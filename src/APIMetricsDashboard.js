@@ -15,7 +15,8 @@ const APIMetricsDashboard = () => {
     const fetchCSVData = async () => {
       try {
         // Fetch CSV file from the public/data directory
-        const response = await fetch('/data/timeseries.csv');
+        // Use process.env.PUBLIC_URL to handle base path correctly in both dev and production
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/timeseries.csv`);
         if (!response.ok) {
           throw new Error('Failed to fetch data file');
         }
@@ -52,126 +53,174 @@ const APIMetricsDashboard = () => {
   }, []);
 
   const parseCSV = (csv) => {
-    const lines = csv.trim().split('\n');
-    const headers = lines[0].split(',');
-    
-    return lines.slice(1).map(line => {
-      const values = line.split(',');
-      const row = {};
+    try {
+      const lines = csv.trim().split('\n');
+      if (lines.length < 2) {
+        console.error('CSV data is empty or invalid');
+        return [];
+      }
       
-      headers.forEach((header, index) => {
-        row[header] = header === 'date' ? values[index] : parseInt(values[index]);
-      });
+      const headers = lines[0].split(',');
       
-      return row;
-    });
+      return lines.slice(1).map(line => {
+        const values = line.split(',');
+        if (values.length !== headers.length) {
+          console.warn(`Skipping invalid line: ${line}`);
+          return null;
+        }
+        
+        const row = {};
+        
+        headers.forEach((header, index) => {
+          row[header] = header === 'date' ? values[index] : Number.isNaN(parseInt(values[index])) ? 0 : parseInt(values[index]);
+        });
+        
+        return row;
+      }).filter(row => row !== null);
+    } catch (err) {
+      console.error('Error parsing CSV:', err);
+      return [];
+    }
   };
 
   const processData = (parsedData) => {
-    // Remove duplicate dates (specifically 2025-02-14 which appears twice)
-    const uniqueData = [];
-    const dateSet = new Set();
-
-    parsedData.forEach(row => {
-      if (!dateSet.has(row.date)) {
-        dateSet.add(row.date);
-        
-        // Calculate code density (lines per method)
-        row.code_density = parseFloat((row.num_lines / row.num_methods).toFixed(2));
-        
-        uniqueData.push(row);
+    try {
+      if (!parsedData || parsedData.length === 0) {
+        console.error('No valid data to process');
+        setIsLoading(false);
+        return;
       }
-    });
-
-    // Calculate statistics
-    const metrics = ['num_files', 'num_types', 'num_methods', 'num_lines', 'code_density'];
-    const calculatedStats = {};
-
-    metrics.forEach(metric => {
-      const values = uniqueData.map(row => row[metric]);
-      calculatedStats[metric] = {
-        min: Math.min(...values),
-        max: Math.max(...values),
-        avg: Math.round((values.reduce((sum, val) => sum + val, 0) / values.length) * 100) / 100,
-        start: values[0],
-        end: values[values.length - 1],
-        percentChange: ((values[values.length - 1] - values[0]) / values[0] * 100).toFixed(2)
-      };
-    });
-
-    // Find significant changes
-    const changes = [];
-    for (let i = 1; i < uniqueData.length; i++) {
-      const prevRow = uniqueData[i - 1];
-      const currRow = uniqueData[i];
       
-      metrics.forEach(metric => {
-        if (metric !== 'code_density') {  // Skip derived metrics
-          const change = currRow[metric] - prevRow[metric];
-          const percentChange = (change / prevRow[metric]) * 100;
-          
-          // Consider changes of more than 3% significant for most metrics
-          // For lines of code, use a higher threshold (5%) since it has larger fluctuations
-          const threshold = metric === 'num_lines' ? 5 : 3;
-          
-          if (Math.abs(percentChange) > threshold) {
-            changes.push({
-              date: currRow.date,
-              metric,
-              previousValue: prevRow[metric],
-              newValue: currRow[metric],
-              change,
-              percentChange: percentChange.toFixed(2)
-            });
-          }
+      // Remove duplicate dates and sort by date
+      const uniqueData = [];
+      const dateMap = new Map();
+
+      // Group entries by date and take the last entry for each date
+      parsedData.forEach(row => {
+        if (row && row.date) {
+          dateMap.set(row.date, row);
         }
       });
+
+      // Convert map back to array and sort by date
+      Array.from(dateMap.entries())
+        .sort((a, b) => new Date(a[0]) - new Date(b[0]))
+        .forEach(([_, row]) => {
+          // Calculate code density (lines per method)
+          if (row.num_methods > 0) {
+            row.code_density = parseFloat((row.num_lines / row.num_methods).toFixed(2));
+          } else {
+            row.code_density = 0;
+          }
+          
+          uniqueData.push(row);
+        });
+
+      // Calculate statistics if we have data
+      if (uniqueData.length > 0) {
+        const metrics = ['num_files', 'num_types', 'num_methods', 'num_lines', 'code_density'];
+        const calculatedStats = {};
+
+        metrics.forEach(metric => {
+          const values = uniqueData.map(row => row[metric] || 0);
+          calculatedStats[metric] = {
+            min: Math.min(...values),
+            max: Math.max(...values),
+            avg: Math.round((values.reduce((sum, val) => sum + val, 0) / values.length) * 100) / 100,
+            start: values[0],
+            end: values[values.length - 1],
+            percentChange: values[0] > 0 ? 
+              ((values[values.length - 1] - values[0]) / values[0] * 100).toFixed(2) : 
+              '0.00'
+          };
+        });
+
+        // Find significant changes
+        const changes = [];
+        for (let i = 1; i < uniqueData.length; i++) {
+          const prevRow = uniqueData[i - 1];
+          const currRow = uniqueData[i];
+          
+          metrics.forEach(metric => {
+            if (metric !== 'code_density') {  // Skip derived metrics
+              const prevValue = prevRow[metric] || 0;
+              const currValue = currRow[metric] || 0;
+              const change = currValue - prevValue;
+              
+              // Avoid division by zero
+              const percentChange = prevValue !== 0 ? 
+                (change / prevValue) * 100 : 
+                change > 0 ? 100 : 0;
+              
+              // Consider changes of more than 3% significant for most metrics
+              // For lines of code, use a higher threshold (5%) since it has larger fluctuations
+              const threshold = metric === 'num_lines' ? 5 : 3;
+              
+              if (Math.abs(percentChange) > threshold) {
+                changes.push({
+                  date: currRow.date,
+                  metric,
+                  previousValue: prevValue,
+                  newValue: currValue,
+                  change,
+                  percentChange: percentChange.toFixed(2)
+                });
+              }
+            }
+          });
+        }
+
+        // Calculate correlations between metrics
+        const metricCorrelations = {};
+        const primaryMetrics = ['num_files', 'num_types', 'num_methods', 'num_lines'];
+        
+        primaryMetrics.forEach(metric1 => {
+          primaryMetrics.forEach(metric2 => {
+            if (metric1 !== metric2) {
+              const values1 = uniqueData.map(row => row[metric1] || 0);
+              const values2 = uniqueData.map(row => row[metric2] || 0);
+              
+              // Calculate covariance
+              const mean1 = values1.reduce((sum, val) => sum + val, 0) / values1.length;
+              const mean2 = values2.reduce((sum, val) => sum + val, 0) / values2.length;
+              
+              let covariance = 0;
+              for (let i = 0; i < values1.length; i++) {
+                covariance += (values1[i] - mean1) * (values2[i] - mean2);
+              }
+              covariance /= values1.length;
+              
+              // Calculate standard deviations
+              const stdDev1 = Math.sqrt(values1.reduce((sum, val) => sum + Math.pow(val - mean1, 2), 0) / values1.length);
+              const stdDev2 = Math.sqrt(values2.reduce((sum, val) => sum + Math.pow(val - mean2, 2), 0) / values2.length);
+              
+              // Calculate correlation coefficient (avoid division by zero)
+              const correlation = (stdDev1 !== 0 && stdDev2 !== 0) ? 
+                covariance / (stdDev1 * stdDev2) : 0;
+              
+              metricCorrelations[`${metric1}_${metric2}`] = parseFloat(correlation.toFixed(3));
+            }
+          });
+        });
+
+        // Create density data for the additional chart
+        const densityChartData = uniqueData.map(row => ({
+          date: row.date,
+          code_density: row.code_density || 0,
+        }));
+
+        setDensityData(densityChartData);
+        setCorrelations(metricCorrelations);
+        setStats(calculatedStats);
+        setSignificantChanges(changes);
+        setData(uniqueData);
+      }
+      setIsLoading(false);
+    } catch (err) {
+      console.error('Error processing data:', err);
+      setError('Failed to process data. Please try again later.');
+      setIsLoading(false);
     }
-
-    // Calculate correlations between metrics
-    const metricCorrelations = {};
-    const primaryMetrics = ['num_files', 'num_types', 'num_methods', 'num_lines'];
-    
-    primaryMetrics.forEach(metric1 => {
-      primaryMetrics.forEach(metric2 => {
-        if (metric1 !== metric2) {
-          const values1 = uniqueData.map(row => row[metric1]);
-          const values2 = uniqueData.map(row => row[metric2]);
-          
-          // Calculate covariance
-          const mean1 = values1.reduce((sum, val) => sum + val, 0) / values1.length;
-          const mean2 = values2.reduce((sum, val) => sum + val, 0) / values2.length;
-          
-          let covariance = 0;
-          for (let i = 0; i < values1.length; i++) {
-            covariance += (values1[i] - mean1) * (values2[i] - mean2);
-          }
-          covariance /= values1.length;
-          
-          // Calculate standard deviations
-          const stdDev1 = Math.sqrt(values1.reduce((sum, val) => sum + Math.pow(val - mean1, 2), 0) / values1.length);
-          const stdDev2 = Math.sqrt(values2.reduce((sum, val) => sum + Math.pow(val - mean2, 2), 0) / values2.length);
-          
-          // Calculate correlation coefficient
-          const correlation = covariance / (stdDev1 * stdDev2);
-          
-          metricCorrelations[`${metric1}_${metric2}`] = parseFloat(correlation.toFixed(3));
-        }
-      });
-    });
-
-    // Create density data for the additional chart
-    const densityChartData = uniqueData.map(row => ({
-      date: row.date,
-      code_density: row.code_density,
-    }));
-
-    setDensityData(densityChartData);
-    setCorrelations(metricCorrelations);
-    setStats(calculatedStats);
-    setSignificantChanges(changes);
-    setData(uniqueData);
-    setIsLoading(false);
   };
 
   const formatDate = (dateStr) => {
@@ -225,9 +274,13 @@ const APIMetricsDashboard = () => {
         <ul className="space-y-1">
           {changesForSelectedDate.map((change, index) => (
             <li key={index}>
-              <span className="font-medium">{metricNames[change.metric]}:</span> {change.previousValue.toLocaleString()} → {change.newValue.toLocaleString()} 
+              <span className="font-medium">{metricNames[change.metric]}:</span> {
+                change.previousValue !== undefined ? change.previousValue.toLocaleString() : 'N/A'
+              } → {
+                change.newValue !== undefined ? change.newValue.toLocaleString() : 'N/A'
+              } 
               <span className={`ml-2 ${change.change > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                ({change.change > 0 ? '+' : ''}{change.change.toLocaleString()} / {change.percentChange}%)
+                ({change.change > 0 ? '+' : ''}{change.change !== undefined ? change.change.toLocaleString() : 'N/A'} / {change.percentChange}%)
               </span>
             </li>
           ))}
@@ -238,10 +291,14 @@ const APIMetricsDashboard = () => {
 
   const renderMetricSummary = (metric) => {
     const metricStat = stats[metric];
+    if (!metricStat) {
+      return <div>No data available for this metric</div>;
+    }
+    
     return (
       <div className="flex flex-wrap justify-between text-sm">
-        <div>Start: <span className="font-medium">{metricStat.start.toLocaleString()}</span></div>
-        <div>End: <span className="font-medium">{metricStat.end.toLocaleString()}</span></div>
+        <div>Start: <span className="font-medium">{metricStat.start !== undefined ? metricStat.start.toLocaleString() : 'N/A'}</span></div>
+        <div>End: <span className="font-medium">{metricStat.end !== undefined ? metricStat.end.toLocaleString() : 'N/A'}</span></div>
         <div>Change: <span className={`font-medium ${metricStat.percentChange > 0 ? 'text-green-600' : metricStat.percentChange < 0 ? 'text-red-600' : ''}`}>
           {metricStat.percentChange > 0 ? '+' : ''}{metricStat.percentChange}%
         </span></div>
@@ -355,75 +412,11 @@ const APIMetricsDashboard = () => {
     );
   };
 
-  const getCorrelationClass = (value) => {
-    const absValue = Math.abs(value);
-    if (absValue > 0.7) return 'font-bold';
-    if (absValue > 0.5) return 'font-medium';
-    return 'text-gray-500';
-  };
-
-  const renderCorrelationMatrix = () => {
-    const metrics = ['num_files', 'num_types', 'num_methods', 'num_lines'];
-    
-    return (
-      <div className="mb-8 bg-white p-4 rounded shadow">
-        <h2 className="text-lg font-medium mb-4">Metric Correlations</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="p-2 border-b-2 border-gray-300"></th>
-                {metrics.map(metric => (
-                  <th key={metric} className="p-2 border-b-2 border-gray-300 text-left">
-                    {metricNames[metric].replace('Number of ', '').replace('Lines of ', '')}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {metrics.map(metric1 => (
-                <tr key={metric1}>
-                  <td className="p-2 border-b border-gray-200 font-medium">
-                    {metricNames[metric1].replace('Number of ', '').replace('Lines of ', '')}
-                  </td>
-                  {metrics.map(metric2 => {
-                    if (metric1 === metric2) {
-                      return (
-                        <td key={`${metric1}_${metric2}`} className="p-2 border-b border-gray-200 text-center">
-                          —
-                        </td>
-                      );
-                    }
-                    
-                    const correlation = correlations[`${metric1}_${metric2}`];
-                    return (
-                      <td 
-                        key={`${metric1}_${metric2}`} 
-                        className={`p-2 border-b border-gray-200 ${getCorrelationClass(correlation)}`}
-                      >
-                        {correlation.toFixed(2)}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-4 text-sm text-gray-600">
-          Values closer to 1 or -1 indicate stronger correlation. 
-          Positive values mean metrics tend to increase together, 
-          negative values mean one tends to decrease as the other increases.
-        </p>
-      </div>
-    );
-  };
-
   return (
     <div className="p-4 max-w-6xl mx-auto bg-gray-50">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Public API Surface Dashboard</h1>
-        <p className="text-gray-600">Tracking changes to your library's public API surface over time.</p>
+        <h1 className="text-2xl font-bold mb-2">TT-Metal Public API Surface Dashboard</h1>
+        <p className="text-gray-600">Tracking changes to TT-Metal public API surface over time.</p>
       </div>
 
       {renderSignificantChanges()}
@@ -434,19 +427,26 @@ const APIMetricsDashboard = () => {
         {renderChart('num_methods')}
         {renderChart('num_lines')}
         {renderDensityChart()}
-        {renderCorrelationMatrix()}
       </div>
 
       <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded">
         <h3 className="font-medium mb-2">Key Insights:</h3>
         <ul className="space-y-2">
-          <li>Files increased by {stats.num_files.percentChange}% (from {stats.num_files.start} to {stats.num_files.end})</li>
-          <li>Types increased by {stats.num_types.percentChange}% (from {stats.num_types.start} to {stats.num_types.end})</li>
-          <li>Methods decreased slightly by {stats.num_methods.percentChange}% (from {stats.num_methods.start} to {stats.num_methods.end})</li>
-          <li>Lines of code decreased significantly by {stats.num_lines.percentChange}% (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})</li>
-          <li>Code density decreased by {stats.code_density.percentChange}% (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)</li>
-          <li>Strong correlation ({correlations.num_methods_num_lines.toFixed(2)}) between methods count and lines of code</li>
-          <li>Recent growth: March 4-7 shows increases across all metrics</li>
+          {stats.num_files && (
+            <li>Files increased by {stats.num_files.percentChange}% (from {stats.num_files.start} to {stats.num_files.end})</li>
+          )}
+          {stats.num_types && (
+            <li>Types increased by {stats.num_types.percentChange}% (from {stats.num_types.start} to {stats.num_types.end})</li>
+          )}
+          {stats.num_methods && (
+            <li>Methods decreased slightly by {stats.num_methods.percentChange}% (from {stats.num_methods.start} to {stats.num_methods.end})</li>
+          )}
+          {stats.num_lines && (
+            <li>Lines of code decreased significantly by {stats.num_lines.percentChange}% (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})</li>
+          )}
+          {stats.code_density && (
+            <li>Code density decreased by {stats.code_density.percentChange}% (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)</li>
+          )}
         </ul>
       </div>
     </div>
