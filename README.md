@@ -56,6 +56,14 @@ This project is configured for easy deployment to GitHub Pages:
    npm run deploy
    ```
 
+### Automatic Deployment
+
+This project has automatic deployment enabled:
+
+- Changes pushed to the main branch will automatically trigger a deployment to GitHub Pages
+- No manual deployment steps are required for updates to the main branch
+- The live dashboard is automatically updated with the latest changes
+
 ## Customizing Data
 
 The dashboard currently uses sample data embedded in the code. To use your own API metrics:
