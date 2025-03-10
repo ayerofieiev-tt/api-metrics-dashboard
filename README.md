@@ -50,8 +50,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 The simplest way to collect data manually:
 
 ```bash
-# Run the collection script from the repo root
-./scripts/collect-data.sh
+# Run the setup and analysis script from the repo root
+./scripts/setup-and-run-analysis.sh
 ```
 
 This script will:
@@ -60,6 +60,25 @@ This script will:
 3. Run the metrics collection process
 4. Update the data file in your local copy
 5. Clean up temporary files
+
+### Scripts Overview
+
+The data collection system consists of three main components:
+
+1. **setup-and-run-analysis.sh** - Main wrapper script that:
+   - Sets up the environment (clones repo, installs dependencies)
+   - Runs the time series data collection
+   - Updates the dashboard with new data
+
+2. **build-api-metrics-timeseries.sh** - Creates historical time series data by:
+   - Going through git history day by day
+   - Analyzing API metrics at each point in time
+   - Building a CSV of metrics over time
+
+3. **analyze_cpp_api.py** - Python script that:
+   - Analyzes C++ header files using tree-sitter
+   - Counts files, types, methods, and lines
+   - Outputs metrics for a single point in time
 
 ## Deployment
 

@@ -29,18 +29,17 @@ jobs:
       
       - name: Install dependencies
         run: |
+          sudo apt-get install -y jq
           python -m pip install --upgrade pip
-          pip install tree-sitter
-          pip install tree-sitter-cpp
-          pip install jq
+          python -m pip install tree-sitter tree-sitter-cpp
       
       - name: Run metric collection scripts
         run: |
           cd tt-metal
-          cp ../dashboard/scripts/collect_metrics.sh .
-          cp ../dashboard/scripts/compute_public_api_surface.py .
-          chmod +x collect_metrics.sh
-          ./collect_metrics.sh
+          cp ../dashboard/scripts/build-api-metrics-timeseries.sh .
+          cp ../dashboard/scripts/analyze_cpp_api.py .
+          chmod +x build-api-metrics-timeseries.sh
+          ./build-api-metrics-timeseries.sh
           cp timeseries.csv ../dashboard/public/data/
       
       - name: Commit and push changes

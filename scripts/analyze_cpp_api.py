@@ -1,3 +1,15 @@
+"""
+analyze_cpp_api.py - Analyzes C++ header files to calculate API surface metrics
+
+This script processes C++ header files to extract metrics about the public API surface:
+- Number of files
+- Number of types (classes, structs, enums)
+- Number of methods and functions
+- Total lines of code
+
+It outputs the metrics in JSON format for a single point in time.
+"""
+
 import os
 import json
 import datetime
