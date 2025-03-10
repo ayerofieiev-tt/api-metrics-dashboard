@@ -1,73 +1,71 @@
 # API Metrics Dashboard
 
-This dashboard provides insights into TT-Metal API's changes, helping monitor our progress towards a lean and clean API.
+Dashboard tracking TT-Metal API changes to help create a cleaner API.
 
-## Live
+## Links
 
-Check out the live dashboard: [API Metrics Dashboard](https://ayerofieiev-tt.github.io/api-metrics-dashboard/)
+- **Live Dashboard:** [https://ayerofieiev-tt.github.io/api-metrics-dashboard/](https://ayerofieiev-tt.github.io/api-metrics-dashboard/)
+- **Source Code:** [https://github.com/ayerofieiev-tt/api-metrics-dashboard](https://github.com/ayerofieiev-tt/api-metrics-dashboard)
 
-## What's there
+## Features
 
-- **Metrics Tracking**: Monitor files, types, methods, and lines of code over time
-- **Change Detection**: Automatically identifies significant changes in your API surface
-- **Correlation Analysis**: Visualizes relationships between different metrics
-- **Code Density Insights**: Tracks code density (lines per method) to monitor code complexity
+- Tracks API files, types, methods, and lines of code over time
+- Identifies significant changes automatically
+- Shows correlations between metrics
+- Monitors code density (lines per method)
 
-## Getting Started
+## Setup
 
 ### Prerequisites
 
-- Node.js (v14 or later)
-- npm (v6 or later)
+- Node.js (v14+)
+- npm (v6+)
 
-### Installation
+### Install and Run
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/ayerofieiev-tt/api-metrics-dashboard.git
-   cd api-metrics-dashboard
-   ```
+```bash
+# Clone repo
+git clone https://github.com/ayerofieiev-tt/api-metrics-dashboard.git
+cd api-metrics-dashboard
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. Start the development server:
-   ```
-   npm start
-   ```
+# Start development server
+npm start
+```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the dashboard in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Data Collection
+
+### Automatic Updates
+
+- A GitHub workflow runs daily at midnight to collect metrics from tt-metal
+- Updates happen automatically when pushed to main branch
+- Manual workflow runs can be triggered from GitHub Actions tab
+
+### Manual Data Collection
+
+The simplest way to collect data manually:
+
+```bash
+# Run the collection script from the repo root
+./scripts/collect-data.sh
+```
+
+This script will:
+1. Clone the tt-metal repository to a temporary directory
+2. Install required dependencies
+3. Run the metrics collection process
+4. Update the data file in your local copy
+5. Clean up temporary files
 
 ## Deployment
 
-### GitHub Pages
+```bash
+# Deploy to GitHub Pages
+npm run deploy
+```
 
-This project is configured for easy deployment to GitHub Pages:
-
-1. Install the gh-pages package if not already installed:
-   ```
-   npm install --save-dev gh-pages
-   ```
-
-2. Deploy to GitHub Pages:
-   ```
-   npm run deploy
-   ```
-
-### Automatic Deployment
-
-This project has automatic deployment enabled:
-
-- Changes pushed to the main branch will automatically trigger a deployment to GitHub Pages
-- No manual deployment steps are required for updates to the main branch
-- The live dashboard is automatically updated with the latest changes
-
-## Customizing Data
-
-The dashboard currently uses sample data embedded in the code. To use your own API metrics:
-
-1. Open `src/APIMetricsDashboard.js`
-2. Locate the `csvData` variable in the `useEffect` hook
-3. Replace the sample data with your own CSV-formatted metrics data
+Changes to main branch automatically deploy to GitHub Pages.

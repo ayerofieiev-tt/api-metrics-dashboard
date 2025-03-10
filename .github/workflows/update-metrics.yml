@@ -1,0 +1,53 @@
+name: Update API Metrics
+
+on:
+  schedule:
+    # Run daily at midnight
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout dashboard repository
+        uses: actions/checkout@v3
+        with:
+          path: dashboard
+      
+      - name: Checkout tt-metal repository
+        uses: actions/checkout@v3
+        with:
+          repository: tenstorrent/tt-metal
+          path: tt-metal
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install tree-sitter
+          pip install tree-sitter-cpp
+          pip install jq
+      
+      - name: Run metric collection scripts
+        run: |
+          cd tt-metal
+          cp ../dashboard/scripts/collect_metrics.sh .
+          cp ../dashboard/scripts/compute_public_api_surface.py .
+          chmod +x collect_metrics.sh
+          ./collect_metrics.sh
+          cp timeseries.csv ../dashboard/public/data/
+      
+      - name: Commit and push changes
+        run: |
+          cd dashboard
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add public/data/timeseries.csv
+          git commit -m "Update API metrics data" || echo "No changes to commit"
+          git push 
