@@ -14,9 +14,11 @@ const APIMetricsDashboard = () => {
   useEffect(() => {
     const fetchCSVData = async () => {
       try {
+        // Add timestamp to prevent caching
+        const timestamp = new Date().getTime();
         // Fetch CSV file from the public/data directory
         // Use process.env.PUBLIC_URL to handle base path correctly in both dev and production
-        const response = await fetch(`${process.env.PUBLIC_URL}/data/timeseries.csv`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/timeseries.csv?v=${timestamp}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data file');
         }
