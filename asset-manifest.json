@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/api-metrics-dashboard/static/css/main.f340bc4e.css",
-    "main.js": "/api-metrics-dashboard/static/js/main.f912375a.js",
+    "main.js": "/api-metrics-dashboard/static/js/main.14d90553.js",
     "static/js/453.de60625b.chunk.js": "/api-metrics-dashboard/static/js/453.de60625b.chunk.js",
     "index.html": "/api-metrics-dashboard/index.html",
     "main.f340bc4e.css.map": "/api-metrics-dashboard/static/css/main.f340bc4e.css.map",
-    "main.f912375a.js.map": "/api-metrics-dashboard/static/js/main.f912375a.js.map",
+    "main.14d90553.js.map": "/api-metrics-dashboard/static/js/main.14d90553.js.map",
     "453.de60625b.chunk.js.map": "/api-metrics-dashboard/static/js/453.de60625b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f340bc4e.css",
-    "static/js/main.f912375a.js"
+    "static/js/main.14d90553.js"
   ]
 }
