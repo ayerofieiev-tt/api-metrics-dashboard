@@ -207,11 +207,11 @@ const HeaderLeaderboard = () => {
 
   const renderTabs = () => {
     return (
-      <div className="tabs mb-4">
+      <div className="tabs mb-3 flex flex-wrap">
         {Object.keys(categoryInfo).map(category => (
           <button
             key={category}
-            className={`tab-button px-4 py-2 mr-1 rounded-t-lg ${activeTab === category ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+            className={`tab-button px-2 py-1 mr-1 mb-1 rounded text-xs ${activeTab === category ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
             onClick={() => setActiveTab(category)}
           >
             {categoryInfo[category].title}
@@ -253,16 +253,16 @@ const HeaderLeaderboard = () => {
     
     return (
       <div>
-        <h3 className="text-xl mb-2">{category.title}</h3>
-        <p className="text-gray-600 mb-4">{category.description}</p>
+        <h3 className="text-md font-semibold mb-1">{category.title}</h3>
+        <p className="text-gray-600 text-xs mb-3">{category.description}</p>
         
-        <div className="overflow-x-auto max-h-[500px] overflow-y-auto">
-          <table className="w-full bg-white">
+        <div className="overflow-x-auto max-h-[calc(100vh-400px)] overflow-y-auto">
+          <table className="w-full bg-white text-sm">
             <thead className="sticky top-0 z-10">
               <tr className="bg-gray-100">
-                <th className="px-4 py-2 text-left">Rank</th>
-                <th className="px-4 py-2 text-left">File</th>
-                <th className="px-4 py-2 text-right">{category.metric.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</th>
+                <th className="px-2 py-1 text-left">#</th>
+                <th className="px-2 py-1 text-left">File</th>
+                <th className="px-2 py-1 text-right">{category.metric.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</th>
               </tr>
             </thead>
             <tbody>
@@ -272,20 +272,23 @@ const HeaderLeaderboard = () => {
                   className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 cursor-pointer ${selectedFile && selectedFile.path === file.path ? 'bg-blue-100' : ''}`}
                   onClick={() => handleRowClick(file)}
                 >
-                  <td className="px-4 py-2 text-left">{index + 1}</td>
-                  <td className="px-4 py-2 text-left font-mono text-sm">
-                    <a 
-                      href={`${repoBaseUrl}/${file.filename}`} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-blue-600 hover:underline"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {file.filename}
-                    </a>
-                    <span className="block text-xs text-gray-500">{file.path}</span>
+                  <td className="px-2 py-1 text-left">{index + 1}</td>
+                  <td className="px-2 py-1 text-left font-mono text-xs">
+                    <div className="truncate max-w-[150px]">
+                      <a 
+                        href={`${repoBaseUrl}/${file.filename}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-blue-600 hover:underline"
+                        onClick={(e) => e.stopPropagation()}
+                        title={file.filename}
+                      >
+                        {file.filename}
+                      </a>
+                    </div>
+                    <div className="truncate text-xxs text-gray-500" title={file.path}>{file.path}</div>
                   </td>
-                  <td className="px-4 py-2 text-right">{file[category.metric].toLocaleString()} {category.label}</td>
+                  <td className="px-2 py-1 text-right">{file[category.metric].toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
@@ -331,23 +334,21 @@ const HeaderLeaderboard = () => {
     };
 
     return (
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <div className="p-4 bg-gray-100 border-b">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="text-xl font-semibold">{selectedFile.filename}</h3>
-              <p className="text-sm text-gray-600">{selectedFile.path}</p>
-            </div>
-            <div>
-              <a 
-                href={`${repoBaseUrl}/${selectedFile.filename}`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-600 hover:underline text-sm"
-              >
-                View on GitHub
-              </a>
-            </div>
+      <div className="flex flex-col h-full overflow-hidden">
+        <div className="p-3 bg-gray-100 border-b flex items-center">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-gray-800">{selectedFile.filename}</h3>
+            <p className="text-xs text-gray-600">{selectedFile.path}</p>
+          </div>
+          <div>
+            <a 
+              href={`${repoBaseUrl}/${selectedFile.filename}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline text-sm"
+            >
+              View on GitHub
+            </a>
           </div>
         </div>
         <div className="flex-1 overflow-hidden">
@@ -409,18 +410,18 @@ const HeaderLeaderboard = () => {
   }
 
   return (
-    <div className="header-leaderboard p-4 border rounded-lg bg-white h-full flex flex-col">
+    <div className="header-leaderboard p-4 border rounded-lg bg-white flex flex-col" style={{ height: 'calc(100vh - 200px)' }}>
       <h2 className="text-2xl font-bold mb-4">API Header Leaderboard</h2>
       
-      <div className="flex flex-row flex-1 overflow-hidden">
-        <div className="w-1/3 pr-4 border-r overflow-y-auto">
+      <div className="flex flex-col md:flex-row overflow-hidden flex-1">
+        <div className="w-full md:w-1/4 pr-0 md:pr-4 border-b md:border-b-0 md:border-r overflow-y-auto">
           {renderTabs()}
           {renderLeaderboard()}
           <div className="mt-4 text-xs text-gray-500">
             Generated on: {leaderboardData.generated_at} • Total files analyzed: {leaderboardData.total_files_analyzed}
           </div>
         </div>
-        <div className="w-2/3 pl-4 flex flex-col overflow-hidden">
+        <div className="w-full md:w-3/4 pl-0 md:pl-4 mt-4 md:mt-0 flex flex-col overflow-hidden flex-1">
           {renderFileContent()}
         </div>
       </div>

@@ -40,3 +40,9 @@ main {
   width: 100% !important;
   overflow: hidden;
 }
+
+/* Custom utility classes */
+.text-xxs {
+  font-size: 0.65rem;
+  line-height: 1rem;
+}
