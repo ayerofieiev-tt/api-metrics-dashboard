@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
+import HeaderLeaderboard from './HeaderLeaderboard';
 
 const APIMetricsDashboard = () => {
   const [data, setData] = useState([]);
@@ -10,6 +11,7 @@ const APIMetricsDashboard = () => {
   const [correlations, setCorrelations] = useState({});
   const [densityData, setDensityData] = useState([]);
   const [error, setError] = useState(null);
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
 
   useEffect(() => {
     const fetchCSVData = async () => {
@@ -256,6 +258,11 @@ const APIMetricsDashboard = () => {
     code_density: "#0088FE"
   };
 
+  // Navigation between time series view and leaderboard view
+  const toggleLeaderboard = () => {
+    setShowLeaderboard(!showLeaderboard);
+  };
+
   if (isLoading) {
     return <div className="flex items-center justify-center h-64">Loading dashboard...</div>;
   }
@@ -415,42 +422,65 @@ const APIMetricsDashboard = () => {
   };
 
   return (
-    <div className="p-4 max-w-6xl mx-auto bg-gray-50">
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">TT-Metal Public API Surface Dashboard</h1>
-        <p className="text-gray-600">Tracking changes to TT-Metal public API surface over time.</p>
+    <div className="dashboard p-4 flex flex-col h-full">
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-3xl font-bold">API Metrics Dashboard</h1>
+        <button 
+          onClick={toggleLeaderboard} 
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+        >
+          {showLeaderboard ? 'Show Time Series' : 'Show Leaderboard'}
+        </button>
       </div>
 
-      {renderSignificantChanges()}
+      {error && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">{error}</div>}
 
-      <div className="space-y-6">
-        {renderChart('num_files')}
-        {renderChart('num_types')}
-        {renderChart('num_methods')}
-        {renderChart('num_lines')}
-        {renderDensityChart()}
-      </div>
+      {isLoading ? (
+        <div className="loading-indicator">Loading data...</div>
+      ) : (
+        <div className={showLeaderboard ? "flex-1 flex flex-col overflow-hidden" : "overflow-y-auto h-full"}>
+          {showLeaderboard ? (
+            // Leaderboard view
+            <div className="flex-1 flex flex-col">
+              <HeaderLeaderboard />
+            </div>
+          ) : (
+            // Time series view (your existing dashboard content)
+            <div className="overflow-y-auto">
+              {renderSignificantChanges()}
 
-      <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded">
-        <h3 className="font-medium mb-2">Key Insights:</h3>
-        <ul className="space-y-2">
-          {stats.num_files && (
-            <li>Files increased by {stats.num_files.percentChange}% (from {stats.num_files.start} to {stats.num_files.end})</li>
+              <div className="space-y-6">
+                {renderChart('num_files')}
+                {renderChart('num_types')}
+                {renderChart('num_methods')}
+                {renderChart('num_lines')}
+                {renderDensityChart()}
+              </div>
+
+              <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded">
+                <h3 className="font-medium mb-2">Key Insights:</h3>
+                <ul className="space-y-2">
+                  {stats.num_files && (
+                    <li>Files increased by {stats.num_files.percentChange}% (from {stats.num_files.start} to {stats.num_files.end})</li>
+                  )}
+                  {stats.num_types && (
+                    <li>Types increased by {stats.num_types.percentChange}% (from {stats.num_types.start} to {stats.num_types.end})</li>
+                  )}
+                  {stats.num_methods && (
+                    <li>Methods decreased slightly by {stats.num_methods.percentChange}% (from {stats.num_methods.start} to {stats.num_methods.end})</li>
+                  )}
+                  {stats.num_lines && (
+                    <li>Lines of code decreased significantly by {stats.num_lines.percentChange}% (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})</li>
+                  )}
+                  {stats.code_density && (
+                    <li>Code density decreased by {stats.code_density.percentChange}% (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)</li>
+                  )}
+                </ul>
+              </div>
+            </div>
           )}
-          {stats.num_types && (
-            <li>Types increased by {stats.num_types.percentChange}% (from {stats.num_types.start} to {stats.num_types.end})</li>
-          )}
-          {stats.num_methods && (
-            <li>Methods decreased slightly by {stats.num_methods.percentChange}% (from {stats.num_methods.start} to {stats.num_methods.end})</li>
-          )}
-          {stats.num_lines && (
-            <li>Lines of code decreased significantly by {stats.num_lines.percentChange}% (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})</li>
-          )}
-          {stats.code_density && (
-            <li>Code density decreased by {stats.code_density.percentChange}% (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)</li>
-          )}
-        </ul>
-      </div>
+        </div>
+      )}
     </div>
   );
 };

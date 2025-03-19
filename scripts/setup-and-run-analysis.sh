@@ -3,6 +3,10 @@
 
 set -e  # Exit on any error
 
+# Configuration
+REPO_URL="https://github.com/tenstorrent/tt-metal.git"
+API_PATH="tt_metal/api/tt-metalium"  # Path to API within the repo
+
 # Create a temporary directory
 TEMP_DIR=$(mktemp -d)
 echo "Created temporary directory: $TEMP_DIR"
@@ -29,6 +33,7 @@ cd $TEMP_DIR/tt-metal
 echo "Copying data collection scripts..."
 cp $SCRIPT_DIR/build-api-metrics-timeseries.sh .
 cp $SCRIPT_DIR/analyze_cpp_api.py .
+cp $SCRIPT_DIR/analyze_cpp_header_leaderboard.py .
 
 # Create and activate a virtual environment
 echo "Setting up Python virtual environment..."
@@ -40,15 +45,18 @@ echo "Installing dependencies..."
 python -m pip install --upgrade pip
 python -m pip install tree-sitter tree-sitter-cpp
 
-# Run the data collection script
+# Create output directory
+mkdir -p $DASHBOARD_DIR/public/data
+
+# Run the time series data collection script
 echo "Running time series data collection script..."
 chmod +x build-api-metrics-timeseries.sh
 ./build-api-metrics-timeseries.sh
 
-# Copy the results to the dashboard
-echo "Copying results to dashboard..."
-mkdir -p $DASHBOARD_DIR/public/data
-cp timeseries.csv $DASHBOARD_DIR/public/data/
+# Run header leaderboard analysis
+echo "Running header leaderboard analysis..."
+python analyze_cpp_header_leaderboard.py "$API_PATH" "$DASHBOARD_DIR/public/data/leaderboard.json"
+echo "Header leaderboard data saved to $DASHBOARD_DIR/public/data/leaderboard.json"
 
 # Deactivate virtual environment
 deactivate
@@ -58,4 +66,4 @@ echo "Cleaning up temporary directory..."
 cd $DASHBOARD_DIR
 rm -rf $TEMP_DIR
 
-echo "Data collection complete! The metrics data has been updated in public/data/timeseries.csv" 
+echo "Analysis complete! The dashboard data has been updated." 

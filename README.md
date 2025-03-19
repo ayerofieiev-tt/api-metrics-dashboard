@@ -13,6 +13,9 @@ Dashboard tracking TT-Metal API changes to help create a cleaner API.
 - Identifies significant changes automatically
 - Shows correlations between metrics
 - Monitors code density (lines per method)
+- Header Leaderboard showing top API headers by various metrics
+- Interactive code viewer with syntax highlighting for C++ files
+- Automatic highlighting of code regions (types, methods, implementations)
 
 ## Setup
 
@@ -79,6 +82,24 @@ The data collection system consists of three main components:
    - Analyzes C++ header files using tree-sitter
    - Counts files, types, methods, and lines
    - Outputs metrics for a single point in time
+
+The dashboard uses Python scripts to collect data from the C++ API code:
+
+1. **analyze_cpp_headers.py** - Parses C++ headers and extracts metrics daily
+2. **analyze_cpp_header_leaderboard.py** - Analyzes headers to create leaderboard data
+
+## Header Leaderboard
+
+The Header Leaderboard feature allows you to:
+
+- View top API headers by different metrics (lines of code, methods, types, implementation in headers)
+- Examine header file content with syntax highlighting
+- Automatically highlight different code regions:
+  - Types (classes, structs, enums)
+  - Methods (function declarations)
+  - Implementations (function bodies in headers)
+
+This helps identify headers that might need refactoring or cleanup based on various metrics.
 
 ## Deployment
 

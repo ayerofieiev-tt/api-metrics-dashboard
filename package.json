@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ayerofieiev-tt.github.io/api-metrics-dashboard",
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
