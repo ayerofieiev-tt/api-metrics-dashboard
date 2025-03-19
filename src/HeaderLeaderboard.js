@@ -32,10 +32,10 @@ const HeaderLeaderboard = () => {
   // Helper to get highlight color based on region type
   const getColorForRegionType = useCallback((regionType) => {
     switch (regionType) {
-      case 'types': return '#4CAF50'; // Green
-      case 'methods': return '#2196F3'; // Blue
-      case 'implementations': return '#FF9800'; // Orange
-      default: return '#BBBBBB'; // Gray
+      case 'types': return '#40C057'; // Green - match chart color
+      case 'methods': return '#F59F00'; // Orange - match chart color
+      case 'implementations': return '#FA5252'; // Red - match chart color
+      default: return '#7950F2'; // Purple - match chart color
     }
   }, []);
   
@@ -208,15 +208,28 @@ const HeaderLeaderboard = () => {
   const renderTabs = () => {
     return (
       <div className="tabs mb-3 flex flex-wrap">
-        {Object.keys(categoryInfo).map(category => (
-          <button
-            key={category}
-            className={`tab-button px-2 py-1 mr-1 mb-1 rounded text-xs ${activeTab === category ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-            onClick={() => setActiveTab(category)}
-          >
-            {categoryInfo[category].title}
-          </button>
-        ))}
+        {Object.keys(categoryInfo).map(category => {
+          // Get appropriate color based on category
+          let color = '#4C6EF5'; // Default blue
+          if (category === 'most_types') color = '#40C057'; // Green
+          if (category === 'most_methods') color = '#F59F00'; // Orange
+          if (category === 'most_implementation_lines') color = '#FA5252'; // Red
+          
+          return (
+            <button
+              key={category}
+              className={`tab-button px-3 py-1 mr-1 mb-1 rounded text-sm ${
+                activeTab === category 
+                  ? 'text-white font-medium shadow-sm' 
+                  : 'bg-gray-200 hover:bg-gray-300'
+              }`}
+              style={activeTab === category ? { backgroundColor: color } : {}}
+              onClick={() => setActiveTab(category)}
+            >
+              {categoryInfo[category].title}
+            </button>
+          );
+        })}
       </div>
     );
   };
@@ -253,7 +266,19 @@ const HeaderLeaderboard = () => {
     
     return (
       <div>
-        <h3 className="text-md font-semibold mb-1">{category.title}</h3>
+        <h3 className="text-md font-semibold mb-1 flex items-center">
+          {category.title}
+          <span 
+            className="ml-2 inline-block w-3 h-3 rounded-full" 
+            style={{ 
+              backgroundColor: 
+                activeTab === 'most_types' ? '#40C057' : 
+                activeTab === 'most_methods' ? '#F59F00' : 
+                activeTab === 'most_implementation_lines' ? '#FA5252' : 
+                '#4C6EF5'
+            }}
+          ></span>
+        </h3>
         <p className="text-gray-600 text-xs mb-3">{category.description}</p>
         
         <div className="overflow-x-auto max-h-[calc(100vh-400px)] overflow-y-auto">
@@ -269,7 +294,25 @@ const HeaderLeaderboard = () => {
               {leaderboardData[activeTab].map((file, index) => (
                 <tr 
                   key={file.path} 
-                  className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 cursor-pointer ${selectedFile && selectedFile.path === file.path ? 'bg-blue-100' : ''}`}
+                  className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 cursor-pointer ${
+                    selectedFile && selectedFile.path === file.path 
+                      ? 'font-medium' 
+                      : ''
+                  }`}
+                  style={selectedFile && selectedFile.path === file.path ? {
+                    borderLeft: `4px solid ${
+                      activeTab === 'most_types' ? '#40C057' : 
+                      activeTab === 'most_methods' ? '#F59F00' : 
+                      activeTab === 'most_implementation_lines' ? '#FA5252' : 
+                      '#4C6EF5'
+                    }`,
+                    backgroundColor: `${
+                      activeTab === 'most_types' ? 'rgba(64, 192, 87, 0.1)' : 
+                      activeTab === 'most_methods' ? 'rgba(245, 159, 0, 0.1)' : 
+                      activeTab === 'most_implementation_lines' ? 'rgba(250, 82, 82, 0.1)' : 
+                      'rgba(76, 110, 245, 0.1)'
+                    }`
+                  } : {}}
                   onClick={() => handleRowClick(file)}
                 >
                   <td className="px-2 py-1 text-left">{index + 1}</td>
@@ -384,14 +427,14 @@ const HeaderLeaderboard = () => {
               // Add CSS for each type of highlight
               const styleElement = document.createElement('style');
               styleElement.textContent = `
-                .highlighted-types-line { background-color: rgba(76, 175, 80, 0.15) !important; border-left: 3px solid #4CAF50 !important; }
-                .highlighted-methods-line { background-color: rgba(33, 150, 243, 0.15) !important; border-left: 3px solid #2196F3 !important; }
-                .highlighted-implementations-line { background-color: rgba(255, 152, 0, 0.15) !important; border-left: 3px solid #FF9800 !important; }
-                .highlighted-custom-line { background-color: rgba(255, 235, 59, 0.15) !important; border-left: 3px solid #FFC107 !important; }
+                .highlighted-types-line { background-color: rgba(64, 192, 87, 0.15) !important; border-left: 3px solid #40C057 !important; }
+                .highlighted-methods-line { background-color: rgba(245, 159, 0, 0.15) !important; border-left: 3px solid #F59F00 !important; }
+                .highlighted-implementations-line { background-color: rgba(250, 82, 82, 0.15) !important; border-left: 3px solid #FA5252 !important; }
+                .highlighted-custom-line { background-color: rgba(121, 80, 242, 0.15) !important; border-left: 3px solid #7950F2 !important; }
                 
-                .line-decoration-types { background-color: #4CAF50 !important; width: 3px !important; margin-left: 3px; }
-                .line-decoration-methods { background-color: #2196F3 !important; width: 3px !important; margin-left: 3px; }
-                .line-decoration-implementations { background-color: #FF9800 !important; width: 3px !important; margin-left: 3px; }
+                .line-decoration-types { background-color: #40C057 !important; width: 3px !important; margin-left: 3px; }
+                .line-decoration-methods { background-color: #F59F00 !important; width: 3px !important; margin-left: 3px; }
+                .line-decoration-implementations { background-color: #FA5252 !important; width: 3px !important; margin-left: 3px; }
               `;
               document.head.appendChild(styleElement);
             }}

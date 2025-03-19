@@ -55,6 +55,16 @@ const APIMetricsDashboard = () => {
     fetchCSVData();
   }, []);
 
+  // Add effect to update the last-updated info in the header
+  useEffect(() => {
+    if (data.length > 0) {
+      const lastUpdatedContainer = document.getElementById('last-updated-container');
+      if (lastUpdatedContainer) {
+        lastUpdatedContainer.textContent = `Last updated: ${formatDate(data[data.length - 1].date)}`;
+      }
+    }
+  }, [data]);
+
   const parseCSV = (csv) => {
     try {
       const lines = csv.trim().split('\n');
@@ -250,11 +260,11 @@ const APIMetricsDashboard = () => {
   };
 
   const metricColors = {
-    num_files: "#8884d8",
-    num_types: "#82ca9d",
-    num_methods: "#ffc658",
-    num_lines: "#ff8042",
-    code_density: "#0088FE"
+    num_files: "#4C6EF5",  // Blue
+    num_types: "#40C057",  // Green
+    num_methods: "#F59F00", // Orange/Amber
+    num_lines: "#FA5252",  // Red
+    code_density: "#7950F2"  // Purple
   };
 
   const renderSignificantChanges = () => {
@@ -268,12 +278,18 @@ const APIMetricsDashboard = () => {
     }
 
     return (
-      <div className="mb-6 p-6 bg-yellow-50 border border-yellow-300 rounded-lg shadow-sm">
-        <h3 className="font-medium text-lg mb-4 text-yellow-800">Significant Changes on {formatDate(selectedDate)}:</h3>
-        <ul className="space-y-2">
+      <div className="mb-4 p-4 bg-yellow-50 border border-yellow-300 rounded-lg shadow-sm">
+        <h3 className="font-medium text-base mb-2 text-yellow-800">Significant Changes on {formatDate(selectedDate)}:</h3>
+        <ul className="space-y-1">
           {changesForSelectedDate.map((change, index) => (
             <li key={index} className="flex items-center">
-              <span className="mr-2">{
+              <span className="mr-2 flex items-center justify-center w-5 h-5 rounded-full" style={{ 
+                backgroundColor: change.metric === 'num_files' ? metricColors.num_files : 
+                change.metric === 'num_types' ? metricColors.num_types : 
+                change.metric === 'num_methods' ? metricColors.num_methods : 
+                change.metric === 'num_lines' ? metricColors.num_lines : metricColors.code_density,
+                color: 'white'
+              }}>{
                 change.metric === 'num_files' ? '📄' : 
                 change.metric === 'num_types' ? '🔠' : 
                 change.metric === 'num_methods' ? '⚙️' : 
@@ -284,7 +300,7 @@ const APIMetricsDashboard = () => {
               } → {
                 change.newValue !== undefined ? change.newValue.toLocaleString() : 'N/A'
               } 
-              <span className={`ml-2 ${change.change > 0 ? 'text-green-600' : 'text-red-600'} font-medium`}>
+              <span className={`ml-2 ${change.change < 0 ? 'text-green-600' : 'text-red-600'} font-medium`}>
                 ({change.change > 0 ? '+' : ''}{change.change !== undefined ? change.change.toLocaleString() : 'N/A'} / {change.percentChange}%)
               </span>
             </li>
@@ -307,7 +323,7 @@ const APIMetricsDashboard = () => {
       <div className="flex flex-wrap justify-between text-sm">
         <div>Start: <span className="font-medium">{metricStat.start !== undefined ? metricStat.start.toLocaleString() : 'N/A'}</span></div>
         <div>End: <span className="font-medium">{metricStat.end !== undefined ? metricStat.end.toLocaleString() : 'N/A'}</span></div>
-        <div>Change: <span className={`font-medium ${metricStat.percentChange > 0 ? 'text-green-600' : metricStat.percentChange < 0 ? 'text-red-600' : ''}`}>
+        <div>Change: <span className={`font-medium ${metricStat.percentChange < 0 ? 'text-green-600' : metricStat.percentChange > 0 ? 'text-red-600' : ''}`}>
           {metricStat.percentChange > 0 ? '+' : ''}{metricStat.percentChange}%
         </span></div>
       </div>
@@ -316,10 +332,13 @@ const APIMetricsDashboard = () => {
 
   const renderChart = (metric) => {
     return (
-      <div className="mb-8 bg-white p-6 rounded-lg shadow-md border border-gray-100">
-        <h2 className="text-lg font-medium mb-2">{metricNames[metric]}</h2>
+      <div className="mb-5 bg-white p-4 rounded-lg shadow-md border border-gray-100">
+        <h2 className="text-base font-medium mb-1 flex items-center">
+          <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: metricColors[metric] }}></span>
+          {metricNames[metric]}
+        </h2>
         {renderMetricSummary(metric)}
-        <div className="h-64 mt-4">
+        <div className="h-56 mt-3">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
@@ -350,7 +369,7 @@ const APIMetricsDashboard = () => {
               <Line 
                 type="monotone" 
                 dataKey={metric} 
-                stroke="#3182ce" 
+                stroke={metricColors[metric]} 
                 activeDot={{ r: 8 }} 
                 dot={{ r: 3 }}
               />
@@ -372,10 +391,13 @@ const APIMetricsDashboard = () => {
 
   const renderDensityChart = () => {
     return (
-      <div className="mb-8 bg-white p-6 rounded-lg shadow-md border border-gray-100">
-        <h2 className="text-lg font-medium mb-2">Code Density (Lines per Method)</h2>
+      <div className="mb-5 bg-white p-4 rounded-lg shadow-md border border-gray-100">
+        <h2 className="text-base font-medium mb-1 flex items-center">
+          <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: metricColors.code_density }}></span>
+          Code Density (Lines per Method)
+        </h2>
         {renderMetricSummary('code_density')}
-        <div className="h-64 mt-4">
+        <div className="h-56 mt-3">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
@@ -418,77 +440,74 @@ const APIMetricsDashboard = () => {
   };
 
   return (
-    <div className="dashboard p-6 flex flex-col h-full overflow-y-auto bg-gray-50">
-      <div className="flex justify-between items-center mb-8 max-w-5xl mx-auto w-full">
-        <h1 className="text-3xl font-bold text-gray-800">API Metrics Dashboard</h1>
+    <div className="dashboard flex flex-col h-full overflow-y-auto bg-gray-50">
+      <div className="px-4 pt-2">
+        {error && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg shadow-sm mb-4 max-w-5xl mx-auto">
+          <div className="flex">
+            <div className="py-1 mr-3">⚠️</div>
+            <div>{error}</div>
+          </div>
+        </div>}
+
+        {isLoading ? (
+          <div className="flex items-center justify-center h-52 max-w-5xl mx-auto">
+            <div className="text-lg text-gray-600">Loading data...</div>
+          </div>
+        ) : (
+          <div className="space-y-8 pb-8">
+            {/* Time Series Section */}
+            <div className="time-series-section pt-2 mb-8 max-w-5xl mx-auto">
+              {renderSignificantChanges()}
+
+              <div className="space-y-4">
+                {renderChart('num_files')}
+                {renderChart('num_types')}
+                {renderChart('num_methods')}
+                {renderChart('num_lines')}
+                {renderDensityChart()}
+              </div>
+
+              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg shadow-sm">
+                <h3 className="font-medium text-base mb-2 text-blue-800">Key Insights:</h3>
+                <ul className="space-y-1">
+                  {stats.num_files && (
+                    <li className="flex items-center">
+                      <span className="mr-2 flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: metricColors.num_files }}></span> Files increased by <span className={`font-medium ml-1 mr-1 ${stats.num_files.percentChange < 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_files.percentChange}%</span> (from {stats.num_files.start} to {stats.num_files.end})
+                    </li>
+                  )}
+                  {stats.num_types && (
+                    <li className="flex items-center">
+                      <span className="mr-2 flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: metricColors.num_types }}></span> Types increased by <span className={`font-medium ml-1 mr-1 ${stats.num_types.percentChange < 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_types.percentChange}%</span> (from {stats.num_types.start} to {stats.num_types.end})
+                    </li>
+                  )}
+                  {stats.num_methods && (
+                    <li className="flex items-center">
+                      <span className="mr-2 flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: metricColors.num_methods }}></span> Methods changed by <span className={`font-medium ml-1 mr-1 ${stats.num_methods.percentChange < 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_methods.percentChange}%</span> (from {stats.num_methods.start} to {stats.num_methods.end})
+                    </li>
+                  )}
+                  {stats.num_lines && (
+                    <li className="flex items-center">
+                      <span className="mr-2 flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: metricColors.num_lines }}></span> Lines of code changed by <span className={`font-medium ml-1 mr-1 ${stats.num_lines.percentChange < 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_lines.percentChange}%</span> (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})
+                    </li>
+                  )}
+                  {stats.code_density && (
+                    <li className="flex items-center">
+                      <span className="mr-2 flex items-center justify-center w-4 h-4 rounded-full" style={{ backgroundColor: metricColors.code_density }}></span> Code density changed by <span className={`font-medium ml-1 mr-1 ${stats.code_density.percentChange < 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.code_density.percentChange}%</span> (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)
+                    </li>
+                  )}
+                </ul>
+              </div>
+            </div>
+            
+            {/* Header Leaderboard Section */}
+            <div className="mt-10 pt-6 border-t-2 border-gray-300 max-w-full mx-auto w-full">
+              <div className="leaderboard-container">
+                <HeaderLeaderboard />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-
-      {error && <div className="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg shadow-sm mb-6 max-w-5xl mx-auto">
-        <div className="flex">
-          <div className="py-1 mr-3">⚠️</div>
-          <div>{error}</div>
-        </div>
-      </div>}
-
-      {isLoading ? (
-        <div className="flex items-center justify-center h-64 max-w-5xl mx-auto">
-          <div className="text-lg text-gray-600">Loading data...</div>
-        </div>
-      ) : (
-        <div className="space-y-10 pb-10">
-          {/* Time Series Section */}
-          <div className="time-series-section mb-12 max-w-5xl mx-auto">
-            {renderSignificantChanges()}
-
-            <div className="space-y-6">
-              {renderChart('num_files')}
-              {renderChart('num_types')}
-              {renderChart('num_methods')}
-              {renderChart('num_lines')}
-              {renderDensityChart()}
-            </div>
-
-            <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-sm">
-              <h3 className="font-medium text-lg mb-4 text-blue-800">Key Insights:</h3>
-              <ul className="space-y-3">
-                {stats.num_files && (
-                  <li className="flex items-center">
-                    <span className="mr-2">📄</span> Files increased by <span className={`font-medium ml-1 mr-1 ${stats.num_files.percentChange > 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_files.percentChange}%</span> (from {stats.num_files.start} to {stats.num_files.end})
-                  </li>
-                )}
-                {stats.num_types && (
-                  <li className="flex items-center">
-                    <span className="mr-2">🔠</span> Types increased by <span className={`font-medium ml-1 mr-1 ${stats.num_types.percentChange > 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_types.percentChange}%</span> (from {stats.num_types.start} to {stats.num_types.end})
-                  </li>
-                )}
-                {stats.num_methods && (
-                  <li className="flex items-center">
-                    <span className="mr-2">⚙️</span> Methods changed by <span className={`font-medium ml-1 mr-1 ${stats.num_methods.percentChange > 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_methods.percentChange}%</span> (from {stats.num_methods.start} to {stats.num_methods.end})
-                  </li>
-                )}
-                {stats.num_lines && (
-                  <li className="flex items-center">
-                    <span className="mr-2">📝</span> Lines of code changed by <span className={`font-medium ml-1 mr-1 ${stats.num_lines.percentChange > 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.num_lines.percentChange}%</span> (from {stats.num_lines.start.toLocaleString()} to {stats.num_lines.end.toLocaleString()})
-                  </li>
-                )}
-                {stats.code_density && (
-                  <li className="flex items-center">
-                    <span className="mr-2">📊</span> Code density changed by <span className={`font-medium ml-1 mr-1 ${stats.code_density.percentChange > 0 ? 'text-green-600' : 'text-red-600'}`}>{stats.code_density.percentChange}%</span> (from {stats.code_density.start.toFixed(2)} to {stats.code_density.end.toFixed(2)} lines per method)
-                  </li>
-                )}
-              </ul>
-            </div>
-          </div>
-          
-          {/* Header Leaderboard Section */}
-          <div className="mt-16 pt-8 border-t-2 border-gray-300 max-w-full mx-auto w-full">
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">Header File Analysis</h2>
-            <div className="leaderboard-container">
-              <HeaderLeaderboard />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
