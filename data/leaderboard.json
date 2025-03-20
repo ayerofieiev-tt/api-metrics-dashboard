@@ -1733,825 +1733,6 @@
       }
     },
     {
-      "path": "tt_metal/api/tt-metalium/hal.hpp",
-      "filename": "hal.hpp",
-      "num_types": 12,
-      "num_methods": 103,
-      "num_lines": 417,
-      "implementation_lines": 155,
-      "highlight_regions": {
-        "types": [
-          {
-            "start": 20,
-            "end": 20,
-            "type": "enum"
-          },
-          {
-            "start": 24,
-            "end": 24,
-            "type": "enum"
-          },
-          {
-            "start": 28,
-            "end": 28,
-            "type": "enum"
-          },
-          {
-            "start": 32,
-            "end": 37,
-            "type": "enum"
-          },
-          {
-            "start": 39,
-            "end": 60,
-            "type": "enum"
-          },
-          {
-            "start": 62,
-            "end": 62,
-            "type": "enum"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "enum"
-          },
-          {
-            "start": 72,
-            "end": 77,
-            "type": "struct"
-          },
-          {
-            "start": 79,
-            "end": 79,
-            "type": "class"
-          },
-          {
-            "start": 82,
-            "end": 109,
-            "type": "class"
-          },
-          {
-            "start": 137,
-            "end": 281,
-            "type": "class"
-          },
-          {
-            "start": 379,
-            "end": 394,
-            "type": "class"
-          }
-        ],
-        "methods": [
-          {
-            "start": 73,
-            "end": 73,
-            "type": "field"
-          },
-          {
-            "start": 74,
-            "end": 74,
-            "type": "field"
-          },
-          {
-            "start": 75,
-            "end": 75,
-            "type": "field"
-          },
-          {
-            "start": 76,
-            "end": 76,
-            "type": "field"
-          },
-          {
-            "start": 86,
-            "end": 86,
-            "type": "field"
-          },
-          {
-            "start": 87,
-            "end": 87,
-            "type": "field"
-          },
-          {
-            "start": 89,
-            "end": 89,
-            "type": "field"
-          },
-          {
-            "start": 90,
-            "end": 90,
-            "type": "field"
-          },
-          {
-            "start": 91,
-            "end": 91,
-            "type": "field"
-          },
-          {
-            "start": 92,
-            "end": 92,
-            "type": "field"
-          },
-          {
-            "start": 105,
-            "end": 105,
-            "type": "field"
-          },
-          {
-            "start": 106,
-            "end": 106,
-            "type": "field"
-          },
-          {
-            "start": 107,
-            "end": 107,
-            "type": "field"
-          },
-          {
-            "start": 108,
-            "end": 108,
-            "type": "field"
-          },
-          {
-            "start": 148,
-            "end": 148,
-            "type": "field"
-          },
-          {
-            "start": 149,
-            "end": 149,
-            "type": "field"
-          },
-          {
-            "start": 150,
-            "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 151,
-            "end": 151,
-            "type": "field"
-          },
-          {
-            "start": 152,
-            "end": 152,
-            "type": "field"
-          },
-          {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
-            "start": 155,
-            "end": 155,
-            "type": "field"
-          },
-          {
-            "start": 156,
-            "end": 156,
-            "type": "field"
-          },
-          {
-            "start": 157,
-            "end": 157,
-            "type": "field"
-          },
-          {
-            "start": 158,
-            "end": 158,
-            "type": "field"
-          },
-          {
-            "start": 159,
-            "end": 159,
-            "type": "field"
-          },
-          {
-            "start": 160,
-            "end": 160,
-            "type": "field"
-          },
-          {
-            "start": 161,
-            "end": 161,
-            "type": "field"
-          },
-          {
-            "start": 162,
-            "end": 162,
-            "type": "field"
-          },
-          {
-            "start": 163,
-            "end": 163,
-            "type": "field"
-          },
-          {
-            "start": 164,
-            "end": 164,
-            "type": "field"
-          },
-          {
-            "start": 165,
-            "end": 165,
-            "type": "field"
-          },
-          {
-            "start": 166,
-            "end": 166,
-            "type": "field"
-          },
-          {
-            "start": 168,
-            "end": 168,
-            "type": "field"
-          },
-          {
-            "start": 169,
-            "end": 169,
-            "type": "field"
-          },
-          {
-            "start": 170,
-            "end": 170,
-            "type": "field"
-          },
-          {
-            "start": 172,
-            "end": 172,
-            "type": "field"
-          },
-          {
-            "start": 173,
-            "end": 173,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
-            "start": 177,
-            "end": 177,
-            "type": "field"
-          },
-          {
-            "start": 178,
-            "end": 178,
-            "type": "field"
-          },
-          {
-            "start": 179,
-            "end": 179,
-            "type": "field"
-          },
-          {
-            "start": 180,
-            "end": 180,
-            "type": "field"
-          },
-          {
-            "start": 181,
-            "end": 181,
-            "type": "field"
-          },
-          {
-            "start": 182,
-            "end": 182,
-            "type": "field"
-          },
-          {
-            "start": 183,
-            "end": 183,
-            "type": "field"
-          },
-          {
-            "start": 184,
-            "end": 184,
-            "type": "field"
-          },
-          {
-            "start": 185,
-            "end": 185,
-            "type": "field"
-          },
-          {
-            "start": 186,
-            "end": 186,
-            "type": "field"
-          },
-          {
-            "start": 187,
-            "end": 187,
-            "type": "field"
-          },
-          {
-            "start": 188,
-            "end": 188,
-            "type": "field"
-          },
-          {
-            "start": 193,
-            "end": 193,
-            "type": "class_method"
-          },
-          {
-            "start": 195,
-            "end": 195,
-            "type": "class_method"
-          },
-          {
-            "start": 196,
-            "end": 196,
-            "type": "class_method"
-          },
-          {
-            "start": 197,
-            "end": 197,
-            "type": "class_method"
-          },
-          {
-            "start": 199,
-            "end": 199,
-            "type": "class_method"
-          },
-          {
-            "start": 200,
-            "end": 200,
-            "type": "class_method"
-          },
-          {
-            "start": 201,
-            "end": 203,
-            "type": "class_method"
-          },
-          {
-            "start": 204,
-            "end": 206,
-            "type": "class_method"
-          },
-          {
-            "start": 207,
-            "end": 209,
-            "type": "class_method"
-          },
-          {
-            "start": 210,
-            "end": 212,
-            "type": "class_method"
-          },
-          {
-            "start": 214,
-            "end": 214,
-            "type": "class_method"
-          },
-          {
-            "start": 215,
-            "end": 215,
-            "type": "class_method"
-          },
-          {
-            "start": 216,
-            "end": 216,
-            "type": "class_method"
-          },
-          {
-            "start": 219,
-            "end": 222,
-            "type": "class_method"
-          },
-          {
-            "start": 224,
-            "end": 224,
-            "type": "class_method"
-          },
-          {
-            "start": 225,
-            "end": 227,
-            "type": "class_method"
-          },
-          {
-            "start": 229,
-            "end": 229,
-            "type": "class_method"
-          },
-          {
-            "start": 230,
-            "end": 230,
-            "type": "class_method"
-          },
-          {
-            "start": 231,
-            "end": 231,
-            "type": "class_method"
-          },
-          {
-            "start": 232,
-            "end": 232,
-            "type": "class_method"
-          },
-          {
-            "start": 233,
-            "end": 233,
-            "type": "class_method"
-          },
-          {
-            "start": 234,
-            "end": 234,
-            "type": "class_method"
-          },
-          {
-            "start": 235,
-            "end": 235,
-            "type": "class_method"
-          },
-          {
-            "start": 237,
-            "end": 237,
-            "type": "class_method"
-          },
-          {
-            "start": 238,
-            "end": 238,
-            "type": "class_method"
-          },
-          {
-            "start": 239,
-            "end": 239,
-            "type": "class_method"
-          },
-          {
-            "start": 240,
-            "end": 240,
-            "type": "class_method"
-          },
-          {
-            "start": 241,
-            "end": 241,
-            "type": "field"
-          },
-          {
-            "start": 242,
-            "end": 242,
-            "type": "field"
-          },
-          {
-            "start": 243,
-            "end": 243,
-            "type": "field"
-          },
-          {
-            "start": 244,
-            "end": 244,
-            "type": "field"
-          },
-          {
-            "start": 245,
-            "end": 245,
-            "type": "field"
-          },
-          {
-            "start": 246,
-            "end": 246,
-            "type": "field"
-          },
-          {
-            "start": 247,
-            "end": 248,
-            "type": "field"
-          },
-          {
-            "start": 254,
-            "end": 254,
-            "type": "field"
-          },
-          {
-            "start": 259,
-            "end": 259,
-            "type": "field"
-          },
-          {
-            "start": 261,
-            "end": 261,
-            "type": "field"
-          },
-          {
-            "start": 263,
-            "end": 263,
-            "type": "field"
-          },
-          {
-            "start": 265,
-            "end": 265,
-            "type": "field"
-          },
-          {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 270,
-            "type": "field"
-          },
-          {
-            "start": 272,
-            "end": 274,
-            "type": "class_method"
-          },
-          {
-            "start": 276,
-            "end": 276,
-            "type": "class_method"
-          },
-          {
-            "start": 278,
-            "end": 278,
-            "type": "class_method"
-          },
-          {
-            "start": 280,
-            "end": 280,
-            "type": "class_method"
-          },
-          {
-            "start": 381,
-            "end": 381,
-            "type": "class_method"
-          },
-          {
-            "start": 382,
-            "end": 382,
-            "type": "class_method"
-          },
-          {
-            "start": 383,
-            "end": 383,
-            "type": "class_method"
-          },
-          {
-            "start": 384,
-            "end": 384,
-            "type": "class_method"
-          },
-          {
-            "start": 386,
-            "end": 386,
-            "type": "class_method"
-          },
-          {
-            "start": 387,
-            "end": 387,
-            "type": "class_method"
-          },
-          {
-            "start": 390,
-            "end": 393,
-            "type": "class_method"
-          }
-        ],
-        "implementations": [
-          {
-            "start": 112,
-            "end": 116
-          },
-          {
-            "start": 118,
-            "end": 122
-          },
-          {
-            "start": 124,
-            "end": 124
-          },
-          {
-            "start": 126,
-            "end": 129
-          },
-          {
-            "start": 131,
-            "end": 135
-          },
-          {
-            "start": 193,
-            "end": 193
-          },
-          {
-            "start": 195,
-            "end": 195
-          },
-          {
-            "start": 196,
-            "end": 196
-          },
-          {
-            "start": 197,
-            "end": 197
-          },
-          {
-            "start": 199,
-            "end": 199
-          },
-          {
-            "start": 200,
-            "end": 200
-          },
-          {
-            "start": 201,
-            "end": 203
-          },
-          {
-            "start": 204,
-            "end": 206
-          },
-          {
-            "start": 207,
-            "end": 209
-          },
-          {
-            "start": 210,
-            "end": 212
-          },
-          {
-            "start": 214,
-            "end": 214
-          },
-          {
-            "start": 215,
-            "end": 215
-          },
-          {
-            "start": 216,
-            "end": 216
-          },
-          {
-            "start": 219,
-            "end": 222
-          },
-          {
-            "start": 224,
-            "end": 224
-          },
-          {
-            "start": 225,
-            "end": 227
-          },
-          {
-            "start": 229,
-            "end": 229
-          },
-          {
-            "start": 230,
-            "end": 230
-          },
-          {
-            "start": 231,
-            "end": 231
-          },
-          {
-            "start": 232,
-            "end": 232
-          },
-          {
-            "start": 233,
-            "end": 233
-          },
-          {
-            "start": 234,
-            "end": 234
-          },
-          {
-            "start": 235,
-            "end": 235
-          },
-          {
-            "start": 237,
-            "end": 237
-          },
-          {
-            "start": 238,
-            "end": 238
-          },
-          {
-            "start": 239,
-            "end": 239
-          },
-          {
-            "start": 240,
-            "end": 240
-          },
-          {
-            "start": 272,
-            "end": 274
-          },
-          {
-            "start": 276,
-            "end": 276
-          },
-          {
-            "start": 278,
-            "end": 278
-          },
-          {
-            "start": 280,
-            "end": 280
-          },
-          {
-            "start": 283,
-            "end": 283
-          },
-          {
-            "start": 285,
-            "end": 300
-          },
-          {
-            "start": 302,
-            "end": 317
-          },
-          {
-            "start": 319,
-            "end": 321
-          },
-          {
-            "start": 323,
-            "end": 323
-          },
-          {
-            "start": 326,
-            "end": 330
-          },
-          {
-            "start": 333,
-            "end": 336
-          },
-          {
-            "start": 338,
-            "end": 342
-          },
-          {
-            "start": 345,
-            "end": 349
-          },
-          {
-            "start": 351,
-            "end": 355
-          },
-          {
-            "start": 357,
-            "end": 361
-          },
-          {
-            "start": 363,
-            "end": 367
-          },
-          {
-            "start": 369,
-            "end": 371
-          },
-          {
-            "start": 373,
-            "end": 377
-          },
-          {
-            "start": 381,
-            "end": 381
-          },
-          {
-            "start": 382,
-            "end": 382
-          },
-          {
-            "start": 383,
-            "end": 383
-          },
-          {
-            "start": 384,
-            "end": 384
-          },
-          {
-            "start": 386,
-            "end": 386
-          },
-          {
-            "start": 387,
-            "end": 387
-          },
-          {
-            "start": 390,
-            "end": 393
-          }
-        ]
-      }
-    },
-    {
       "path": "tt_metal/api/tt-metalium/dev_msgs.h",
       "filename": "dev_msgs.h",
       "num_types": 68,
@@ -4384,8 +3565,8 @@
       "path": "tt_metal/api/tt-metalium/mesh_device.hpp",
       "filename": "mesh_device.hpp",
       "num_types": 10,
-      "num_methods": 155,
-      "num_lines": 331,
+      "num_methods": 153,
+      "num_lines": 327,
       "implementation_lines": 6,
       "highlight_regions": {
         "types": [
@@ -4420,80 +3601,90 @@
             "type": "class"
           },
           {
-            "start": 38,
-            "end": 317,
+            "start": 36,
+            "end": 313,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 323,
-            "end": 327,
+            "start": 319,
+            "end": 323,
             "type": "struct"
           }
         ],
         "methods": [
           {
+            "start": 39,
+            "end": 66,
+            "type": "field"
+          },
+          {
             "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 68,
             "end": 68,
             "type": "field"
           },
           {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
-            "type": "field"
-          },
-          {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
+            "start": 69,
+            "end": 69,
             "type": "field"
           },
           {
@@ -4502,18 +3693,13 @@
             "type": "field"
           },
           {
-            "start": 71,
-            "end": 71,
-            "type": "field"
-          },
-          {
             "start": 72,
             "end": 72,
             "type": "field"
           },
           {
-            "start": 74,
-            "end": 74,
+            "start": 73,
+            "end": 73,
             "type": "field"
           },
           {
@@ -4527,13 +3713,13 @@
             "type": "field"
           },
           {
-            "start": 79,
-            "end": 79,
+            "start": 78,
+            "end": 78,
             "type": "field"
           },
           {
-            "start": 80,
-            "end": 80,
+            "start": 79,
+            "end": 79,
             "type": "field"
           },
           {
@@ -4542,8 +3728,8 @@
             "type": "field"
           },
           {
-            "start": 83,
-            "end": 83,
+            "start": 82,
+            "end": 82,
             "type": "field"
           },
           {
@@ -4557,8 +3743,8 @@
             "type": "field"
           },
           {
-            "start": 88,
-            "end": 88,
+            "start": 89,
+            "end": 89,
             "type": "field"
           },
           {
@@ -4567,13 +3753,13 @@
             "type": "field"
           },
           {
-            "start": 93,
-            "end": 93,
-            "type": "field"
+            "start": 100,
+            "end": 100,
+            "type": "class_method"
           },
           {
-            "start": 102,
-            "end": 102,
+            "start": 101,
+            "end": 101,
             "type": "class_method"
           },
           {
@@ -4582,14 +3768,19 @@
             "type": "class_method"
           },
           {
-            "start": 105,
-            "end": 105,
+            "start": 104,
+            "end": 104,
             "type": "class_method"
           },
           {
-            "start": 106,
-            "end": 106,
-            "type": "class_method"
+            "start": 107,
+            "end": 107,
+            "type": "field"
+          },
+          {
+            "start": 108,
+            "end": 108,
+            "type": "field"
           },
           {
             "start": 109,
@@ -4607,13 +3798,13 @@
             "type": "field"
           },
           {
-            "start": 112,
-            "end": 112,
+            "start": 113,
+            "end": 113,
             "type": "field"
           },
           {
-            "start": 113,
-            "end": 113,
+            "start": 114,
+            "end": 114,
             "type": "field"
           },
           {
@@ -4622,13 +3813,13 @@
             "type": "field"
           },
           {
-            "start": 116,
-            "end": 116,
+            "start": 117,
+            "end": 117,
             "type": "field"
           },
           {
-            "start": 117,
-            "end": 117,
+            "start": 118,
+            "end": 118,
             "type": "field"
           },
           {
@@ -4639,11 +3830,6 @@
           {
             "start": 120,
             "end": 120,
-            "type": "field"
-          },
-          {
-            "start": 121,
-            "end": 121,
             "type": "field"
           },
           {
@@ -4662,11 +3848,6 @@
             "type": "field"
           },
           {
-            "start": 126,
-            "end": 126,
-            "type": "field"
-          },
-          {
             "start": 127,
             "end": 127,
             "type": "field"
@@ -4674,6 +3855,16 @@
           {
             "start": 128,
             "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
+            "end": 129,
+            "type": "field"
+          },
+          {
+            "start": 130,
+            "end": 130,
             "type": "field"
           },
           {
@@ -4748,11 +3939,6 @@
           },
           {
             "start": 145,
-            "end": 145,
-            "type": "field"
-          },
-          {
-            "start": 146,
             "end": 146,
             "type": "field"
           },
@@ -4768,6 +3954,11 @@
           },
           {
             "start": 149,
+            "end": 149,
+            "type": "field"
+          },
+          {
+            "start": 150,
             "end": 150,
             "type": "field"
           },
@@ -4782,16 +3973,6 @@
             "type": "field"
           },
           {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
             "start": 155,
             "end": 155,
             "type": "field"
@@ -4803,17 +3984,17 @@
           },
           {
             "start": 159,
-            "end": 159,
+            "end": 163,
             "type": "field"
           },
           {
-            "start": 160,
-            "end": 160,
+            "start": 164,
+            "end": 164,
             "type": "field"
           },
           {
-            "start": 163,
-            "end": 167,
+            "start": 165,
+            "end": 165,
             "type": "field"
           },
           {
@@ -4824,6 +4005,16 @@
           {
             "start": 169,
             "end": 169,
+            "type": "field"
+          },
+          {
+            "start": 170,
+            "end": 170,
+            "type": "field"
+          },
+          {
+            "start": 171,
+            "end": 171,
             "type": "field"
           },
           {
@@ -4842,42 +4033,42 @@
             "type": "field"
           },
           {
-            "start": 175,
-            "end": 175,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
             "start": 177,
             "end": 177,
             "type": "field"
           },
           {
-            "start": 178,
-            "end": 178,
+            "start": 179,
+            "end": 179,
             "type": "field"
           },
           {
-            "start": 181,
-            "end": 181,
+            "start": 180,
+            "end": 180,
             "type": "field"
           },
           {
             "start": 183,
-            "end": 183,
+            "end": 188,
             "type": "field"
           },
           {
-            "start": 184,
-            "end": 184,
+            "start": 189,
+            "end": 189,
             "type": "field"
           },
           {
-            "start": 187,
+            "start": 190,
+            "end": 190,
+            "type": "field"
+          },
+          {
+            "start": 191,
+            "end": 191,
+            "type": "field"
+          },
+          {
+            "start": 192,
             "end": 192,
             "type": "field"
           },
@@ -4943,11 +4134,6 @@
           },
           {
             "start": 205,
-            "end": 205,
-            "type": "field"
-          },
-          {
-            "start": 206,
             "end": 206,
             "type": "field"
           },
@@ -4963,6 +4149,11 @@
           },
           {
             "start": 209,
+            "end": 209,
+            "type": "field"
+          },
+          {
+            "start": 210,
             "end": 210,
             "type": "field"
           },
@@ -5022,17 +4213,7 @@
             "type": "field"
           },
           {
-            "start": 222,
-            "end": 222,
-            "type": "field"
-          },
-          {
             "start": 223,
-            "end": 223,
-            "type": "field"
-          },
-          {
-            "start": 224,
             "end": 224,
             "type": "field"
           },
@@ -5042,13 +4223,18 @@
             "type": "field"
           },
           {
-            "start": 227,
-            "end": 228,
+            "start": 231,
+            "end": 231,
             "type": "field"
           },
           {
-            "start": 229,
-            "end": 229,
+            "start": 232,
+            "end": 232,
+            "type": "field"
+          },
+          {
+            "start": 233,
+            "end": 233,
             "type": "field"
           },
           {
@@ -5057,18 +4243,8 @@
             "type": "field"
           },
           {
-            "start": 236,
-            "end": 236,
-            "type": "field"
-          },
-          {
             "start": 237,
             "end": 237,
-            "type": "field"
-          },
-          {
-            "start": 239,
-            "end": 239,
             "type": "field"
           },
           {
@@ -5077,23 +4253,33 @@
             "type": "field"
           },
           {
+            "start": 242,
+            "end": 242,
+            "type": "field"
+          },
+          {
+            "start": 243,
+            "end": 243,
+            "type": "field"
+          },
+          {
             "start": 245,
             "end": 245,
             "type": "field"
           },
           {
-            "start": 246,
-            "end": 246,
+            "start": 262,
+            "end": 262,
             "type": "field"
           },
           {
-            "start": 247,
-            "end": 247,
+            "start": 263,
+            "end": 263,
             "type": "field"
           },
           {
-            "start": 249,
-            "end": 249,
+            "start": 265,
+            "end": 265,
             "type": "field"
           },
           {
@@ -5102,28 +4288,18 @@
             "type": "field"
           },
           {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 269,
+            "start": 268,
+            "end": 268,
             "type": "field"
           },
           {
             "start": 270,
-            "end": 270,
+            "end": 271,
             "type": "field"
           },
           {
-            "start": 272,
-            "end": 272,
-            "type": "field"
-          },
-          {
-            "start": 274,
-            "end": 275,
+            "start": 273,
+            "end": 273,
             "type": "field"
           },
           {
@@ -5132,23 +4308,28 @@
             "type": "field"
           },
           {
-            "start": 281,
-            "end": 281,
+            "start": 278,
+            "end": 279,
             "type": "field"
           },
           {
-            "start": 282,
+            "start": 281,
+            "end": 282,
+            "type": "field"
+          },
+          {
+            "start": 283,
             "end": 283,
             "type": "field"
           },
           {
             "start": 285,
-            "end": 286,
+            "end": 285,
             "type": "field"
           },
           {
-            "start": 287,
-            "end": 287,
+            "start": 286,
+            "end": 286,
             "type": "field"
           },
           {
@@ -5162,85 +4343,75 @@
             "type": "field"
           },
           {
-            "start": 293,
-            "end": 293,
+            "start": 292,
+            "end": 298,
             "type": "field"
           },
           {
-            "start": 294,
-            "end": 294,
+            "start": 299,
+            "end": 305,
             "type": "field"
           },
           {
-            "start": 296,
-            "end": 302,
+            "start": 306,
+            "end": 312,
             "type": "field"
           },
           {
-            "start": 303,
-            "end": 309,
+            "start": 41,
+            "end": 41,
             "type": "field"
           },
           {
-            "start": 310,
-            "end": 316,
+            "start": 42,
+            "end": 42,
             "type": "field"
           },
           {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
+            "start": 61,
+            "end": 61,
             "type": "class_method"
           },
           {
-            "start": 64,
-            "end": 64,
+            "start": 62,
+            "end": 62,
             "type": "class_method"
           },
           {
-            "start": 67,
-            "end": 67,
+            "start": 65,
+            "end": 65,
             "type": "field"
           },
           {
-            "start": 326,
-            "end": 326,
+            "start": 322,
+            "end": 322,
             "type": "field"
           }
         ],
         "implementations": [
           {
-            "start": 63,
-            "end": 63
+            "start": 61,
+            "end": 61
           },
           {
-            "start": 64,
-            "end": 64
+            "start": 62,
+            "end": 62
           },
           {
-            "start": 102,
-            "end": 102
+            "start": 100,
+            "end": 100
+          },
+          {
+            "start": 101,
+            "end": 101
           },
           {
             "start": 103,
             "end": 103
           },
           {
-            "start": 105,
-            "end": 105
-          },
-          {
-            "start": 106,
-            "end": 106
+            "start": 104,
+            "end": 104
           }
         ]
       }
@@ -6004,6 +5175,734 @@
           }
         ]
       }
+    },
+    {
+      "path": "tt_metal/api/tt-metalium/device_impl.hpp",
+      "filename": "device_impl.hpp",
+      "num_types": 1,
+      "num_methods": 131,
+      "num_lines": 269,
+      "implementation_lines": 13,
+      "highlight_regions": {
+        "types": [
+          {
+            "start": 28,
+            "end": 267,
+            "type": "class"
+          }
+        ],
+        "methods": [
+          {
+            "start": 31,
+            "end": 31,
+            "type": "class_method"
+          },
+          {
+            "start": 45,
+            "end": 45,
+            "type": "class_method"
+          },
+          {
+            "start": 46,
+            "end": 46,
+            "type": "class_method"
+          },
+          {
+            "start": 49,
+            "end": 49,
+            "type": "field"
+          },
+          {
+            "start": 51,
+            "end": 51,
+            "type": "field"
+          },
+          {
+            "start": 53,
+            "end": 53,
+            "type": "class_method"
+          },
+          {
+            "start": 55,
+            "end": 55,
+            "type": "class_method"
+          },
+          {
+            "start": 57,
+            "end": 57,
+            "type": "class_method"
+          },
+          {
+            "start": 59,
+            "end": 59,
+            "type": "class_method"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "field"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "field"
+          },
+          {
+            "start": 63,
+            "end": 63,
+            "type": "field"
+          },
+          {
+            "start": 64,
+            "end": 64,
+            "type": "field"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 66,
+            "end": 66,
+            "type": "field"
+          },
+          {
+            "start": 69,
+            "end": 69,
+            "type": "field"
+          },
+          {
+            "start": 71,
+            "end": 71,
+            "type": "field"
+          },
+          {
+            "start": 72,
+            "end": 72,
+            "type": "field"
+          },
+          {
+            "start": 73,
+            "end": 73,
+            "type": "field"
+          },
+          {
+            "start": 75,
+            "end": 75,
+            "type": "field"
+          },
+          {
+            "start": 76,
+            "end": 76,
+            "type": "field"
+          },
+          {
+            "start": 79,
+            "end": 79,
+            "type": "field"
+          },
+          {
+            "start": 80,
+            "end": 80,
+            "type": "field"
+          },
+          {
+            "start": 83,
+            "end": 83,
+            "type": "field"
+          },
+          {
+            "start": 84,
+            "end": 84,
+            "type": "field"
+          },
+          {
+            "start": 87,
+            "end": 87,
+            "type": "field"
+          },
+          {
+            "start": 88,
+            "end": 88,
+            "type": "field"
+          },
+          {
+            "start": 89,
+            "end": 89,
+            "type": "field"
+          },
+          {
+            "start": 90,
+            "end": 90,
+            "type": "field"
+          },
+          {
+            "start": 92,
+            "end": 92,
+            "type": "field"
+          },
+          {
+            "start": 94,
+            "end": 94,
+            "type": "field"
+          },
+          {
+            "start": 95,
+            "end": 95,
+            "type": "field"
+          },
+          {
+            "start": 97,
+            "end": 97,
+            "type": "field"
+          },
+          {
+            "start": 98,
+            "end": 98,
+            "type": "field"
+          },
+          {
+            "start": 100,
+            "end": 100,
+            "type": "field"
+          },
+          {
+            "start": 101,
+            "end": 101,
+            "type": "field"
+          },
+          {
+            "start": 103,
+            "end": 103,
+            "type": "field"
+          },
+          {
+            "start": 104,
+            "end": 104,
+            "type": "field"
+          },
+          {
+            "start": 109,
+            "end": 109,
+            "type": "class_method"
+          },
+          {
+            "start": 111,
+            "end": 111,
+            "type": "class_method"
+          },
+          {
+            "start": 113,
+            "end": 113,
+            "type": "field"
+          },
+          {
+            "start": 114,
+            "end": 114,
+            "type": "field"
+          },
+          {
+            "start": 116,
+            "end": 116,
+            "type": "class_method"
+          },
+          {
+            "start": 117,
+            "end": 117,
+            "type": "field"
+          },
+          {
+            "start": 120,
+            "end": 120,
+            "type": "field"
+          },
+          {
+            "start": 121,
+            "end": 121,
+            "type": "field"
+          },
+          {
+            "start": 122,
+            "end": 126,
+            "type": "field"
+          },
+          {
+            "start": 127,
+            "end": 127,
+            "type": "field"
+          },
+          {
+            "start": 128,
+            "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
+            "end": 129,
+            "type": "class_method"
+          },
+          {
+            "start": 130,
+            "end": 130,
+            "type": "class_method"
+          },
+          {
+            "start": 132,
+            "end": 132,
+            "type": "field"
+          },
+          {
+            "start": 134,
+            "end": 134,
+            "type": "field"
+          },
+          {
+            "start": 135,
+            "end": 135,
+            "type": "field"
+          },
+          {
+            "start": 139,
+            "end": 144,
+            "type": "field"
+          },
+          {
+            "start": 145,
+            "end": 145,
+            "type": "field"
+          },
+          {
+            "start": 146,
+            "end": 146,
+            "type": "field"
+          },
+          {
+            "start": 147,
+            "end": 147,
+            "type": "field"
+          },
+          {
+            "start": 148,
+            "end": 148,
+            "type": "field"
+          },
+          {
+            "start": 150,
+            "end": 150,
+            "type": "field"
+          },
+          {
+            "start": 153,
+            "end": 153,
+            "type": "field"
+          },
+          {
+            "start": 157,
+            "end": 157,
+            "type": "field"
+          },
+          {
+            "start": 158,
+            "end": 158,
+            "type": "field"
+          },
+          {
+            "start": 159,
+            "end": 159,
+            "type": "field"
+          },
+          {
+            "start": 160,
+            "end": 160,
+            "type": "field"
+          },
+          {
+            "start": 161,
+            "end": 161,
+            "type": "field"
+          },
+          {
+            "start": 163,
+            "end": 163,
+            "type": "field"
+          },
+          {
+            "start": 167,
+            "end": 167,
+            "type": "field"
+          },
+          {
+            "start": 168,
+            "end": 168,
+            "type": "field"
+          },
+          {
+            "start": 169,
+            "end": 169,
+            "type": "class_method"
+          },
+          {
+            "start": 170,
+            "end": 170,
+            "type": "field"
+          },
+          {
+            "start": 172,
+            "end": 172,
+            "type": "field"
+          },
+          {
+            "start": 174,
+            "end": 174,
+            "type": "field"
+          },
+          {
+            "start": 176,
+            "end": 176,
+            "type": "field"
+          },
+          {
+            "start": 177,
+            "end": 177,
+            "type": "field"
+          },
+          {
+            "start": 178,
+            "end": 178,
+            "type": "field"
+          },
+          {
+            "start": 180,
+            "end": 180,
+            "type": "field"
+          },
+          {
+            "start": 181,
+            "end": 181,
+            "type": "field"
+          },
+          {
+            "start": 182,
+            "end": 182,
+            "type": "field"
+          },
+          {
+            "start": 183,
+            "end": 183,
+            "type": "field"
+          },
+          {
+            "start": 184,
+            "end": 184,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
+            "type": "field"
+          },
+          {
+            "start": 187,
+            "end": 187,
+            "type": "field"
+          },
+          {
+            "start": 188,
+            "end": 188,
+            "type": "field"
+          },
+          {
+            "start": 189,
+            "end": 189,
+            "type": "field"
+          },
+          {
+            "start": 190,
+            "end": 190,
+            "type": "field"
+          },
+          {
+            "start": 191,
+            "end": 191,
+            "type": "field"
+          },
+          {
+            "start": 194,
+            "end": 195,
+            "type": "field"
+          },
+          {
+            "start": 197,
+            "end": 197,
+            "type": "field"
+          },
+          {
+            "start": 200,
+            "end": 200,
+            "type": "field"
+          },
+          {
+            "start": 202,
+            "end": 202,
+            "type": "field"
+          },
+          {
+            "start": 203,
+            "end": 204,
+            "type": "field"
+          },
+          {
+            "start": 205,
+            "end": 205,
+            "type": "field"
+          },
+          {
+            "start": 206,
+            "end": 206,
+            "type": "field"
+          },
+          {
+            "start": 208,
+            "end": 208,
+            "type": "field"
+          },
+          {
+            "start": 210,
+            "end": 210,
+            "type": "field"
+          },
+          {
+            "start": 211,
+            "end": 211,
+            "type": "field"
+          },
+          {
+            "start": 212,
+            "end": 212,
+            "type": "field"
+          },
+          {
+            "start": 213,
+            "end": 215,
+            "type": "field"
+          },
+          {
+            "start": 217,
+            "end": 217,
+            "type": "field"
+          },
+          {
+            "start": 219,
+            "end": 219,
+            "type": "field"
+          },
+          {
+            "start": 221,
+            "end": 221,
+            "type": "field"
+          },
+          {
+            "start": 222,
+            "end": 222,
+            "type": "field"
+          },
+          {
+            "start": 224,
+            "end": 224,
+            "type": "field"
+          },
+          {
+            "start": 225,
+            "end": 225,
+            "type": "field"
+          },
+          {
+            "start": 226,
+            "end": 226,
+            "type": "field"
+          },
+          {
+            "start": 228,
+            "end": 228,
+            "type": "field"
+          },
+          {
+            "start": 229,
+            "end": 229,
+            "type": "field"
+          },
+          {
+            "start": 231,
+            "end": 231,
+            "type": "field"
+          },
+          {
+            "start": 233,
+            "end": 233,
+            "type": "field"
+          },
+          {
+            "start": 235,
+            "end": 235,
+            "type": "field"
+          },
+          {
+            "start": 236,
+            "end": 236,
+            "type": "field"
+          },
+          {
+            "start": 239,
+            "end": 239,
+            "type": "field"
+          },
+          {
+            "start": 243,
+            "end": 243,
+            "type": "field"
+          },
+          {
+            "start": 244,
+            "end": 244,
+            "type": "field"
+          },
+          {
+            "start": 245,
+            "end": 245,
+            "type": "field"
+          },
+          {
+            "start": 246,
+            "end": 246,
+            "type": "field"
+          },
+          {
+            "start": 247,
+            "end": 247,
+            "type": "field"
+          },
+          {
+            "start": 250,
+            "end": 250,
+            "type": "field"
+          },
+          {
+            "start": 252,
+            "end": 252,
+            "type": "field"
+          },
+          {
+            "start": 253,
+            "end": 253,
+            "type": "field"
+          },
+          {
+            "start": 254,
+            "end": 254,
+            "type": "field"
+          },
+          {
+            "start": 255,
+            "end": 255,
+            "type": "field"
+          },
+          {
+            "start": 257,
+            "end": 257,
+            "type": "field"
+          },
+          {
+            "start": 258,
+            "end": 258,
+            "type": "field"
+          },
+          {
+            "start": 259,
+            "end": 259,
+            "type": "field"
+          },
+          {
+            "start": 260,
+            "end": 260,
+            "type": "field"
+          },
+          {
+            "start": 262,
+            "end": 262,
+            "type": "field"
+          },
+          {
+            "start": 264,
+            "end": 264,
+            "type": "field"
+          },
+          {
+            "start": 265,
+            "end": 266,
+            "type": "field"
+          }
+        ],
+        "implementations": [
+          {
+            "start": 31,
+            "end": 31
+          },
+          {
+            "start": 45,
+            "end": 45
+          },
+          {
+            "start": 46,
+            "end": 46
+          },
+          {
+            "start": 53,
+            "end": 53
+          },
+          {
+            "start": 55,
+            "end": 55
+          },
+          {
+            "start": 57,
+            "end": 57
+          },
+          {
+            "start": 59,
+            "end": 59
+          },
+          {
+            "start": 109,
+            "end": 109
+          },
+          {
+            "start": 111,
+            "end": 111
+          },
+          {
+            "start": 116,
+            "end": 116
+          },
+          {
+            "start": 129,
+            "end": 129
+          },
+          {
+            "start": 130,
+            "end": 130
+          },
+          {
+            "start": 169,
+            "end": 169
+          }
+        ]
+      }
     }
   ],
   "most_implementation_lines": [
@@ -6649,825 +6548,6 @@
           {
             "start": 457,
             "end": 460
-          }
-        ]
-      }
-    },
-    {
-      "path": "tt_metal/api/tt-metalium/hal.hpp",
-      "filename": "hal.hpp",
-      "num_types": 12,
-      "num_methods": 103,
-      "num_lines": 417,
-      "implementation_lines": 155,
-      "highlight_regions": {
-        "types": [
-          {
-            "start": 20,
-            "end": 20,
-            "type": "enum"
-          },
-          {
-            "start": 24,
-            "end": 24,
-            "type": "enum"
-          },
-          {
-            "start": 28,
-            "end": 28,
-            "type": "enum"
-          },
-          {
-            "start": 32,
-            "end": 37,
-            "type": "enum"
-          },
-          {
-            "start": 39,
-            "end": 60,
-            "type": "enum"
-          },
-          {
-            "start": 62,
-            "end": 62,
-            "type": "enum"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "enum"
-          },
-          {
-            "start": 72,
-            "end": 77,
-            "type": "struct"
-          },
-          {
-            "start": 79,
-            "end": 79,
-            "type": "class"
-          },
-          {
-            "start": 82,
-            "end": 109,
-            "type": "class"
-          },
-          {
-            "start": 137,
-            "end": 281,
-            "type": "class"
-          },
-          {
-            "start": 379,
-            "end": 394,
-            "type": "class"
-          }
-        ],
-        "methods": [
-          {
-            "start": 73,
-            "end": 73,
-            "type": "field"
-          },
-          {
-            "start": 74,
-            "end": 74,
-            "type": "field"
-          },
-          {
-            "start": 75,
-            "end": 75,
-            "type": "field"
-          },
-          {
-            "start": 76,
-            "end": 76,
-            "type": "field"
-          },
-          {
-            "start": 86,
-            "end": 86,
-            "type": "field"
-          },
-          {
-            "start": 87,
-            "end": 87,
-            "type": "field"
-          },
-          {
-            "start": 89,
-            "end": 89,
-            "type": "field"
-          },
-          {
-            "start": 90,
-            "end": 90,
-            "type": "field"
-          },
-          {
-            "start": 91,
-            "end": 91,
-            "type": "field"
-          },
-          {
-            "start": 92,
-            "end": 92,
-            "type": "field"
-          },
-          {
-            "start": 105,
-            "end": 105,
-            "type": "field"
-          },
-          {
-            "start": 106,
-            "end": 106,
-            "type": "field"
-          },
-          {
-            "start": 107,
-            "end": 107,
-            "type": "field"
-          },
-          {
-            "start": 108,
-            "end": 108,
-            "type": "field"
-          },
-          {
-            "start": 148,
-            "end": 148,
-            "type": "field"
-          },
-          {
-            "start": 149,
-            "end": 149,
-            "type": "field"
-          },
-          {
-            "start": 150,
-            "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 151,
-            "end": 151,
-            "type": "field"
-          },
-          {
-            "start": 152,
-            "end": 152,
-            "type": "field"
-          },
-          {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
-            "start": 155,
-            "end": 155,
-            "type": "field"
-          },
-          {
-            "start": 156,
-            "end": 156,
-            "type": "field"
-          },
-          {
-            "start": 157,
-            "end": 157,
-            "type": "field"
-          },
-          {
-            "start": 158,
-            "end": 158,
-            "type": "field"
-          },
-          {
-            "start": 159,
-            "end": 159,
-            "type": "field"
-          },
-          {
-            "start": 160,
-            "end": 160,
-            "type": "field"
-          },
-          {
-            "start": 161,
-            "end": 161,
-            "type": "field"
-          },
-          {
-            "start": 162,
-            "end": 162,
-            "type": "field"
-          },
-          {
-            "start": 163,
-            "end": 163,
-            "type": "field"
-          },
-          {
-            "start": 164,
-            "end": 164,
-            "type": "field"
-          },
-          {
-            "start": 165,
-            "end": 165,
-            "type": "field"
-          },
-          {
-            "start": 166,
-            "end": 166,
-            "type": "field"
-          },
-          {
-            "start": 168,
-            "end": 168,
-            "type": "field"
-          },
-          {
-            "start": 169,
-            "end": 169,
-            "type": "field"
-          },
-          {
-            "start": 170,
-            "end": 170,
-            "type": "field"
-          },
-          {
-            "start": 172,
-            "end": 172,
-            "type": "field"
-          },
-          {
-            "start": 173,
-            "end": 173,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
-            "start": 177,
-            "end": 177,
-            "type": "field"
-          },
-          {
-            "start": 178,
-            "end": 178,
-            "type": "field"
-          },
-          {
-            "start": 179,
-            "end": 179,
-            "type": "field"
-          },
-          {
-            "start": 180,
-            "end": 180,
-            "type": "field"
-          },
-          {
-            "start": 181,
-            "end": 181,
-            "type": "field"
-          },
-          {
-            "start": 182,
-            "end": 182,
-            "type": "field"
-          },
-          {
-            "start": 183,
-            "end": 183,
-            "type": "field"
-          },
-          {
-            "start": 184,
-            "end": 184,
-            "type": "field"
-          },
-          {
-            "start": 185,
-            "end": 185,
-            "type": "field"
-          },
-          {
-            "start": 186,
-            "end": 186,
-            "type": "field"
-          },
-          {
-            "start": 187,
-            "end": 187,
-            "type": "field"
-          },
-          {
-            "start": 188,
-            "end": 188,
-            "type": "field"
-          },
-          {
-            "start": 193,
-            "end": 193,
-            "type": "class_method"
-          },
-          {
-            "start": 195,
-            "end": 195,
-            "type": "class_method"
-          },
-          {
-            "start": 196,
-            "end": 196,
-            "type": "class_method"
-          },
-          {
-            "start": 197,
-            "end": 197,
-            "type": "class_method"
-          },
-          {
-            "start": 199,
-            "end": 199,
-            "type": "class_method"
-          },
-          {
-            "start": 200,
-            "end": 200,
-            "type": "class_method"
-          },
-          {
-            "start": 201,
-            "end": 203,
-            "type": "class_method"
-          },
-          {
-            "start": 204,
-            "end": 206,
-            "type": "class_method"
-          },
-          {
-            "start": 207,
-            "end": 209,
-            "type": "class_method"
-          },
-          {
-            "start": 210,
-            "end": 212,
-            "type": "class_method"
-          },
-          {
-            "start": 214,
-            "end": 214,
-            "type": "class_method"
-          },
-          {
-            "start": 215,
-            "end": 215,
-            "type": "class_method"
-          },
-          {
-            "start": 216,
-            "end": 216,
-            "type": "class_method"
-          },
-          {
-            "start": 219,
-            "end": 222,
-            "type": "class_method"
-          },
-          {
-            "start": 224,
-            "end": 224,
-            "type": "class_method"
-          },
-          {
-            "start": 225,
-            "end": 227,
-            "type": "class_method"
-          },
-          {
-            "start": 229,
-            "end": 229,
-            "type": "class_method"
-          },
-          {
-            "start": 230,
-            "end": 230,
-            "type": "class_method"
-          },
-          {
-            "start": 231,
-            "end": 231,
-            "type": "class_method"
-          },
-          {
-            "start": 232,
-            "end": 232,
-            "type": "class_method"
-          },
-          {
-            "start": 233,
-            "end": 233,
-            "type": "class_method"
-          },
-          {
-            "start": 234,
-            "end": 234,
-            "type": "class_method"
-          },
-          {
-            "start": 235,
-            "end": 235,
-            "type": "class_method"
-          },
-          {
-            "start": 237,
-            "end": 237,
-            "type": "class_method"
-          },
-          {
-            "start": 238,
-            "end": 238,
-            "type": "class_method"
-          },
-          {
-            "start": 239,
-            "end": 239,
-            "type": "class_method"
-          },
-          {
-            "start": 240,
-            "end": 240,
-            "type": "class_method"
-          },
-          {
-            "start": 241,
-            "end": 241,
-            "type": "field"
-          },
-          {
-            "start": 242,
-            "end": 242,
-            "type": "field"
-          },
-          {
-            "start": 243,
-            "end": 243,
-            "type": "field"
-          },
-          {
-            "start": 244,
-            "end": 244,
-            "type": "field"
-          },
-          {
-            "start": 245,
-            "end": 245,
-            "type": "field"
-          },
-          {
-            "start": 246,
-            "end": 246,
-            "type": "field"
-          },
-          {
-            "start": 247,
-            "end": 248,
-            "type": "field"
-          },
-          {
-            "start": 254,
-            "end": 254,
-            "type": "field"
-          },
-          {
-            "start": 259,
-            "end": 259,
-            "type": "field"
-          },
-          {
-            "start": 261,
-            "end": 261,
-            "type": "field"
-          },
-          {
-            "start": 263,
-            "end": 263,
-            "type": "field"
-          },
-          {
-            "start": 265,
-            "end": 265,
-            "type": "field"
-          },
-          {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 270,
-            "type": "field"
-          },
-          {
-            "start": 272,
-            "end": 274,
-            "type": "class_method"
-          },
-          {
-            "start": 276,
-            "end": 276,
-            "type": "class_method"
-          },
-          {
-            "start": 278,
-            "end": 278,
-            "type": "class_method"
-          },
-          {
-            "start": 280,
-            "end": 280,
-            "type": "class_method"
-          },
-          {
-            "start": 381,
-            "end": 381,
-            "type": "class_method"
-          },
-          {
-            "start": 382,
-            "end": 382,
-            "type": "class_method"
-          },
-          {
-            "start": 383,
-            "end": 383,
-            "type": "class_method"
-          },
-          {
-            "start": 384,
-            "end": 384,
-            "type": "class_method"
-          },
-          {
-            "start": 386,
-            "end": 386,
-            "type": "class_method"
-          },
-          {
-            "start": 387,
-            "end": 387,
-            "type": "class_method"
-          },
-          {
-            "start": 390,
-            "end": 393,
-            "type": "class_method"
-          }
-        ],
-        "implementations": [
-          {
-            "start": 112,
-            "end": 116
-          },
-          {
-            "start": 118,
-            "end": 122
-          },
-          {
-            "start": 124,
-            "end": 124
-          },
-          {
-            "start": 126,
-            "end": 129
-          },
-          {
-            "start": 131,
-            "end": 135
-          },
-          {
-            "start": 193,
-            "end": 193
-          },
-          {
-            "start": 195,
-            "end": 195
-          },
-          {
-            "start": 196,
-            "end": 196
-          },
-          {
-            "start": 197,
-            "end": 197
-          },
-          {
-            "start": 199,
-            "end": 199
-          },
-          {
-            "start": 200,
-            "end": 200
-          },
-          {
-            "start": 201,
-            "end": 203
-          },
-          {
-            "start": 204,
-            "end": 206
-          },
-          {
-            "start": 207,
-            "end": 209
-          },
-          {
-            "start": 210,
-            "end": 212
-          },
-          {
-            "start": 214,
-            "end": 214
-          },
-          {
-            "start": 215,
-            "end": 215
-          },
-          {
-            "start": 216,
-            "end": 216
-          },
-          {
-            "start": 219,
-            "end": 222
-          },
-          {
-            "start": 224,
-            "end": 224
-          },
-          {
-            "start": 225,
-            "end": 227
-          },
-          {
-            "start": 229,
-            "end": 229
-          },
-          {
-            "start": 230,
-            "end": 230
-          },
-          {
-            "start": 231,
-            "end": 231
-          },
-          {
-            "start": 232,
-            "end": 232
-          },
-          {
-            "start": 233,
-            "end": 233
-          },
-          {
-            "start": 234,
-            "end": 234
-          },
-          {
-            "start": 235,
-            "end": 235
-          },
-          {
-            "start": 237,
-            "end": 237
-          },
-          {
-            "start": 238,
-            "end": 238
-          },
-          {
-            "start": 239,
-            "end": 239
-          },
-          {
-            "start": 240,
-            "end": 240
-          },
-          {
-            "start": 272,
-            "end": 274
-          },
-          {
-            "start": 276,
-            "end": 276
-          },
-          {
-            "start": 278,
-            "end": 278
-          },
-          {
-            "start": 280,
-            "end": 280
-          },
-          {
-            "start": 283,
-            "end": 283
-          },
-          {
-            "start": 285,
-            "end": 300
-          },
-          {
-            "start": 302,
-            "end": 317
-          },
-          {
-            "start": 319,
-            "end": 321
-          },
-          {
-            "start": 323,
-            "end": 323
-          },
-          {
-            "start": 326,
-            "end": 330
-          },
-          {
-            "start": 333,
-            "end": 336
-          },
-          {
-            "start": 338,
-            "end": 342
-          },
-          {
-            "start": 345,
-            "end": 349
-          },
-          {
-            "start": 351,
-            "end": 355
-          },
-          {
-            "start": 357,
-            "end": 361
-          },
-          {
-            "start": 363,
-            "end": 367
-          },
-          {
-            "start": 369,
-            "end": 371
-          },
-          {
-            "start": 373,
-            "end": 377
-          },
-          {
-            "start": 381,
-            "end": 381
-          },
-          {
-            "start": 382,
-            "end": 382
-          },
-          {
-            "start": 383,
-            "end": 383
-          },
-          {
-            "start": 384,
-            "end": 384
-          },
-          {
-            "start": 386,
-            "end": 386
-          },
-          {
-            "start": 387,
-            "end": 387
-          },
-          {
-            "start": 390,
-            "end": 393
           }
         ]
       }
@@ -10267,6 +9347,42 @@
           }
         ]
       }
+    },
+    {
+      "path": "tt_metal/api/tt-metalium/distributed.hpp",
+      "filename": "distributed.hpp",
+      "num_types": 1,
+      "num_methods": 0,
+      "num_lines": 107,
+      "implementation_lines": 46,
+      "highlight_regions": {
+        "types": [
+          {
+            "start": 15,
+            "end": 15,
+            "type": "class"
+          }
+        ],
+        "methods": [],
+        "implementations": [
+          {
+            "start": 26,
+            "end": 38
+          },
+          {
+            "start": 41,
+            "end": 55
+          },
+          {
+            "start": 58,
+            "end": 64
+          },
+          {
+            "start": 67,
+            "end": 77
+          }
+        ]
+      }
     }
   ],
   "most_methods": [
@@ -10274,8 +9390,8 @@
       "path": "tt_metal/api/tt-metalium/mesh_device.hpp",
       "filename": "mesh_device.hpp",
       "num_types": 10,
-      "num_methods": 155,
-      "num_lines": 331,
+      "num_methods": 153,
+      "num_lines": 327,
       "implementation_lines": 6,
       "highlight_regions": {
         "types": [
@@ -10310,80 +9426,90 @@
             "type": "class"
           },
           {
-            "start": 38,
-            "end": 317,
+            "start": 36,
+            "end": 313,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 323,
-            "end": 327,
+            "start": 319,
+            "end": 323,
             "type": "struct"
           }
         ],
         "methods": [
           {
+            "start": 39,
+            "end": 66,
+            "type": "field"
+          },
+          {
             "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 68,
             "end": 68,
             "type": "field"
           },
           {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
-            "type": "field"
-          },
-          {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
+            "start": 69,
+            "end": 69,
             "type": "field"
           },
           {
@@ -10392,18 +9518,13 @@
             "type": "field"
           },
           {
-            "start": 71,
-            "end": 71,
-            "type": "field"
-          },
-          {
             "start": 72,
             "end": 72,
             "type": "field"
           },
           {
-            "start": 74,
-            "end": 74,
+            "start": 73,
+            "end": 73,
             "type": "field"
           },
           {
@@ -10417,13 +9538,13 @@
             "type": "field"
           },
           {
-            "start": 79,
-            "end": 79,
+            "start": 78,
+            "end": 78,
             "type": "field"
           },
           {
-            "start": 80,
-            "end": 80,
+            "start": 79,
+            "end": 79,
             "type": "field"
           },
           {
@@ -10432,8 +9553,8 @@
             "type": "field"
           },
           {
-            "start": 83,
-            "end": 83,
+            "start": 82,
+            "end": 82,
             "type": "field"
           },
           {
@@ -10447,8 +9568,8 @@
             "type": "field"
           },
           {
-            "start": 88,
-            "end": 88,
+            "start": 89,
+            "end": 89,
             "type": "field"
           },
           {
@@ -10457,13 +9578,13 @@
             "type": "field"
           },
           {
-            "start": 93,
-            "end": 93,
-            "type": "field"
+            "start": 100,
+            "end": 100,
+            "type": "class_method"
           },
           {
-            "start": 102,
-            "end": 102,
+            "start": 101,
+            "end": 101,
             "type": "class_method"
           },
           {
@@ -10472,14 +9593,19 @@
             "type": "class_method"
           },
           {
-            "start": 105,
-            "end": 105,
+            "start": 104,
+            "end": 104,
             "type": "class_method"
           },
           {
-            "start": 106,
-            "end": 106,
-            "type": "class_method"
+            "start": 107,
+            "end": 107,
+            "type": "field"
+          },
+          {
+            "start": 108,
+            "end": 108,
+            "type": "field"
           },
           {
             "start": 109,
@@ -10497,13 +9623,13 @@
             "type": "field"
           },
           {
-            "start": 112,
-            "end": 112,
+            "start": 113,
+            "end": 113,
             "type": "field"
           },
           {
-            "start": 113,
-            "end": 113,
+            "start": 114,
+            "end": 114,
             "type": "field"
           },
           {
@@ -10512,13 +9638,13 @@
             "type": "field"
           },
           {
-            "start": 116,
-            "end": 116,
+            "start": 117,
+            "end": 117,
             "type": "field"
           },
           {
-            "start": 117,
-            "end": 117,
+            "start": 118,
+            "end": 118,
             "type": "field"
           },
           {
@@ -10529,11 +9655,6 @@
           {
             "start": 120,
             "end": 120,
-            "type": "field"
-          },
-          {
-            "start": 121,
-            "end": 121,
             "type": "field"
           },
           {
@@ -10552,11 +9673,6 @@
             "type": "field"
           },
           {
-            "start": 126,
-            "end": 126,
-            "type": "field"
-          },
-          {
             "start": 127,
             "end": 127,
             "type": "field"
@@ -10564,6 +9680,16 @@
           {
             "start": 128,
             "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
+            "end": 129,
+            "type": "field"
+          },
+          {
+            "start": 130,
+            "end": 130,
             "type": "field"
           },
           {
@@ -10638,11 +9764,6 @@
           },
           {
             "start": 145,
-            "end": 145,
-            "type": "field"
-          },
-          {
-            "start": 146,
             "end": 146,
             "type": "field"
           },
@@ -10658,6 +9779,11 @@
           },
           {
             "start": 149,
+            "end": 149,
+            "type": "field"
+          },
+          {
+            "start": 150,
             "end": 150,
             "type": "field"
           },
@@ -10672,16 +9798,6 @@
             "type": "field"
           },
           {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
             "start": 155,
             "end": 155,
             "type": "field"
@@ -10693,17 +9809,17 @@
           },
           {
             "start": 159,
-            "end": 159,
+            "end": 163,
             "type": "field"
           },
           {
-            "start": 160,
-            "end": 160,
+            "start": 164,
+            "end": 164,
             "type": "field"
           },
           {
-            "start": 163,
-            "end": 167,
+            "start": 165,
+            "end": 165,
             "type": "field"
           },
           {
@@ -10714,6 +9830,16 @@
           {
             "start": 169,
             "end": 169,
+            "type": "field"
+          },
+          {
+            "start": 170,
+            "end": 170,
+            "type": "field"
+          },
+          {
+            "start": 171,
+            "end": 171,
             "type": "field"
           },
           {
@@ -10732,42 +9858,42 @@
             "type": "field"
           },
           {
-            "start": 175,
-            "end": 175,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
             "start": 177,
             "end": 177,
             "type": "field"
           },
           {
-            "start": 178,
-            "end": 178,
+            "start": 179,
+            "end": 179,
             "type": "field"
           },
           {
-            "start": 181,
-            "end": 181,
+            "start": 180,
+            "end": 180,
             "type": "field"
           },
           {
             "start": 183,
-            "end": 183,
+            "end": 188,
             "type": "field"
           },
           {
-            "start": 184,
-            "end": 184,
+            "start": 189,
+            "end": 189,
             "type": "field"
           },
           {
-            "start": 187,
+            "start": 190,
+            "end": 190,
+            "type": "field"
+          },
+          {
+            "start": 191,
+            "end": 191,
+            "type": "field"
+          },
+          {
+            "start": 192,
             "end": 192,
             "type": "field"
           },
@@ -10833,11 +9959,6 @@
           },
           {
             "start": 205,
-            "end": 205,
-            "type": "field"
-          },
-          {
-            "start": 206,
             "end": 206,
             "type": "field"
           },
@@ -10853,6 +9974,11 @@
           },
           {
             "start": 209,
+            "end": 209,
+            "type": "field"
+          },
+          {
+            "start": 210,
             "end": 210,
             "type": "field"
           },
@@ -10912,17 +10038,7 @@
             "type": "field"
           },
           {
-            "start": 222,
-            "end": 222,
-            "type": "field"
-          },
-          {
             "start": 223,
-            "end": 223,
-            "type": "field"
-          },
-          {
-            "start": 224,
             "end": 224,
             "type": "field"
           },
@@ -10932,13 +10048,18 @@
             "type": "field"
           },
           {
-            "start": 227,
-            "end": 228,
+            "start": 231,
+            "end": 231,
             "type": "field"
           },
           {
-            "start": 229,
-            "end": 229,
+            "start": 232,
+            "end": 232,
+            "type": "field"
+          },
+          {
+            "start": 233,
+            "end": 233,
             "type": "field"
           },
           {
@@ -10947,18 +10068,8 @@
             "type": "field"
           },
           {
-            "start": 236,
-            "end": 236,
-            "type": "field"
-          },
-          {
             "start": 237,
             "end": 237,
-            "type": "field"
-          },
-          {
-            "start": 239,
-            "end": 239,
             "type": "field"
           },
           {
@@ -10967,23 +10078,33 @@
             "type": "field"
           },
           {
+            "start": 242,
+            "end": 242,
+            "type": "field"
+          },
+          {
+            "start": 243,
+            "end": 243,
+            "type": "field"
+          },
+          {
             "start": 245,
             "end": 245,
             "type": "field"
           },
           {
-            "start": 246,
-            "end": 246,
+            "start": 262,
+            "end": 262,
             "type": "field"
           },
           {
-            "start": 247,
-            "end": 247,
+            "start": 263,
+            "end": 263,
             "type": "field"
           },
           {
-            "start": 249,
-            "end": 249,
+            "start": 265,
+            "end": 265,
             "type": "field"
           },
           {
@@ -10992,28 +10113,18 @@
             "type": "field"
           },
           {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 269,
+            "start": 268,
+            "end": 268,
             "type": "field"
           },
           {
             "start": 270,
-            "end": 270,
+            "end": 271,
             "type": "field"
           },
           {
-            "start": 272,
-            "end": 272,
-            "type": "field"
-          },
-          {
-            "start": 274,
-            "end": 275,
+            "start": 273,
+            "end": 273,
             "type": "field"
           },
           {
@@ -11022,23 +10133,28 @@
             "type": "field"
           },
           {
-            "start": 281,
-            "end": 281,
+            "start": 278,
+            "end": 279,
             "type": "field"
           },
           {
-            "start": 282,
+            "start": 281,
+            "end": 282,
+            "type": "field"
+          },
+          {
+            "start": 283,
             "end": 283,
             "type": "field"
           },
           {
             "start": 285,
-            "end": 286,
+            "end": 285,
             "type": "field"
           },
           {
-            "start": 287,
-            "end": 287,
+            "start": 286,
+            "end": 286,
             "type": "field"
           },
           {
@@ -11052,85 +10168,75 @@
             "type": "field"
           },
           {
-            "start": 293,
-            "end": 293,
+            "start": 292,
+            "end": 298,
             "type": "field"
           },
           {
-            "start": 294,
-            "end": 294,
+            "start": 299,
+            "end": 305,
             "type": "field"
           },
           {
-            "start": 296,
-            "end": 302,
+            "start": 306,
+            "end": 312,
             "type": "field"
           },
           {
-            "start": 303,
-            "end": 309,
+            "start": 41,
+            "end": 41,
             "type": "field"
           },
           {
-            "start": 310,
-            "end": 316,
+            "start": 42,
+            "end": 42,
             "type": "field"
           },
           {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
+            "start": 61,
+            "end": 61,
             "type": "class_method"
           },
           {
-            "start": 64,
-            "end": 64,
+            "start": 62,
+            "end": 62,
             "type": "class_method"
           },
           {
-            "start": 67,
-            "end": 67,
+            "start": 65,
+            "end": 65,
             "type": "field"
           },
           {
-            "start": 326,
-            "end": 326,
+            "start": 322,
+            "end": 322,
             "type": "field"
           }
         ],
         "implementations": [
           {
-            "start": 63,
-            "end": 63
+            "start": 61,
+            "end": 61
           },
           {
-            "start": 64,
-            "end": 64
+            "start": 62,
+            "end": 62
           },
           {
-            "start": 102,
-            "end": 102
+            "start": 100,
+            "end": 100
+          },
+          {
+            "start": 101,
+            "end": 101
           },
           {
             "start": 103,
             "end": 103
           },
           {
-            "start": 105,
-            "end": 105
-          },
-          {
-            "start": 106,
-            "end": 106
+            "start": 104,
+            "end": 104
           }
         ]
       }
@@ -12131,14 +11237,14 @@
       "path": "tt_metal/api/tt-metalium/device_impl.hpp",
       "filename": "device_impl.hpp",
       "num_types": 1,
-      "num_methods": 134,
-      "num_lines": 273,
+      "num_methods": 131,
+      "num_lines": 269,
       "implementation_lines": 13,
       "highlight_regions": {
         "types": [
           {
             "start": 28,
-            "end": 271,
+            "end": 267,
             "type": "class"
           }
         ],
@@ -12219,13 +11325,13 @@
             "type": "field"
           },
           {
-            "start": 67,
-            "end": 67,
+            "start": 69,
+            "end": 69,
             "type": "field"
           },
           {
-            "start": 70,
-            "end": 70,
+            "start": 71,
+            "end": 71,
             "type": "field"
           },
           {
@@ -12234,8 +11340,8 @@
             "type": "field"
           },
           {
-            "start": 74,
-            "end": 74,
+            "start": 73,
+            "end": 73,
             "type": "field"
           },
           {
@@ -12249,18 +11355,13 @@
             "type": "field"
           },
           {
-            "start": 78,
-            "end": 78,
-            "type": "field"
-          },
-          {
             "start": 79,
             "end": 79,
             "type": "field"
           },
           {
-            "start": 82,
-            "end": 82,
+            "start": 80,
+            "end": 80,
             "type": "field"
           },
           {
@@ -12269,8 +11370,8 @@
             "type": "field"
           },
           {
-            "start": 86,
-            "end": 86,
+            "start": 84,
+            "end": 84,
             "type": "field"
           },
           {
@@ -12279,13 +11380,18 @@
             "type": "field"
           },
           {
-            "start": 90,
-            "end": 90,
+            "start": 88,
+            "end": 88,
             "type": "field"
           },
           {
-            "start": 91,
-            "end": 91,
+            "start": 89,
+            "end": 89,
+            "type": "field"
+          },
+          {
+            "start": 90,
+            "end": 90,
             "type": "field"
           },
           {
@@ -12294,8 +11400,8 @@
             "type": "field"
           },
           {
-            "start": 93,
-            "end": 93,
+            "start": 94,
+            "end": 94,
             "type": "field"
           },
           {
@@ -12334,29 +11440,29 @@
             "type": "field"
           },
           {
-            "start": 106,
-            "end": 106,
-            "type": "field"
-          },
-          {
-            "start": 107,
-            "end": 107,
-            "type": "field"
-          },
-          {
-            "start": 112,
-            "end": 112,
+            "start": 109,
+            "end": 109,
             "type": "class_method"
+          },
+          {
+            "start": 111,
+            "end": 111,
+            "type": "class_method"
+          },
+          {
+            "start": 113,
+            "end": 113,
+            "type": "field"
           },
           {
             "start": 114,
             "end": 114,
-            "type": "class_method"
+            "type": "field"
           },
           {
             "start": 116,
             "end": 116,
-            "type": "field"
+            "type": "class_method"
           },
           {
             "start": 117,
@@ -12364,49 +11470,49 @@
             "type": "field"
           },
           {
-            "start": 119,
-            "end": 119,
-            "type": "class_method"
-          },
-          {
             "start": 120,
             "end": 120,
             "type": "field"
           },
           {
-            "start": 123,
-            "end": 123,
+            "start": 121,
+            "end": 121,
             "type": "field"
           },
           {
-            "start": 124,
-            "end": 124,
+            "start": 122,
+            "end": 126,
             "type": "field"
           },
           {
-            "start": 125,
+            "start": 127,
+            "end": 127,
+            "type": "field"
+          },
+          {
+            "start": 128,
+            "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
             "end": 129,
-            "type": "field"
+            "type": "class_method"
           },
           {
             "start": 130,
             "end": 130,
-            "type": "field"
-          },
-          {
-            "start": 131,
-            "end": 131,
-            "type": "field"
+            "type": "class_method"
           },
           {
             "start": 132,
             "end": 132,
-            "type": "class_method"
+            "type": "field"
           },
           {
-            "start": 133,
-            "end": 133,
-            "type": "class_method"
+            "start": 134,
+            "end": 134,
+            "type": "field"
           },
           {
             "start": 135,
@@ -12414,17 +11520,22 @@
             "type": "field"
           },
           {
-            "start": 137,
-            "end": 137,
+            "start": 139,
+            "end": 144,
             "type": "field"
           },
           {
-            "start": 138,
-            "end": 138,
+            "start": 145,
+            "end": 145,
             "type": "field"
           },
           {
-            "start": 142,
+            "start": 146,
+            "end": 146,
+            "type": "field"
+          },
+          {
+            "start": 147,
             "end": 147,
             "type": "field"
           },
@@ -12434,18 +11545,8 @@
             "type": "field"
           },
           {
-            "start": 149,
-            "end": 149,
-            "type": "field"
-          },
-          {
             "start": 150,
             "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 151,
-            "end": 151,
             "type": "field"
           },
           {
@@ -12454,8 +11555,18 @@
             "type": "field"
           },
           {
-            "start": 156,
-            "end": 156,
+            "start": 157,
+            "end": 157,
+            "type": "field"
+          },
+          {
+            "start": 158,
+            "end": 158,
+            "type": "field"
+          },
+          {
+            "start": 159,
+            "end": 159,
             "type": "field"
           },
           {
@@ -12469,24 +11580,24 @@
             "type": "field"
           },
           {
-            "start": 162,
-            "end": 162,
-            "type": "field"
-          },
-          {
             "start": 163,
             "end": 163,
             "type": "field"
           },
           {
-            "start": 164,
-            "end": 164,
+            "start": 167,
+            "end": 167,
             "type": "field"
           },
           {
-            "start": 166,
-            "end": 166,
+            "start": 168,
+            "end": 168,
             "type": "field"
+          },
+          {
+            "start": 169,
+            "end": 169,
+            "type": "class_method"
           },
           {
             "start": 170,
@@ -12494,23 +11605,18 @@
             "type": "field"
           },
           {
-            "start": 171,
-            "end": 171,
-            "type": "field"
-          },
-          {
             "start": 172,
             "end": 172,
-            "type": "class_method"
-          },
-          {
-            "start": 173,
-            "end": 173,
             "type": "field"
           },
           {
-            "start": 175,
-            "end": 175,
+            "start": 174,
+            "end": 174,
+            "type": "field"
+          },
+          {
+            "start": 176,
+            "end": 176,
             "type": "field"
           },
           {
@@ -12519,8 +11625,8 @@
             "type": "field"
           },
           {
-            "start": 179,
-            "end": 179,
+            "start": 178,
+            "end": 178,
             "type": "field"
           },
           {
@@ -12531,6 +11637,11 @@
           {
             "start": 181,
             "end": 181,
+            "type": "field"
+          },
+          {
+            "start": 182,
+            "end": 182,
             "type": "field"
           },
           {
@@ -12579,23 +11690,13 @@
             "type": "field"
           },
           {
-            "start": 192,
-            "end": 192,
-            "type": "field"
-          },
-          {
-            "start": 193,
-            "end": 193,
-            "type": "field"
-          },
-          {
             "start": 194,
-            "end": 194,
+            "end": 195,
             "type": "field"
           },
           {
             "start": 197,
-            "end": 198,
+            "end": 197,
             "type": "field"
           },
           {
@@ -12604,8 +11705,13 @@
             "type": "field"
           },
           {
+            "start": 202,
+            "end": 202,
+            "type": "field"
+          },
+          {
             "start": 203,
-            "end": 203,
+            "end": 204,
             "type": "field"
           },
           {
@@ -12615,7 +11721,7 @@
           },
           {
             "start": 206,
-            "end": 207,
+            "end": 206,
             "type": "field"
           },
           {
@@ -12624,8 +11730,8 @@
             "type": "field"
           },
           {
-            "start": 209,
-            "end": 209,
+            "start": 210,
+            "end": 210,
             "type": "field"
           },
           {
@@ -12634,28 +11740,28 @@
             "type": "field"
           },
           {
+            "start": 212,
+            "end": 212,
+            "type": "field"
+          },
+          {
             "start": 213,
-            "end": 213,
-            "type": "field"
-          },
-          {
-            "start": 214,
-            "end": 214,
-            "type": "field"
-          },
-          {
-            "start": 215,
             "end": 215,
             "type": "field"
           },
           {
-            "start": 216,
-            "end": 218,
+            "start": 217,
+            "end": 217,
             "type": "field"
           },
           {
-            "start": 220,
-            "end": 220,
+            "start": 219,
+            "end": 219,
+            "type": "field"
+          },
+          {
+            "start": 221,
+            "end": 221,
             "type": "field"
           },
           {
@@ -12674,8 +11780,8 @@
             "type": "field"
           },
           {
-            "start": 227,
-            "end": 227,
+            "start": 226,
+            "end": 226,
             "type": "field"
           },
           {
@@ -12689,13 +11795,8 @@
             "type": "field"
           },
           {
-            "start": 230,
-            "end": 230,
-            "type": "field"
-          },
-          {
-            "start": 232,
-            "end": 232,
+            "start": 231,
+            "end": 231,
             "type": "field"
           },
           {
@@ -12709,8 +11810,8 @@
             "type": "field"
           },
           {
-            "start": 237,
-            "end": 237,
+            "start": 236,
+            "end": 236,
             "type": "field"
           },
           {
@@ -12719,13 +11820,23 @@
             "type": "field"
           },
           {
-            "start": 240,
-            "end": 240,
+            "start": 243,
+            "end": 243,
             "type": "field"
           },
           {
-            "start": 243,
-            "end": 243,
+            "start": 244,
+            "end": 244,
+            "type": "field"
+          },
+          {
+            "start": 245,
+            "end": 245,
+            "type": "field"
+          },
+          {
+            "start": 246,
+            "end": 246,
             "type": "field"
           },
           {
@@ -12734,23 +11845,18 @@
             "type": "field"
           },
           {
-            "start": 248,
-            "end": 248,
-            "type": "field"
-          },
-          {
-            "start": 249,
-            "end": 249,
-            "type": "field"
-          },
-          {
             "start": 250,
             "end": 250,
             "type": "field"
           },
           {
-            "start": 251,
-            "end": 251,
+            "start": 252,
+            "end": 252,
+            "type": "field"
+          },
+          {
+            "start": 253,
+            "end": 253,
             "type": "field"
           },
           {
@@ -12759,8 +11865,8 @@
             "type": "field"
           },
           {
-            "start": 256,
-            "end": 256,
+            "start": 255,
+            "end": 255,
             "type": "field"
           },
           {
@@ -12779,8 +11885,8 @@
             "type": "field"
           },
           {
-            "start": 261,
-            "end": 261,
+            "start": 260,
+            "end": 260,
             "type": "field"
           },
           {
@@ -12789,28 +11895,13 @@
             "type": "field"
           },
           {
-            "start": 263,
-            "end": 263,
-            "type": "field"
-          },
-          {
             "start": 264,
             "end": 264,
             "type": "field"
           },
           {
-            "start": 266,
+            "start": 265,
             "end": 266,
-            "type": "field"
-          },
-          {
-            "start": 268,
-            "end": 268,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 270,
             "type": "field"
           }
         ],
@@ -12844,28 +11935,28 @@
             "end": 59
           },
           {
-            "start": 112,
-            "end": 112
+            "start": 109,
+            "end": 109
           },
           {
-            "start": 114,
-            "end": 114
+            "start": 111,
+            "end": 111
           },
           {
-            "start": 119,
-            "end": 119
+            "start": 116,
+            "end": 116
           },
           {
-            "start": 132,
-            "end": 132
+            "start": 129,
+            "end": 129
           },
           {
-            "start": 133,
-            "end": 133
+            "start": 130,
+            "end": 130
           },
           {
-            "start": 172,
-            "end": 172
+            "start": 169,
+            "end": 169
           }
         ]
       }
@@ -15909,831 +15000,12 @@
       }
     },
     {
-      "path": "tt_metal/api/tt-metalium/hal.hpp",
-      "filename": "hal.hpp",
-      "num_types": 12,
-      "num_methods": 103,
-      "num_lines": 417,
-      "implementation_lines": 155,
-      "highlight_regions": {
-        "types": [
-          {
-            "start": 20,
-            "end": 20,
-            "type": "enum"
-          },
-          {
-            "start": 24,
-            "end": 24,
-            "type": "enum"
-          },
-          {
-            "start": 28,
-            "end": 28,
-            "type": "enum"
-          },
-          {
-            "start": 32,
-            "end": 37,
-            "type": "enum"
-          },
-          {
-            "start": 39,
-            "end": 60,
-            "type": "enum"
-          },
-          {
-            "start": 62,
-            "end": 62,
-            "type": "enum"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "enum"
-          },
-          {
-            "start": 72,
-            "end": 77,
-            "type": "struct"
-          },
-          {
-            "start": 79,
-            "end": 79,
-            "type": "class"
-          },
-          {
-            "start": 82,
-            "end": 109,
-            "type": "class"
-          },
-          {
-            "start": 137,
-            "end": 281,
-            "type": "class"
-          },
-          {
-            "start": 379,
-            "end": 394,
-            "type": "class"
-          }
-        ],
-        "methods": [
-          {
-            "start": 73,
-            "end": 73,
-            "type": "field"
-          },
-          {
-            "start": 74,
-            "end": 74,
-            "type": "field"
-          },
-          {
-            "start": 75,
-            "end": 75,
-            "type": "field"
-          },
-          {
-            "start": 76,
-            "end": 76,
-            "type": "field"
-          },
-          {
-            "start": 86,
-            "end": 86,
-            "type": "field"
-          },
-          {
-            "start": 87,
-            "end": 87,
-            "type": "field"
-          },
-          {
-            "start": 89,
-            "end": 89,
-            "type": "field"
-          },
-          {
-            "start": 90,
-            "end": 90,
-            "type": "field"
-          },
-          {
-            "start": 91,
-            "end": 91,
-            "type": "field"
-          },
-          {
-            "start": 92,
-            "end": 92,
-            "type": "field"
-          },
-          {
-            "start": 105,
-            "end": 105,
-            "type": "field"
-          },
-          {
-            "start": 106,
-            "end": 106,
-            "type": "field"
-          },
-          {
-            "start": 107,
-            "end": 107,
-            "type": "field"
-          },
-          {
-            "start": 108,
-            "end": 108,
-            "type": "field"
-          },
-          {
-            "start": 148,
-            "end": 148,
-            "type": "field"
-          },
-          {
-            "start": 149,
-            "end": 149,
-            "type": "field"
-          },
-          {
-            "start": 150,
-            "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 151,
-            "end": 151,
-            "type": "field"
-          },
-          {
-            "start": 152,
-            "end": 152,
-            "type": "field"
-          },
-          {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
-            "start": 155,
-            "end": 155,
-            "type": "field"
-          },
-          {
-            "start": 156,
-            "end": 156,
-            "type": "field"
-          },
-          {
-            "start": 157,
-            "end": 157,
-            "type": "field"
-          },
-          {
-            "start": 158,
-            "end": 158,
-            "type": "field"
-          },
-          {
-            "start": 159,
-            "end": 159,
-            "type": "field"
-          },
-          {
-            "start": 160,
-            "end": 160,
-            "type": "field"
-          },
-          {
-            "start": 161,
-            "end": 161,
-            "type": "field"
-          },
-          {
-            "start": 162,
-            "end": 162,
-            "type": "field"
-          },
-          {
-            "start": 163,
-            "end": 163,
-            "type": "field"
-          },
-          {
-            "start": 164,
-            "end": 164,
-            "type": "field"
-          },
-          {
-            "start": 165,
-            "end": 165,
-            "type": "field"
-          },
-          {
-            "start": 166,
-            "end": 166,
-            "type": "field"
-          },
-          {
-            "start": 168,
-            "end": 168,
-            "type": "field"
-          },
-          {
-            "start": 169,
-            "end": 169,
-            "type": "field"
-          },
-          {
-            "start": 170,
-            "end": 170,
-            "type": "field"
-          },
-          {
-            "start": 172,
-            "end": 172,
-            "type": "field"
-          },
-          {
-            "start": 173,
-            "end": 173,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
-            "start": 177,
-            "end": 177,
-            "type": "field"
-          },
-          {
-            "start": 178,
-            "end": 178,
-            "type": "field"
-          },
-          {
-            "start": 179,
-            "end": 179,
-            "type": "field"
-          },
-          {
-            "start": 180,
-            "end": 180,
-            "type": "field"
-          },
-          {
-            "start": 181,
-            "end": 181,
-            "type": "field"
-          },
-          {
-            "start": 182,
-            "end": 182,
-            "type": "field"
-          },
-          {
-            "start": 183,
-            "end": 183,
-            "type": "field"
-          },
-          {
-            "start": 184,
-            "end": 184,
-            "type": "field"
-          },
-          {
-            "start": 185,
-            "end": 185,
-            "type": "field"
-          },
-          {
-            "start": 186,
-            "end": 186,
-            "type": "field"
-          },
-          {
-            "start": 187,
-            "end": 187,
-            "type": "field"
-          },
-          {
-            "start": 188,
-            "end": 188,
-            "type": "field"
-          },
-          {
-            "start": 193,
-            "end": 193,
-            "type": "class_method"
-          },
-          {
-            "start": 195,
-            "end": 195,
-            "type": "class_method"
-          },
-          {
-            "start": 196,
-            "end": 196,
-            "type": "class_method"
-          },
-          {
-            "start": 197,
-            "end": 197,
-            "type": "class_method"
-          },
-          {
-            "start": 199,
-            "end": 199,
-            "type": "class_method"
-          },
-          {
-            "start": 200,
-            "end": 200,
-            "type": "class_method"
-          },
-          {
-            "start": 201,
-            "end": 203,
-            "type": "class_method"
-          },
-          {
-            "start": 204,
-            "end": 206,
-            "type": "class_method"
-          },
-          {
-            "start": 207,
-            "end": 209,
-            "type": "class_method"
-          },
-          {
-            "start": 210,
-            "end": 212,
-            "type": "class_method"
-          },
-          {
-            "start": 214,
-            "end": 214,
-            "type": "class_method"
-          },
-          {
-            "start": 215,
-            "end": 215,
-            "type": "class_method"
-          },
-          {
-            "start": 216,
-            "end": 216,
-            "type": "class_method"
-          },
-          {
-            "start": 219,
-            "end": 222,
-            "type": "class_method"
-          },
-          {
-            "start": 224,
-            "end": 224,
-            "type": "class_method"
-          },
-          {
-            "start": 225,
-            "end": 227,
-            "type": "class_method"
-          },
-          {
-            "start": 229,
-            "end": 229,
-            "type": "class_method"
-          },
-          {
-            "start": 230,
-            "end": 230,
-            "type": "class_method"
-          },
-          {
-            "start": 231,
-            "end": 231,
-            "type": "class_method"
-          },
-          {
-            "start": 232,
-            "end": 232,
-            "type": "class_method"
-          },
-          {
-            "start": 233,
-            "end": 233,
-            "type": "class_method"
-          },
-          {
-            "start": 234,
-            "end": 234,
-            "type": "class_method"
-          },
-          {
-            "start": 235,
-            "end": 235,
-            "type": "class_method"
-          },
-          {
-            "start": 237,
-            "end": 237,
-            "type": "class_method"
-          },
-          {
-            "start": 238,
-            "end": 238,
-            "type": "class_method"
-          },
-          {
-            "start": 239,
-            "end": 239,
-            "type": "class_method"
-          },
-          {
-            "start": 240,
-            "end": 240,
-            "type": "class_method"
-          },
-          {
-            "start": 241,
-            "end": 241,
-            "type": "field"
-          },
-          {
-            "start": 242,
-            "end": 242,
-            "type": "field"
-          },
-          {
-            "start": 243,
-            "end": 243,
-            "type": "field"
-          },
-          {
-            "start": 244,
-            "end": 244,
-            "type": "field"
-          },
-          {
-            "start": 245,
-            "end": 245,
-            "type": "field"
-          },
-          {
-            "start": 246,
-            "end": 246,
-            "type": "field"
-          },
-          {
-            "start": 247,
-            "end": 248,
-            "type": "field"
-          },
-          {
-            "start": 254,
-            "end": 254,
-            "type": "field"
-          },
-          {
-            "start": 259,
-            "end": 259,
-            "type": "field"
-          },
-          {
-            "start": 261,
-            "end": 261,
-            "type": "field"
-          },
-          {
-            "start": 263,
-            "end": 263,
-            "type": "field"
-          },
-          {
-            "start": 265,
-            "end": 265,
-            "type": "field"
-          },
-          {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 270,
-            "type": "field"
-          },
-          {
-            "start": 272,
-            "end": 274,
-            "type": "class_method"
-          },
-          {
-            "start": 276,
-            "end": 276,
-            "type": "class_method"
-          },
-          {
-            "start": 278,
-            "end": 278,
-            "type": "class_method"
-          },
-          {
-            "start": 280,
-            "end": 280,
-            "type": "class_method"
-          },
-          {
-            "start": 381,
-            "end": 381,
-            "type": "class_method"
-          },
-          {
-            "start": 382,
-            "end": 382,
-            "type": "class_method"
-          },
-          {
-            "start": 383,
-            "end": 383,
-            "type": "class_method"
-          },
-          {
-            "start": 384,
-            "end": 384,
-            "type": "class_method"
-          },
-          {
-            "start": 386,
-            "end": 386,
-            "type": "class_method"
-          },
-          {
-            "start": 387,
-            "end": 387,
-            "type": "class_method"
-          },
-          {
-            "start": 390,
-            "end": 393,
-            "type": "class_method"
-          }
-        ],
-        "implementations": [
-          {
-            "start": 112,
-            "end": 116
-          },
-          {
-            "start": 118,
-            "end": 122
-          },
-          {
-            "start": 124,
-            "end": 124
-          },
-          {
-            "start": 126,
-            "end": 129
-          },
-          {
-            "start": 131,
-            "end": 135
-          },
-          {
-            "start": 193,
-            "end": 193
-          },
-          {
-            "start": 195,
-            "end": 195
-          },
-          {
-            "start": 196,
-            "end": 196
-          },
-          {
-            "start": 197,
-            "end": 197
-          },
-          {
-            "start": 199,
-            "end": 199
-          },
-          {
-            "start": 200,
-            "end": 200
-          },
-          {
-            "start": 201,
-            "end": 203
-          },
-          {
-            "start": 204,
-            "end": 206
-          },
-          {
-            "start": 207,
-            "end": 209
-          },
-          {
-            "start": 210,
-            "end": 212
-          },
-          {
-            "start": 214,
-            "end": 214
-          },
-          {
-            "start": 215,
-            "end": 215
-          },
-          {
-            "start": 216,
-            "end": 216
-          },
-          {
-            "start": 219,
-            "end": 222
-          },
-          {
-            "start": 224,
-            "end": 224
-          },
-          {
-            "start": 225,
-            "end": 227
-          },
-          {
-            "start": 229,
-            "end": 229
-          },
-          {
-            "start": 230,
-            "end": 230
-          },
-          {
-            "start": 231,
-            "end": 231
-          },
-          {
-            "start": 232,
-            "end": 232
-          },
-          {
-            "start": 233,
-            "end": 233
-          },
-          {
-            "start": 234,
-            "end": 234
-          },
-          {
-            "start": 235,
-            "end": 235
-          },
-          {
-            "start": 237,
-            "end": 237
-          },
-          {
-            "start": 238,
-            "end": 238
-          },
-          {
-            "start": 239,
-            "end": 239
-          },
-          {
-            "start": 240,
-            "end": 240
-          },
-          {
-            "start": 272,
-            "end": 274
-          },
-          {
-            "start": 276,
-            "end": 276
-          },
-          {
-            "start": 278,
-            "end": 278
-          },
-          {
-            "start": 280,
-            "end": 280
-          },
-          {
-            "start": 283,
-            "end": 283
-          },
-          {
-            "start": 285,
-            "end": 300
-          },
-          {
-            "start": 302,
-            "end": 317
-          },
-          {
-            "start": 319,
-            "end": 321
-          },
-          {
-            "start": 323,
-            "end": 323
-          },
-          {
-            "start": 326,
-            "end": 330
-          },
-          {
-            "start": 333,
-            "end": 336
-          },
-          {
-            "start": 338,
-            "end": 342
-          },
-          {
-            "start": 345,
-            "end": 349
-          },
-          {
-            "start": 351,
-            "end": 355
-          },
-          {
-            "start": 357,
-            "end": 361
-          },
-          {
-            "start": 363,
-            "end": 367
-          },
-          {
-            "start": 369,
-            "end": 371
-          },
-          {
-            "start": 373,
-            "end": 377
-          },
-          {
-            "start": 381,
-            "end": 381
-          },
-          {
-            "start": 382,
-            "end": 382
-          },
-          {
-            "start": 383,
-            "end": 383
-          },
-          {
-            "start": 384,
-            "end": 384
-          },
-          {
-            "start": 386,
-            "end": 386
-          },
-          {
-            "start": 387,
-            "end": 387
-          },
-          {
-            "start": 390,
-            "end": 393
-          }
-        ]
-      }
-    },
-    {
       "path": "tt_metal/api/tt-metalium/device.hpp",
       "filename": "device.hpp",
       "num_types": 9,
-      "num_methods": 94,
-      "num_lines": 232,
-      "implementation_lines": 9,
+      "num_methods": 93,
+      "num_lines": 222,
+      "implementation_lines": 6,
       "highlight_regions": {
         "types": [
           {
@@ -16778,7 +15050,7 @@
           },
           {
             "start": 47,
-            "end": 223,
+            "end": 218,
             "type": "class"
           }
         ],
@@ -16869,17 +15141,12 @@
             "type": "field"
           },
           {
-            "start": 73,
-            "end": 73,
+            "start": 75,
+            "end": 75,
             "type": "field"
           },
           {
-            "start": 76,
-            "end": 76,
-            "type": "field"
-          },
-          {
-            "start": 79,
+            "start": 78,
             "end": 79,
             "type": "field"
           },
@@ -16890,37 +15157,42 @@
           },
           {
             "start": 86,
-            "end": 87,
+            "end": 86,
             "type": "field"
           },
           {
-            "start": 90,
+            "start": 89,
             "end": 90,
             "type": "field"
           },
           {
             "start": 93,
-            "end": 94,
+            "end": 93,
             "type": "field"
           },
           {
-            "start": 97,
-            "end": 97,
+            "start": 96,
+            "end": 96,
             "type": "field"
           },
           {
-            "start": 100,
-            "end": 100,
+            "start": 99,
+            "end": 99,
             "type": "field"
           },
           {
-            "start": 103,
-            "end": 103,
+            "start": 102,
+            "end": 102,
             "type": "field"
           },
           {
-            "start": 106,
-            "end": 106,
+            "start": 105,
+            "end": 105,
+            "type": "field"
+          },
+          {
+            "start": 108,
+            "end": 108,
             "type": "field"
           },
           {
@@ -16929,8 +15201,13 @@
             "type": "field"
           },
           {
-            "start": 112,
-            "end": 112,
+            "start": 110,
+            "end": 110,
+            "type": "field"
+          },
+          {
+            "start": 111,
+            "end": 111,
             "type": "field"
           },
           {
@@ -16939,18 +15216,13 @@
             "type": "field"
           },
           {
-            "start": 114,
-            "end": 114,
+            "start": 116,
+            "end": 116,
             "type": "field"
           },
           {
-            "start": 115,
-            "end": 115,
-            "type": "field"
-          },
-          {
-            "start": 117,
-            "end": 117,
+            "start": 118,
+            "end": 118,
             "type": "field"
           },
           {
@@ -16959,8 +15231,13 @@
             "type": "field"
           },
           {
-            "start": 122,
-            "end": 122,
+            "start": 121,
+            "end": 121,
+            "type": "field"
+          },
+          {
+            "start": 123,
+            "end": 123,
             "type": "field"
           },
           {
@@ -16969,8 +15246,8 @@
             "type": "field"
           },
           {
-            "start": 125,
-            "end": 125,
+            "start": 126,
+            "end": 126,
             "type": "field"
           },
           {
@@ -16979,18 +15256,18 @@
             "type": "field"
           },
           {
-            "start": 128,
-            "end": 128,
+            "start": 132,
+            "end": 132,
             "type": "field"
           },
           {
-            "start": 130,
-            "end": 130,
+            "start": 133,
+            "end": 133,
             "type": "field"
           },
           {
-            "start": 131,
-            "end": 131,
+            "start": 135,
+            "end": 135,
             "type": "field"
           },
           {
@@ -16999,18 +15276,13 @@
             "type": "field"
           },
           {
-            "start": 137,
-            "end": 137,
+            "start": 138,
+            "end": 138,
             "type": "field"
           },
           {
             "start": 139,
             "end": 139,
-            "type": "field"
-          },
-          {
-            "start": 140,
-            "end": 140,
             "type": "field"
           },
           {
@@ -17024,28 +15296,28 @@
             "type": "field"
           },
           {
+            "start": 144,
+            "end": 145,
+            "type": "field"
+          },
+          {
             "start": 146,
             "end": 146,
             "type": "field"
           },
           {
-            "start": 147,
-            "end": 147,
+            "start": 148,
+            "end": 148,
             "type": "field"
           },
           {
-            "start": 148,
+            "start": 149,
             "end": 149,
             "type": "field"
           },
           {
             "start": 150,
             "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 152,
-            "end": 152,
             "type": "field"
           },
           {
@@ -17059,38 +15331,38 @@
             "type": "field"
           },
           {
-            "start": 157,
-            "end": 157,
-            "type": "field"
-          },
-          {
-            "start": 158,
-            "end": 158,
+            "start": 155,
+            "end": 155,
             "type": "field"
           },
           {
             "start": 159,
-            "end": 159,
+            "end": 164,
             "type": "field"
           },
           {
-            "start": 163,
+            "start": 165,
+            "end": 165,
+            "type": "field"
+          },
+          {
+            "start": 166,
+            "end": 166,
+            "type": "field"
+          },
+          {
+            "start": 167,
+            "end": 167,
+            "type": "field"
+          },
+          {
+            "start": 168,
             "end": 168,
-            "type": "field"
-          },
-          {
-            "start": 169,
-            "end": 169,
             "type": "field"
           },
           {
             "start": 170,
             "end": 170,
-            "type": "field"
-          },
-          {
-            "start": 171,
-            "end": 171,
             "type": "field"
           },
           {
@@ -17104,13 +15376,18 @@
             "type": "field"
           },
           {
+            "start": 175,
+            "end": 175,
+            "type": "field"
+          },
+          {
             "start": 176,
             "end": 176,
             "type": "field"
           },
           {
-            "start": 178,
-            "end": 178,
+            "start": 177,
+            "end": 177,
             "type": "field"
           },
           {
@@ -17119,33 +15396,28 @@
             "type": "field"
           },
           {
-            "start": 180,
-            "end": 180,
-            "type": "field"
-          },
-          {
-            "start": 181,
-            "end": 181,
-            "type": "field"
-          },
-          {
             "start": 183,
             "end": 183,
             "type": "field"
           },
           {
-            "start": 187,
-            "end": 187,
+            "start": 184,
+            "end": 184,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
             "type": "field"
           },
           {
             "start": 188,
             "end": 188,
-            "type": "field"
-          },
-          {
-            "start": 189,
-            "end": 189,
             "type": "field"
           },
           {
@@ -17159,8 +15431,23 @@
             "type": "field"
           },
           {
-            "start": 197,
-            "end": 197,
+            "start": 194,
+            "end": 194,
+            "type": "field"
+          },
+          {
+            "start": 195,
+            "end": 195,
+            "type": "field"
+          },
+          {
+            "start": 196,
+            "end": 196,
+            "type": "field"
+          },
+          {
+            "start": 198,
+            "end": 198,
             "type": "field"
           },
           {
@@ -17176,6 +15463,11 @@
           {
             "start": 201,
             "end": 201,
+            "type": "field"
+          },
+          {
+            "start": 202,
+            "end": 202,
             "type": "field"
           },
           {
@@ -17214,43 +15506,18 @@
             "type": "field"
           },
           {
-            "start": 210,
-            "end": 210,
-            "type": "field"
-          },
-          {
-            "start": 211,
-            "end": 211,
-            "type": "field"
-          },
-          {
             "start": 212,
-            "end": 212,
-            "type": "field"
-          },
-          {
-            "start": 213,
             "end": 213,
             "type": "field"
           },
           {
-            "start": 214,
-            "end": 214,
+            "start": 215,
+            "end": 215,
             "type": "field"
           },
           {
             "start": 217,
-            "end": 218,
-            "type": "field"
-          },
-          {
-            "start": 220,
-            "end": 220,
-            "type": "field"
-          },
-          {
-            "start": 222,
-            "end": 222,
+            "end": 217,
             "type": "field"
           }
         ],
@@ -17278,10 +15545,6 @@
           {
             "start": 56,
             "end": 56
-          },
-          {
-            "start": 226,
-            "end": 228
           }
         ]
       }
@@ -17928,6 +16191,472 @@
           {
             "start": 457,
             "end": 460
+          }
+        ]
+      }
+    },
+    {
+      "path": "tt_metal/api/tt-metalium/mesh_command_queue.hpp",
+      "filename": "mesh_command_queue.hpp",
+      "num_types": 7,
+      "num_methods": 79,
+      "num_lines": 237,
+      "implementation_lines": 5,
+      "highlight_regions": {
+        "types": [
+          {
+            "start": 23,
+            "end": 23,
+            "type": "class"
+          },
+          {
+            "start": 27,
+            "end": 27,
+            "type": "class"
+          },
+          {
+            "start": 28,
+            "end": 28,
+            "type": "struct"
+          },
+          {
+            "start": 29,
+            "end": 29,
+            "type": "struct"
+          },
+          {
+            "start": 33,
+            "end": 233,
+            "type": "class"
+          },
+          {
+            "start": 184,
+            "end": 188,
+            "type": "struct"
+          },
+          {
+            "start": 184,
+            "end": 188,
+            "type": "struct"
+          }
+        ],
+        "methods": [
+          {
+            "start": 39,
+            "end": 39,
+            "type": "field"
+          },
+          {
+            "start": 40,
+            "end": 40,
+            "type": "field"
+          },
+          {
+            "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 43,
+            "end": 43,
+            "type": "field"
+          },
+          {
+            "start": 46,
+            "end": 50,
+            "type": "field"
+          },
+          {
+            "start": 51,
+            "end": 56,
+            "type": "field"
+          },
+          {
+            "start": 57,
+            "end": 57,
+            "type": "field"
+          },
+          {
+            "start": 58,
+            "end": 58,
+            "type": "field"
+          },
+          {
+            "start": 60,
+            "end": 60,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "field"
+          },
+          {
+            "start": 62,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 69,
+            "end": 73,
+            "type": "field"
+          },
+          {
+            "start": 78,
+            "end": 83,
+            "type": "field"
+          },
+          {
+            "start": 86,
+            "end": 91,
+            "type": "field"
+          },
+          {
+            "start": 95,
+            "end": 100,
+            "type": "field"
+          },
+          {
+            "start": 102,
+            "end": 102,
+            "type": "field"
+          },
+          {
+            "start": 109,
+            "end": 109,
+            "type": "field"
+          },
+          {
+            "start": 110,
+            "end": 110,
+            "type": "field"
+          },
+          {
+            "start": 113,
+            "end": 113,
+            "type": "field"
+          },
+          {
+            "start": 115,
+            "end": 115,
+            "type": "field"
+          },
+          {
+            "start": 116,
+            "end": 116,
+            "type": "field"
+          },
+          {
+            "start": 118,
+            "end": 118,
+            "type": "field"
+          },
+          {
+            "start": 119,
+            "end": 119,
+            "type": "field"
+          },
+          {
+            "start": 120,
+            "end": 120,
+            "type": "field"
+          },
+          {
+            "start": 124,
+            "end": 124,
+            "type": "field"
+          },
+          {
+            "start": 125,
+            "end": 125,
+            "type": "field"
+          },
+          {
+            "start": 126,
+            "end": 126,
+            "type": "field"
+          },
+          {
+            "start": 128,
+            "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
+            "end": 129,
+            "type": "field"
+          },
+          {
+            "start": 130,
+            "end": 130,
+            "type": "field"
+          },
+          {
+            "start": 131,
+            "end": 131,
+            "type": "field"
+          },
+          {
+            "start": 133,
+            "end": 134,
+            "type": "field"
+          },
+          {
+            "start": 135,
+            "end": 136,
+            "type": "field"
+          },
+          {
+            "start": 142,
+            "end": 142,
+            "type": "field"
+          },
+          {
+            "start": 145,
+            "end": 146,
+            "type": "field"
+          },
+          {
+            "start": 148,
+            "end": 148,
+            "type": "field"
+          },
+          {
+            "start": 149,
+            "end": 149,
+            "type": "field"
+          },
+          {
+            "start": 151,
+            "end": 151,
+            "type": "field"
+          },
+          {
+            "start": 152,
+            "end": 152,
+            "type": "field"
+          },
+          {
+            "start": 154,
+            "end": 154,
+            "type": "field"
+          },
+          {
+            "start": 156,
+            "end": 156,
+            "type": "field"
+          },
+          {
+            "start": 158,
+            "end": 158,
+            "type": "field"
+          },
+          {
+            "start": 160,
+            "end": 160,
+            "type": "field"
+          },
+          {
+            "start": 163,
+            "end": 163,
+            "type": "field"
+          },
+          {
+            "start": 173,
+            "end": 173,
+            "type": "class_method"
+          },
+          {
+            "start": 174,
+            "end": 174,
+            "type": "class_method"
+          },
+          {
+            "start": 178,
+            "end": 178,
+            "type": "class_method"
+          },
+          {
+            "start": 179,
+            "end": 179,
+            "type": "class_method"
+          },
+          {
+            "start": 180,
+            "end": 180,
+            "type": "class_method"
+          },
+          {
+            "start": 181,
+            "end": 181,
+            "type": "field"
+          },
+          {
+            "start": 184,
+            "end": 188,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
+            "type": "field"
+          },
+          {
+            "start": 187,
+            "end": 187,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
+            "type": "field"
+          },
+          {
+            "start": 187,
+            "end": 187,
+            "type": "field"
+          },
+          {
+            "start": 191,
+            "end": 196,
+            "type": "field"
+          },
+          {
+            "start": 197,
+            "end": 197,
+            "type": "field"
+          },
+          {
+            "start": 198,
+            "end": 201,
+            "type": "field"
+          },
+          {
+            "start": 204,
+            "end": 204,
+            "type": "field"
+          },
+          {
+            "start": 205,
+            "end": 208,
+            "type": "field"
+          },
+          {
+            "start": 210,
+            "end": 212,
+            "type": "field"
+          },
+          {
+            "start": 213,
+            "end": 215,
+            "type": "field"
+          },
+          {
+            "start": 216,
+            "end": 216,
+            "type": "field"
+          },
+          {
+            "start": 217,
+            "end": 217,
+            "type": "field"
+          },
+          {
+            "start": 218,
+            "end": 218,
+            "type": "field"
+          },
+          {
+            "start": 219,
+            "end": 219,
+            "type": "field"
+          },
+          {
+            "start": 220,
+            "end": 223,
+            "type": "field"
+          },
+          {
+            "start": 224,
+            "end": 224,
+            "type": "field"
+          },
+          {
+            "start": 225,
+            "end": 225,
+            "type": "field"
+          },
+          {
+            "start": 226,
+            "end": 226,
+            "type": "field"
+          },
+          {
+            "start": 228,
+            "end": 228,
+            "type": "field"
+          },
+          {
+            "start": 230,
+            "end": 230,
+            "type": "field"
+          },
+          {
+            "start": 232,
+            "end": 232,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
+            "type": "field"
+          },
+          {
+            "start": 187,
+            "end": 187,
+            "type": "field"
+          }
+        ],
+        "implementations": [
+          {
+            "start": 173,
+            "end": 173
+          },
+          {
+            "start": 174,
+            "end": 174
+          },
+          {
+            "start": 178,
+            "end": 178
+          },
+          {
+            "start": 179,
+            "end": 179
+          },
+          {
+            "start": 180,
+            "end": 180
           }
         ]
       }
@@ -22791,825 +21520,6 @@
       }
     },
     {
-      "path": "tt_metal/api/tt-metalium/hal.hpp",
-      "filename": "hal.hpp",
-      "num_types": 12,
-      "num_methods": 103,
-      "num_lines": 417,
-      "implementation_lines": 155,
-      "highlight_regions": {
-        "types": [
-          {
-            "start": 20,
-            "end": 20,
-            "type": "enum"
-          },
-          {
-            "start": 24,
-            "end": 24,
-            "type": "enum"
-          },
-          {
-            "start": 28,
-            "end": 28,
-            "type": "enum"
-          },
-          {
-            "start": 32,
-            "end": 37,
-            "type": "enum"
-          },
-          {
-            "start": 39,
-            "end": 60,
-            "type": "enum"
-          },
-          {
-            "start": 62,
-            "end": 62,
-            "type": "enum"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "enum"
-          },
-          {
-            "start": 72,
-            "end": 77,
-            "type": "struct"
-          },
-          {
-            "start": 79,
-            "end": 79,
-            "type": "class"
-          },
-          {
-            "start": 82,
-            "end": 109,
-            "type": "class"
-          },
-          {
-            "start": 137,
-            "end": 281,
-            "type": "class"
-          },
-          {
-            "start": 379,
-            "end": 394,
-            "type": "class"
-          }
-        ],
-        "methods": [
-          {
-            "start": 73,
-            "end": 73,
-            "type": "field"
-          },
-          {
-            "start": 74,
-            "end": 74,
-            "type": "field"
-          },
-          {
-            "start": 75,
-            "end": 75,
-            "type": "field"
-          },
-          {
-            "start": 76,
-            "end": 76,
-            "type": "field"
-          },
-          {
-            "start": 86,
-            "end": 86,
-            "type": "field"
-          },
-          {
-            "start": 87,
-            "end": 87,
-            "type": "field"
-          },
-          {
-            "start": 89,
-            "end": 89,
-            "type": "field"
-          },
-          {
-            "start": 90,
-            "end": 90,
-            "type": "field"
-          },
-          {
-            "start": 91,
-            "end": 91,
-            "type": "field"
-          },
-          {
-            "start": 92,
-            "end": 92,
-            "type": "field"
-          },
-          {
-            "start": 105,
-            "end": 105,
-            "type": "field"
-          },
-          {
-            "start": 106,
-            "end": 106,
-            "type": "field"
-          },
-          {
-            "start": 107,
-            "end": 107,
-            "type": "field"
-          },
-          {
-            "start": 108,
-            "end": 108,
-            "type": "field"
-          },
-          {
-            "start": 148,
-            "end": 148,
-            "type": "field"
-          },
-          {
-            "start": 149,
-            "end": 149,
-            "type": "field"
-          },
-          {
-            "start": 150,
-            "end": 150,
-            "type": "field"
-          },
-          {
-            "start": 151,
-            "end": 151,
-            "type": "field"
-          },
-          {
-            "start": 152,
-            "end": 152,
-            "type": "field"
-          },
-          {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
-            "start": 155,
-            "end": 155,
-            "type": "field"
-          },
-          {
-            "start": 156,
-            "end": 156,
-            "type": "field"
-          },
-          {
-            "start": 157,
-            "end": 157,
-            "type": "field"
-          },
-          {
-            "start": 158,
-            "end": 158,
-            "type": "field"
-          },
-          {
-            "start": 159,
-            "end": 159,
-            "type": "field"
-          },
-          {
-            "start": 160,
-            "end": 160,
-            "type": "field"
-          },
-          {
-            "start": 161,
-            "end": 161,
-            "type": "field"
-          },
-          {
-            "start": 162,
-            "end": 162,
-            "type": "field"
-          },
-          {
-            "start": 163,
-            "end": 163,
-            "type": "field"
-          },
-          {
-            "start": 164,
-            "end": 164,
-            "type": "field"
-          },
-          {
-            "start": 165,
-            "end": 165,
-            "type": "field"
-          },
-          {
-            "start": 166,
-            "end": 166,
-            "type": "field"
-          },
-          {
-            "start": 168,
-            "end": 168,
-            "type": "field"
-          },
-          {
-            "start": 169,
-            "end": 169,
-            "type": "field"
-          },
-          {
-            "start": 170,
-            "end": 170,
-            "type": "field"
-          },
-          {
-            "start": 172,
-            "end": 172,
-            "type": "field"
-          },
-          {
-            "start": 173,
-            "end": 173,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
-            "start": 177,
-            "end": 177,
-            "type": "field"
-          },
-          {
-            "start": 178,
-            "end": 178,
-            "type": "field"
-          },
-          {
-            "start": 179,
-            "end": 179,
-            "type": "field"
-          },
-          {
-            "start": 180,
-            "end": 180,
-            "type": "field"
-          },
-          {
-            "start": 181,
-            "end": 181,
-            "type": "field"
-          },
-          {
-            "start": 182,
-            "end": 182,
-            "type": "field"
-          },
-          {
-            "start": 183,
-            "end": 183,
-            "type": "field"
-          },
-          {
-            "start": 184,
-            "end": 184,
-            "type": "field"
-          },
-          {
-            "start": 185,
-            "end": 185,
-            "type": "field"
-          },
-          {
-            "start": 186,
-            "end": 186,
-            "type": "field"
-          },
-          {
-            "start": 187,
-            "end": 187,
-            "type": "field"
-          },
-          {
-            "start": 188,
-            "end": 188,
-            "type": "field"
-          },
-          {
-            "start": 193,
-            "end": 193,
-            "type": "class_method"
-          },
-          {
-            "start": 195,
-            "end": 195,
-            "type": "class_method"
-          },
-          {
-            "start": 196,
-            "end": 196,
-            "type": "class_method"
-          },
-          {
-            "start": 197,
-            "end": 197,
-            "type": "class_method"
-          },
-          {
-            "start": 199,
-            "end": 199,
-            "type": "class_method"
-          },
-          {
-            "start": 200,
-            "end": 200,
-            "type": "class_method"
-          },
-          {
-            "start": 201,
-            "end": 203,
-            "type": "class_method"
-          },
-          {
-            "start": 204,
-            "end": 206,
-            "type": "class_method"
-          },
-          {
-            "start": 207,
-            "end": 209,
-            "type": "class_method"
-          },
-          {
-            "start": 210,
-            "end": 212,
-            "type": "class_method"
-          },
-          {
-            "start": 214,
-            "end": 214,
-            "type": "class_method"
-          },
-          {
-            "start": 215,
-            "end": 215,
-            "type": "class_method"
-          },
-          {
-            "start": 216,
-            "end": 216,
-            "type": "class_method"
-          },
-          {
-            "start": 219,
-            "end": 222,
-            "type": "class_method"
-          },
-          {
-            "start": 224,
-            "end": 224,
-            "type": "class_method"
-          },
-          {
-            "start": 225,
-            "end": 227,
-            "type": "class_method"
-          },
-          {
-            "start": 229,
-            "end": 229,
-            "type": "class_method"
-          },
-          {
-            "start": 230,
-            "end": 230,
-            "type": "class_method"
-          },
-          {
-            "start": 231,
-            "end": 231,
-            "type": "class_method"
-          },
-          {
-            "start": 232,
-            "end": 232,
-            "type": "class_method"
-          },
-          {
-            "start": 233,
-            "end": 233,
-            "type": "class_method"
-          },
-          {
-            "start": 234,
-            "end": 234,
-            "type": "class_method"
-          },
-          {
-            "start": 235,
-            "end": 235,
-            "type": "class_method"
-          },
-          {
-            "start": 237,
-            "end": 237,
-            "type": "class_method"
-          },
-          {
-            "start": 238,
-            "end": 238,
-            "type": "class_method"
-          },
-          {
-            "start": 239,
-            "end": 239,
-            "type": "class_method"
-          },
-          {
-            "start": 240,
-            "end": 240,
-            "type": "class_method"
-          },
-          {
-            "start": 241,
-            "end": 241,
-            "type": "field"
-          },
-          {
-            "start": 242,
-            "end": 242,
-            "type": "field"
-          },
-          {
-            "start": 243,
-            "end": 243,
-            "type": "field"
-          },
-          {
-            "start": 244,
-            "end": 244,
-            "type": "field"
-          },
-          {
-            "start": 245,
-            "end": 245,
-            "type": "field"
-          },
-          {
-            "start": 246,
-            "end": 246,
-            "type": "field"
-          },
-          {
-            "start": 247,
-            "end": 248,
-            "type": "field"
-          },
-          {
-            "start": 254,
-            "end": 254,
-            "type": "field"
-          },
-          {
-            "start": 259,
-            "end": 259,
-            "type": "field"
-          },
-          {
-            "start": 261,
-            "end": 261,
-            "type": "field"
-          },
-          {
-            "start": 263,
-            "end": 263,
-            "type": "field"
-          },
-          {
-            "start": 265,
-            "end": 265,
-            "type": "field"
-          },
-          {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 270,
-            "type": "field"
-          },
-          {
-            "start": 272,
-            "end": 274,
-            "type": "class_method"
-          },
-          {
-            "start": 276,
-            "end": 276,
-            "type": "class_method"
-          },
-          {
-            "start": 278,
-            "end": 278,
-            "type": "class_method"
-          },
-          {
-            "start": 280,
-            "end": 280,
-            "type": "class_method"
-          },
-          {
-            "start": 381,
-            "end": 381,
-            "type": "class_method"
-          },
-          {
-            "start": 382,
-            "end": 382,
-            "type": "class_method"
-          },
-          {
-            "start": 383,
-            "end": 383,
-            "type": "class_method"
-          },
-          {
-            "start": 384,
-            "end": 384,
-            "type": "class_method"
-          },
-          {
-            "start": 386,
-            "end": 386,
-            "type": "class_method"
-          },
-          {
-            "start": 387,
-            "end": 387,
-            "type": "class_method"
-          },
-          {
-            "start": 390,
-            "end": 393,
-            "type": "class_method"
-          }
-        ],
-        "implementations": [
-          {
-            "start": 112,
-            "end": 116
-          },
-          {
-            "start": 118,
-            "end": 122
-          },
-          {
-            "start": 124,
-            "end": 124
-          },
-          {
-            "start": 126,
-            "end": 129
-          },
-          {
-            "start": 131,
-            "end": 135
-          },
-          {
-            "start": 193,
-            "end": 193
-          },
-          {
-            "start": 195,
-            "end": 195
-          },
-          {
-            "start": 196,
-            "end": 196
-          },
-          {
-            "start": 197,
-            "end": 197
-          },
-          {
-            "start": 199,
-            "end": 199
-          },
-          {
-            "start": 200,
-            "end": 200
-          },
-          {
-            "start": 201,
-            "end": 203
-          },
-          {
-            "start": 204,
-            "end": 206
-          },
-          {
-            "start": 207,
-            "end": 209
-          },
-          {
-            "start": 210,
-            "end": 212
-          },
-          {
-            "start": 214,
-            "end": 214
-          },
-          {
-            "start": 215,
-            "end": 215
-          },
-          {
-            "start": 216,
-            "end": 216
-          },
-          {
-            "start": 219,
-            "end": 222
-          },
-          {
-            "start": 224,
-            "end": 224
-          },
-          {
-            "start": 225,
-            "end": 227
-          },
-          {
-            "start": 229,
-            "end": 229
-          },
-          {
-            "start": 230,
-            "end": 230
-          },
-          {
-            "start": 231,
-            "end": 231
-          },
-          {
-            "start": 232,
-            "end": 232
-          },
-          {
-            "start": 233,
-            "end": 233
-          },
-          {
-            "start": 234,
-            "end": 234
-          },
-          {
-            "start": 235,
-            "end": 235
-          },
-          {
-            "start": 237,
-            "end": 237
-          },
-          {
-            "start": 238,
-            "end": 238
-          },
-          {
-            "start": 239,
-            "end": 239
-          },
-          {
-            "start": 240,
-            "end": 240
-          },
-          {
-            "start": 272,
-            "end": 274
-          },
-          {
-            "start": 276,
-            "end": 276
-          },
-          {
-            "start": 278,
-            "end": 278
-          },
-          {
-            "start": 280,
-            "end": 280
-          },
-          {
-            "start": 283,
-            "end": 283
-          },
-          {
-            "start": 285,
-            "end": 300
-          },
-          {
-            "start": 302,
-            "end": 317
-          },
-          {
-            "start": 319,
-            "end": 321
-          },
-          {
-            "start": 323,
-            "end": 323
-          },
-          {
-            "start": 326,
-            "end": 330
-          },
-          {
-            "start": 333,
-            "end": 336
-          },
-          {
-            "start": 338,
-            "end": 342
-          },
-          {
-            "start": 345,
-            "end": 349
-          },
-          {
-            "start": 351,
-            "end": 355
-          },
-          {
-            "start": 357,
-            "end": 361
-          },
-          {
-            "start": 363,
-            "end": 367
-          },
-          {
-            "start": 369,
-            "end": 371
-          },
-          {
-            "start": 373,
-            "end": 377
-          },
-          {
-            "start": 381,
-            "end": 381
-          },
-          {
-            "start": 382,
-            "end": 382
-          },
-          {
-            "start": 383,
-            "end": 383
-          },
-          {
-            "start": 384,
-            "end": 384
-          },
-          {
-            "start": 386,
-            "end": 386
-          },
-          {
-            "start": 387,
-            "end": 387
-          },
-          {
-            "start": 390,
-            "end": 393
-          }
-        ]
-      }
-    },
-    {
       "path": "tt_metal/api/tt-metalium/host_api.hpp",
       "filename": "host_api.hpp",
       "num_types": 11,
@@ -23707,8 +21617,8 @@
       "path": "tt_metal/api/tt-metalium/mesh_device.hpp",
       "filename": "mesh_device.hpp",
       "num_types": 10,
-      "num_methods": 155,
-      "num_lines": 331,
+      "num_methods": 153,
+      "num_lines": 327,
       "implementation_lines": 6,
       "highlight_regions": {
         "types": [
@@ -23743,80 +21653,90 @@
             "type": "class"
           },
           {
-            "start": 38,
-            "end": 317,
+            "start": 36,
+            "end": 313,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 41,
-            "end": 68,
+            "start": 39,
+            "end": 66,
             "type": "class"
           },
           {
-            "start": 323,
-            "end": 327,
+            "start": 319,
+            "end": 323,
             "type": "struct"
           }
         ],
         "methods": [
           {
+            "start": 39,
+            "end": 66,
+            "type": "field"
+          },
+          {
             "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 41,
+            "end": 41,
+            "type": "field"
+          },
+          {
+            "start": 42,
+            "end": 42,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 68,
             "end": 68,
             "type": "field"
           },
           {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
-            "type": "field"
-          },
-          {
-            "start": 43,
-            "end": 43,
-            "type": "field"
-          },
-          {
-            "start": 44,
-            "end": 44,
-            "type": "field"
-          },
-          {
-            "start": 63,
-            "end": 63,
-            "type": "class_method"
-          },
-          {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
-          },
-          {
-            "start": 67,
-            "end": 67,
+            "start": 69,
+            "end": 69,
             "type": "field"
           },
           {
@@ -23825,18 +21745,13 @@
             "type": "field"
           },
           {
-            "start": 71,
-            "end": 71,
-            "type": "field"
-          },
-          {
             "start": 72,
             "end": 72,
             "type": "field"
           },
           {
-            "start": 74,
-            "end": 74,
+            "start": 73,
+            "end": 73,
             "type": "field"
           },
           {
@@ -23850,13 +21765,13 @@
             "type": "field"
           },
           {
-            "start": 79,
-            "end": 79,
+            "start": 78,
+            "end": 78,
             "type": "field"
           },
           {
-            "start": 80,
-            "end": 80,
+            "start": 79,
+            "end": 79,
             "type": "field"
           },
           {
@@ -23865,8 +21780,8 @@
             "type": "field"
           },
           {
-            "start": 83,
-            "end": 83,
+            "start": 82,
+            "end": 82,
             "type": "field"
           },
           {
@@ -23880,8 +21795,8 @@
             "type": "field"
           },
           {
-            "start": 88,
-            "end": 88,
+            "start": 89,
+            "end": 89,
             "type": "field"
           },
           {
@@ -23890,13 +21805,13 @@
             "type": "field"
           },
           {
-            "start": 93,
-            "end": 93,
-            "type": "field"
+            "start": 100,
+            "end": 100,
+            "type": "class_method"
           },
           {
-            "start": 102,
-            "end": 102,
+            "start": 101,
+            "end": 101,
             "type": "class_method"
           },
           {
@@ -23905,14 +21820,19 @@
             "type": "class_method"
           },
           {
-            "start": 105,
-            "end": 105,
+            "start": 104,
+            "end": 104,
             "type": "class_method"
           },
           {
-            "start": 106,
-            "end": 106,
-            "type": "class_method"
+            "start": 107,
+            "end": 107,
+            "type": "field"
+          },
+          {
+            "start": 108,
+            "end": 108,
+            "type": "field"
           },
           {
             "start": 109,
@@ -23930,13 +21850,13 @@
             "type": "field"
           },
           {
-            "start": 112,
-            "end": 112,
+            "start": 113,
+            "end": 113,
             "type": "field"
           },
           {
-            "start": 113,
-            "end": 113,
+            "start": 114,
+            "end": 114,
             "type": "field"
           },
           {
@@ -23945,13 +21865,13 @@
             "type": "field"
           },
           {
-            "start": 116,
-            "end": 116,
+            "start": 117,
+            "end": 117,
             "type": "field"
           },
           {
-            "start": 117,
-            "end": 117,
+            "start": 118,
+            "end": 118,
             "type": "field"
           },
           {
@@ -23962,11 +21882,6 @@
           {
             "start": 120,
             "end": 120,
-            "type": "field"
-          },
-          {
-            "start": 121,
-            "end": 121,
             "type": "field"
           },
           {
@@ -23985,11 +21900,6 @@
             "type": "field"
           },
           {
-            "start": 126,
-            "end": 126,
-            "type": "field"
-          },
-          {
             "start": 127,
             "end": 127,
             "type": "field"
@@ -23997,6 +21907,16 @@
           {
             "start": 128,
             "end": 128,
+            "type": "field"
+          },
+          {
+            "start": 129,
+            "end": 129,
+            "type": "field"
+          },
+          {
+            "start": 130,
+            "end": 130,
             "type": "field"
           },
           {
@@ -24071,11 +21991,6 @@
           },
           {
             "start": 145,
-            "end": 145,
-            "type": "field"
-          },
-          {
-            "start": 146,
             "end": 146,
             "type": "field"
           },
@@ -24091,6 +22006,11 @@
           },
           {
             "start": 149,
+            "end": 149,
+            "type": "field"
+          },
+          {
+            "start": 150,
             "end": 150,
             "type": "field"
           },
@@ -24105,16 +22025,6 @@
             "type": "field"
           },
           {
-            "start": 153,
-            "end": 153,
-            "type": "field"
-          },
-          {
-            "start": 154,
-            "end": 154,
-            "type": "field"
-          },
-          {
             "start": 155,
             "end": 155,
             "type": "field"
@@ -24126,17 +22036,17 @@
           },
           {
             "start": 159,
-            "end": 159,
+            "end": 163,
             "type": "field"
           },
           {
-            "start": 160,
-            "end": 160,
+            "start": 164,
+            "end": 164,
             "type": "field"
           },
           {
-            "start": 163,
-            "end": 167,
+            "start": 165,
+            "end": 165,
             "type": "field"
           },
           {
@@ -24147,6 +22057,16 @@
           {
             "start": 169,
             "end": 169,
+            "type": "field"
+          },
+          {
+            "start": 170,
+            "end": 170,
+            "type": "field"
+          },
+          {
+            "start": 171,
+            "end": 171,
             "type": "field"
           },
           {
@@ -24165,42 +22085,42 @@
             "type": "field"
           },
           {
-            "start": 175,
-            "end": 175,
-            "type": "field"
-          },
-          {
-            "start": 176,
-            "end": 176,
-            "type": "field"
-          },
-          {
             "start": 177,
             "end": 177,
             "type": "field"
           },
           {
-            "start": 178,
-            "end": 178,
+            "start": 179,
+            "end": 179,
             "type": "field"
           },
           {
-            "start": 181,
-            "end": 181,
+            "start": 180,
+            "end": 180,
             "type": "field"
           },
           {
             "start": 183,
-            "end": 183,
+            "end": 188,
             "type": "field"
           },
           {
-            "start": 184,
-            "end": 184,
+            "start": 189,
+            "end": 189,
             "type": "field"
           },
           {
-            "start": 187,
+            "start": 190,
+            "end": 190,
+            "type": "field"
+          },
+          {
+            "start": 191,
+            "end": 191,
+            "type": "field"
+          },
+          {
+            "start": 192,
             "end": 192,
             "type": "field"
           },
@@ -24266,11 +22186,6 @@
           },
           {
             "start": 205,
-            "end": 205,
-            "type": "field"
-          },
-          {
-            "start": 206,
             "end": 206,
             "type": "field"
           },
@@ -24286,6 +22201,11 @@
           },
           {
             "start": 209,
+            "end": 209,
+            "type": "field"
+          },
+          {
+            "start": 210,
             "end": 210,
             "type": "field"
           },
@@ -24345,17 +22265,7 @@
             "type": "field"
           },
           {
-            "start": 222,
-            "end": 222,
-            "type": "field"
-          },
-          {
             "start": 223,
-            "end": 223,
-            "type": "field"
-          },
-          {
-            "start": 224,
             "end": 224,
             "type": "field"
           },
@@ -24365,13 +22275,18 @@
             "type": "field"
           },
           {
-            "start": 227,
-            "end": 228,
+            "start": 231,
+            "end": 231,
             "type": "field"
           },
           {
-            "start": 229,
-            "end": 229,
+            "start": 232,
+            "end": 232,
+            "type": "field"
+          },
+          {
+            "start": 233,
+            "end": 233,
             "type": "field"
           },
           {
@@ -24380,18 +22295,8 @@
             "type": "field"
           },
           {
-            "start": 236,
-            "end": 236,
-            "type": "field"
-          },
-          {
             "start": 237,
             "end": 237,
-            "type": "field"
-          },
-          {
-            "start": 239,
-            "end": 239,
             "type": "field"
           },
           {
@@ -24400,23 +22305,33 @@
             "type": "field"
           },
           {
+            "start": 242,
+            "end": 242,
+            "type": "field"
+          },
+          {
+            "start": 243,
+            "end": 243,
+            "type": "field"
+          },
+          {
             "start": 245,
             "end": 245,
             "type": "field"
           },
           {
-            "start": 246,
-            "end": 246,
+            "start": 262,
+            "end": 262,
             "type": "field"
           },
           {
-            "start": 247,
-            "end": 247,
+            "start": 263,
+            "end": 263,
             "type": "field"
           },
           {
-            "start": 249,
-            "end": 249,
+            "start": 265,
+            "end": 265,
             "type": "field"
           },
           {
@@ -24425,28 +22340,18 @@
             "type": "field"
           },
           {
-            "start": 267,
-            "end": 267,
-            "type": "field"
-          },
-          {
-            "start": 269,
-            "end": 269,
+            "start": 268,
+            "end": 268,
             "type": "field"
           },
           {
             "start": 270,
-            "end": 270,
+            "end": 271,
             "type": "field"
           },
           {
-            "start": 272,
-            "end": 272,
-            "type": "field"
-          },
-          {
-            "start": 274,
-            "end": 275,
+            "start": 273,
+            "end": 273,
             "type": "field"
           },
           {
@@ -24455,23 +22360,28 @@
             "type": "field"
           },
           {
-            "start": 281,
-            "end": 281,
+            "start": 278,
+            "end": 279,
             "type": "field"
           },
           {
-            "start": 282,
+            "start": 281,
+            "end": 282,
+            "type": "field"
+          },
+          {
+            "start": 283,
             "end": 283,
             "type": "field"
           },
           {
             "start": 285,
-            "end": 286,
+            "end": 285,
             "type": "field"
           },
           {
-            "start": 287,
-            "end": 287,
+            "start": 286,
+            "end": 286,
             "type": "field"
           },
           {
@@ -24485,49 +22395,189 @@
             "type": "field"
           },
           {
-            "start": 293,
-            "end": 293,
+            "start": 292,
+            "end": 298,
             "type": "field"
           },
           {
-            "start": 294,
-            "end": 294,
+            "start": 299,
+            "end": 305,
             "type": "field"
           },
           {
-            "start": 296,
-            "end": 302,
+            "start": 306,
+            "end": 312,
             "type": "field"
           },
           {
-            "start": 303,
-            "end": 309,
+            "start": 41,
+            "end": 41,
             "type": "field"
           },
           {
-            "start": 310,
-            "end": 316,
+            "start": 42,
+            "end": 42,
             "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
+            "type": "class_method"
+          },
+          {
+            "start": 62,
+            "end": 62,
+            "type": "class_method"
+          },
+          {
+            "start": 65,
+            "end": 65,
+            "type": "field"
+          },
+          {
+            "start": 322,
+            "end": 322,
+            "type": "field"
+          }
+        ],
+        "implementations": [
+          {
+            "start": 61,
+            "end": 61
+          },
+          {
+            "start": 62,
+            "end": 62
+          },
+          {
+            "start": 100,
+            "end": 100
+          },
+          {
+            "start": 101,
+            "end": 101
+          },
+          {
+            "start": 103,
+            "end": 103
+          },
+          {
+            "start": 104,
+            "end": 104
+          }
+        ]
+      }
+    },
+    {
+      "path": "tt_metal/api/tt-metalium/device.hpp",
+      "filename": "device.hpp",
+      "num_types": 9,
+      "num_methods": 93,
+      "num_lines": 222,
+      "implementation_lines": 6,
+      "highlight_regions": {
+        "types": [
+          {
+            "start": 28,
+            "end": 28,
+            "type": "class"
+          },
+          {
+            "start": 37,
+            "end": 37,
+            "type": "enum"
+          },
+          {
+            "start": 39,
+            "end": 39,
+            "type": "class"
+          },
+          {
+            "start": 40,
+            "end": 40,
+            "type": "class"
+          },
+          {
+            "start": 41,
+            "end": 41,
+            "type": "class"
           },
           {
             "start": 43,
             "end": 43,
-            "type": "field"
+            "type": "class"
           },
           {
             "start": 44,
             "end": 44,
+            "type": "class"
+          },
+          {
+            "start": 45,
+            "end": 45,
+            "type": "struct"
+          },
+          {
+            "start": 47,
+            "end": 218,
+            "type": "class"
+          }
+        ],
+        "methods": [
+          {
+            "start": 49,
+            "end": 49,
+            "type": "class_method"
+          },
+          {
+            "start": 50,
+            "end": 50,
+            "type": "class_method"
+          },
+          {
+            "start": 52,
+            "end": 52,
+            "type": "class_method"
+          },
+          {
+            "start": 53,
+            "end": 53,
+            "type": "class_method"
+          },
+          {
+            "start": 55,
+            "end": 55,
+            "type": "class_method"
+          },
+          {
+            "start": 56,
+            "end": 56,
+            "type": "class_method"
+          },
+          {
+            "start": 58,
+            "end": 58,
+            "type": "field"
+          },
+          {
+            "start": 60,
+            "end": 60,
+            "type": "field"
+          },
+          {
+            "start": 61,
+            "end": 61,
             "type": "field"
           },
           {
             "start": 63,
             "end": 63,
-            "type": "class_method"
+            "type": "field"
           },
           {
-            "start": 64,
-            "end": 64,
-            "type": "class_method"
+            "start": 65,
+            "end": 65,
+            "type": "field"
           },
           {
             "start": 67,
@@ -24535,40 +22585,440 @@
             "type": "field"
           },
           {
-            "start": 326,
-            "end": 326,
+            "start": 68,
+            "end": 68,
+            "type": "field"
+          },
+          {
+            "start": 69,
+            "end": 69,
+            "type": "field"
+          },
+          {
+            "start": 70,
+            "end": 70,
+            "type": "field"
+          },
+          {
+            "start": 71,
+            "end": 71,
+            "type": "field"
+          },
+          {
+            "start": 72,
+            "end": 72,
+            "type": "field"
+          },
+          {
+            "start": 75,
+            "end": 75,
+            "type": "field"
+          },
+          {
+            "start": 78,
+            "end": 79,
+            "type": "field"
+          },
+          {
+            "start": 82,
+            "end": 83,
+            "type": "field"
+          },
+          {
+            "start": 86,
+            "end": 86,
+            "type": "field"
+          },
+          {
+            "start": 89,
+            "end": 90,
+            "type": "field"
+          },
+          {
+            "start": 93,
+            "end": 93,
+            "type": "field"
+          },
+          {
+            "start": 96,
+            "end": 96,
+            "type": "field"
+          },
+          {
+            "start": 99,
+            "end": 99,
+            "type": "field"
+          },
+          {
+            "start": 102,
+            "end": 102,
+            "type": "field"
+          },
+          {
+            "start": 105,
+            "end": 105,
+            "type": "field"
+          },
+          {
+            "start": 108,
+            "end": 108,
+            "type": "field"
+          },
+          {
+            "start": 109,
+            "end": 109,
+            "type": "field"
+          },
+          {
+            "start": 110,
+            "end": 110,
+            "type": "field"
+          },
+          {
+            "start": 111,
+            "end": 111,
+            "type": "field"
+          },
+          {
+            "start": 113,
+            "end": 113,
+            "type": "field"
+          },
+          {
+            "start": 116,
+            "end": 116,
+            "type": "field"
+          },
+          {
+            "start": 118,
+            "end": 118,
+            "type": "field"
+          },
+          {
+            "start": 120,
+            "end": 120,
+            "type": "field"
+          },
+          {
+            "start": 121,
+            "end": 121,
+            "type": "field"
+          },
+          {
+            "start": 123,
+            "end": 123,
+            "type": "field"
+          },
+          {
+            "start": 124,
+            "end": 124,
+            "type": "field"
+          },
+          {
+            "start": 126,
+            "end": 126,
+            "type": "field"
+          },
+          {
+            "start": 127,
+            "end": 127,
+            "type": "field"
+          },
+          {
+            "start": 132,
+            "end": 132,
+            "type": "field"
+          },
+          {
+            "start": 133,
+            "end": 133,
+            "type": "field"
+          },
+          {
+            "start": 135,
+            "end": 135,
+            "type": "field"
+          },
+          {
+            "start": 136,
+            "end": 136,
+            "type": "field"
+          },
+          {
+            "start": 138,
+            "end": 138,
+            "type": "field"
+          },
+          {
+            "start": 139,
+            "end": 139,
+            "type": "field"
+          },
+          {
+            "start": 142,
+            "end": 142,
+            "type": "field"
+          },
+          {
+            "start": 143,
+            "end": 143,
+            "type": "field"
+          },
+          {
+            "start": 144,
+            "end": 145,
+            "type": "field"
+          },
+          {
+            "start": 146,
+            "end": 146,
+            "type": "field"
+          },
+          {
+            "start": 148,
+            "end": 148,
+            "type": "field"
+          },
+          {
+            "start": 149,
+            "end": 149,
+            "type": "field"
+          },
+          {
+            "start": 150,
+            "end": 150,
+            "type": "field"
+          },
+          {
+            "start": 153,
+            "end": 153,
+            "type": "field"
+          },
+          {
+            "start": 154,
+            "end": 154,
+            "type": "field"
+          },
+          {
+            "start": 155,
+            "end": 155,
+            "type": "field"
+          },
+          {
+            "start": 159,
+            "end": 164,
+            "type": "field"
+          },
+          {
+            "start": 165,
+            "end": 165,
+            "type": "field"
+          },
+          {
+            "start": 166,
+            "end": 166,
+            "type": "field"
+          },
+          {
+            "start": 167,
+            "end": 167,
+            "type": "field"
+          },
+          {
+            "start": 168,
+            "end": 168,
+            "type": "field"
+          },
+          {
+            "start": 170,
+            "end": 170,
+            "type": "field"
+          },
+          {
+            "start": 172,
+            "end": 172,
+            "type": "field"
+          },
+          {
+            "start": 174,
+            "end": 174,
+            "type": "field"
+          },
+          {
+            "start": 175,
+            "end": 175,
+            "type": "field"
+          },
+          {
+            "start": 176,
+            "end": 176,
+            "type": "field"
+          },
+          {
+            "start": 177,
+            "end": 177,
+            "type": "field"
+          },
+          {
+            "start": 179,
+            "end": 179,
+            "type": "field"
+          },
+          {
+            "start": 183,
+            "end": 183,
+            "type": "field"
+          },
+          {
+            "start": 184,
+            "end": 184,
+            "type": "field"
+          },
+          {
+            "start": 185,
+            "end": 185,
+            "type": "field"
+          },
+          {
+            "start": 186,
+            "end": 186,
+            "type": "field"
+          },
+          {
+            "start": 188,
+            "end": 188,
+            "type": "field"
+          },
+          {
+            "start": 190,
+            "end": 190,
+            "type": "field"
+          },
+          {
+            "start": 192,
+            "end": 192,
+            "type": "field"
+          },
+          {
+            "start": 194,
+            "end": 194,
+            "type": "field"
+          },
+          {
+            "start": 195,
+            "end": 195,
+            "type": "field"
+          },
+          {
+            "start": 196,
+            "end": 196,
+            "type": "field"
+          },
+          {
+            "start": 198,
+            "end": 198,
+            "type": "field"
+          },
+          {
+            "start": 199,
+            "end": 199,
+            "type": "field"
+          },
+          {
+            "start": 200,
+            "end": 200,
+            "type": "field"
+          },
+          {
+            "start": 201,
+            "end": 201,
+            "type": "field"
+          },
+          {
+            "start": 202,
+            "end": 202,
+            "type": "field"
+          },
+          {
+            "start": 203,
+            "end": 203,
+            "type": "field"
+          },
+          {
+            "start": 204,
+            "end": 204,
+            "type": "field"
+          },
+          {
+            "start": 205,
+            "end": 205,
+            "type": "field"
+          },
+          {
+            "start": 206,
+            "end": 206,
+            "type": "field"
+          },
+          {
+            "start": 207,
+            "end": 207,
+            "type": "field"
+          },
+          {
+            "start": 208,
+            "end": 208,
+            "type": "field"
+          },
+          {
+            "start": 209,
+            "end": 209,
+            "type": "field"
+          },
+          {
+            "start": 212,
+            "end": 213,
+            "type": "field"
+          },
+          {
+            "start": 215,
+            "end": 215,
+            "type": "field"
+          },
+          {
+            "start": 217,
+            "end": 217,
             "type": "field"
           }
         ],
         "implementations": [
           {
-            "start": 63,
-            "end": 63
+            "start": 49,
+            "end": 49
           },
           {
-            "start": 64,
-            "end": 64
+            "start": 50,
+            "end": 50
           },
           {
-            "start": 102,
-            "end": 102
+            "start": 52,
+            "end": 52
           },
           {
-            "start": 103,
-            "end": 103
+            "start": 53,
+            "end": 53
           },
           {
-            "start": 105,
-            "end": 105
+            "start": 55,
+            "end": 55
           },
           {
-            "start": 106,
-            "end": 106
+            "start": 56,
+            "end": 56
           }
         ]
       }
     }
   ],
-  "generated_at": "2025-03-18 20:13:04",
+  "generated_at": "2025-03-20 09:33:21",
   "total_files_analyzed": 103
 }
