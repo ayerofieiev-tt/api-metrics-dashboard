@@ -53,6 +53,9 @@ echo "Running time series data collection script..."
 chmod +x build-api-metrics-timeseries.sh
 ./build-api-metrics-timeseries.sh
 
+# Copy the generated timeseries.csv to the dashboard data directory
+cp timeseries.csv $DASHBOARD_DIR/public/data/
+
 # Run header leaderboard analysis
 echo "Running header leaderboard analysis..."
 python analyze_cpp_header_leaderboard.py "$API_PATH" "$DASHBOARD_DIR/public/data/leaderboard.json"
