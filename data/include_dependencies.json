@@ -1,0 +1,1564 @@
+{
+  "dependency_graph": {
+    "nodes": [
+      {
+        "id": "allocator.hpp",
+        "name": "allocator.hpp",
+        "path": "allocator.hpp"
+      },
+      {
+        "id": "allocator_types.hpp",
+        "name": "allocator_types.hpp",
+        "path": "allocator_types.hpp"
+      },
+      {
+        "id": "assert.hpp",
+        "name": "assert.hpp",
+        "path": "assert.hpp"
+      },
+      {
+        "id": "base_types.hpp",
+        "name": "base_types.hpp",
+        "path": "base_types.hpp"
+      },
+      {
+        "id": "bfloat16.hpp",
+        "name": "bfloat16.hpp",
+        "path": "bfloat16.hpp"
+      },
+      {
+        "id": "bfloat4.hpp",
+        "name": "bfloat4.hpp",
+        "path": "bfloat4.hpp"
+      },
+      {
+        "id": "bfloat8.hpp",
+        "name": "bfloat8.hpp",
+        "path": "bfloat8.hpp"
+      },
+      {
+        "id": "blockfloat_common.hpp",
+        "name": "blockfloat_common.hpp",
+        "path": "blockfloat_common.hpp"
+      },
+      {
+        "id": "buffer.hpp",
+        "name": "buffer.hpp",
+        "path": "buffer.hpp"
+      },
+      {
+        "id": "buffer_constants.hpp",
+        "name": "buffer_constants.hpp",
+        "path": "buffer_constants.hpp"
+      },
+      {
+        "id": "circular_buffer.hpp",
+        "name": "circular_buffer.hpp",
+        "path": "circular_buffer.hpp"
+      },
+      {
+        "id": "circular_buffer_constants.h",
+        "name": "circular_buffer_constants.h",
+        "path": "circular_buffer_constants.h"
+      },
+      {
+        "id": "circular_buffer_types.hpp",
+        "name": "circular_buffer_types.hpp",
+        "path": "circular_buffer_types.hpp"
+      },
+      {
+        "id": "command_queue.hpp",
+        "name": "command_queue.hpp",
+        "path": "command_queue.hpp"
+      },
+      {
+        "id": "command_queue_common.hpp",
+        "name": "command_queue_common.hpp",
+        "path": "command_queue_common.hpp"
+      },
+      {
+        "id": "command_queue_interface.hpp",
+        "name": "command_queue_interface.hpp",
+        "path": "command_queue_interface.hpp"
+      },
+      {
+        "id": "constants.hpp",
+        "name": "constants.hpp",
+        "path": "constants.hpp"
+      },
+      {
+        "id": "control_plane.hpp",
+        "name": "control_plane.hpp",
+        "path": "control_plane.hpp"
+      },
+      {
+        "id": "core_coord.hpp",
+        "name": "core_coord.hpp",
+        "path": "core_coord.hpp"
+      },
+      {
+        "id": "core_descriptor.hpp",
+        "name": "core_descriptor.hpp",
+        "path": "core_descriptor.hpp"
+      },
+      {
+        "id": "data_format.hpp",
+        "name": "data_format.hpp",
+        "path": "data_format.hpp"
+      },
+      {
+        "id": "data_types.hpp",
+        "name": "data_types.hpp",
+        "path": "data_types.hpp"
+      },
+      {
+        "id": "dev_msgs.h",
+        "name": "dev_msgs.h",
+        "path": "dev_msgs.h"
+      },
+      {
+        "id": "device.hpp",
+        "name": "device.hpp",
+        "path": "device.hpp"
+      },
+      {
+        "id": "device_impl.hpp",
+        "name": "device_impl.hpp",
+        "path": "device_impl.hpp"
+      },
+      {
+        "id": "device_pool.hpp",
+        "name": "device_pool.hpp",
+        "path": "device_pool.hpp"
+      },
+      {
+        "id": "dispatch_core_common.hpp",
+        "name": "dispatch_core_common.hpp",
+        "path": "dispatch_core_common.hpp"
+      },
+      {
+        "id": "dispatch_mem_map.hpp",
+        "name": "dispatch_mem_map.hpp",
+        "path": "dispatch_mem_map.hpp"
+      },
+      {
+        "id": "dispatch_settings.hpp",
+        "name": "dispatch_settings.hpp",
+        "path": "dispatch_settings.hpp"
+      },
+      {
+        "id": "distributed.hpp",
+        "name": "distributed.hpp",
+        "path": "distributed.hpp"
+      },
+      {
+        "id": "distribution_spec.hpp",
+        "name": "distribution_spec.hpp",
+        "path": "distribution_spec.hpp"
+      },
+      {
+        "id": "edm_fabric_counters.hpp",
+        "name": "edm_fabric_counters.hpp",
+        "path": "edm_fabric_counters.hpp"
+      },
+      {
+        "id": "erisc_datamover_builder.hpp",
+        "name": "erisc_datamover_builder.hpp",
+        "path": "erisc_datamover_builder.hpp"
+      },
+      {
+        "id": "event.hpp",
+        "name": "event.hpp",
+        "path": "event.hpp"
+      },
+      {
+        "id": "fabric_edm_packet_header.hpp",
+        "name": "fabric_edm_packet_header.hpp",
+        "path": "fabric_edm_packet_header.hpp"
+      },
+      {
+        "id": "fabric_edm_types.hpp",
+        "name": "fabric_edm_types.hpp",
+        "path": "fabric_edm_types.hpp"
+      },
+      {
+        "id": "fabric_host_interface.h",
+        "name": "fabric_host_interface.h",
+        "path": "fabric_host_interface.h"
+      },
+      {
+        "id": "global_circular_buffer.hpp",
+        "name": "global_circular_buffer.hpp",
+        "path": "global_circular_buffer.hpp"
+      },
+      {
+        "id": "global_circular_buffer_impl.hpp",
+        "name": "global_circular_buffer_impl.hpp",
+        "path": "global_circular_buffer_impl.hpp"
+      },
+      {
+        "id": "global_semaphore.hpp",
+        "name": "global_semaphore.hpp",
+        "path": "global_semaphore.hpp"
+      },
+      {
+        "id": "graph_tracking.hpp",
+        "name": "graph_tracking.hpp",
+        "path": "graph_tracking.hpp"
+      },
+      {
+        "id": "hal.hpp",
+        "name": "hal.hpp",
+        "path": "hal.hpp"
+      },
+      {
+        "id": "hal_exp.hpp",
+        "name": "hal_exp.hpp",
+        "path": "hal_exp.hpp"
+      },
+      {
+        "id": "hlk_desc.hpp",
+        "name": "hlk_desc.hpp",
+        "path": "hlk_desc.hpp"
+      },
+      {
+        "id": "host_api.hpp",
+        "name": "host_api.hpp",
+        "path": "host_api.hpp"
+      },
+      {
+        "id": "jit_build_options.hpp",
+        "name": "jit_build_options.hpp",
+        "path": "jit_build_options.hpp"
+      },
+      {
+        "id": "jit_build_settings.hpp",
+        "name": "jit_build_settings.hpp",
+        "path": "jit_build_settings.hpp"
+      },
+      {
+        "id": "kernel.hpp",
+        "name": "kernel.hpp",
+        "path": "kernel.hpp"
+      },
+      {
+        "id": "kernel_types.hpp",
+        "name": "kernel_types.hpp",
+        "path": "kernel_types.hpp"
+      },
+      {
+        "id": "launch_message_ring_buffer_state.hpp",
+        "name": "launch_message_ring_buffer_state.hpp",
+        "path": "launch_message_ring_buffer_state.hpp"
+      },
+      {
+        "id": "lightmetal_binary.hpp",
+        "name": "lightmetal_binary.hpp",
+        "path": "lightmetal_binary.hpp"
+      },
+      {
+        "id": "lightmetal_capture_utils.hpp",
+        "name": "lightmetal_capture_utils.hpp",
+        "path": "lightmetal_capture_utils.hpp"
+      },
+      {
+        "id": "lightmetal_replay.hpp",
+        "name": "lightmetal_replay.hpp",
+        "path": "lightmetal_replay.hpp"
+      },
+      {
+        "id": "logger.hpp",
+        "name": "logger.hpp",
+        "path": "logger.hpp"
+      },
+      {
+        "id": "math.hpp",
+        "name": "math.hpp",
+        "path": "math.hpp"
+      },
+      {
+        "id": "memcpy.hpp",
+        "name": "memcpy.hpp",
+        "path": "memcpy.hpp"
+      },
+      {
+        "id": "memory_reporter.hpp",
+        "name": "memory_reporter.hpp",
+        "path": "memory_reporter.hpp"
+      },
+      {
+        "id": "mesh_buffer.hpp",
+        "name": "mesh_buffer.hpp",
+        "path": "mesh_buffer.hpp"
+      },
+      {
+        "id": "mesh_command_queue.hpp",
+        "name": "mesh_command_queue.hpp",
+        "path": "mesh_command_queue.hpp"
+      },
+      {
+        "id": "mesh_config.hpp",
+        "name": "mesh_config.hpp",
+        "path": "mesh_config.hpp"
+      },
+      {
+        "id": "mesh_coord.hpp",
+        "name": "mesh_coord.hpp",
+        "path": "mesh_coord.hpp"
+      },
+      {
+        "id": "mesh_device.hpp",
+        "name": "mesh_device.hpp",
+        "path": "mesh_device.hpp"
+      },
+      {
+        "id": "mesh_device_view.hpp",
+        "name": "mesh_device_view.hpp",
+        "path": "mesh_device_view.hpp"
+      },
+      {
+        "id": "mesh_event.hpp",
+        "name": "mesh_event.hpp",
+        "path": "mesh_event.hpp"
+      },
+      {
+        "id": "mesh_graph.hpp",
+        "name": "mesh_graph.hpp",
+        "path": "mesh_graph.hpp"
+      },
+      {
+        "id": "mesh_trace.hpp",
+        "name": "mesh_trace.hpp",
+        "path": "mesh_trace.hpp"
+      },
+      {
+        "id": "mesh_trace_id.hpp",
+        "name": "mesh_trace_id.hpp",
+        "path": "mesh_trace_id.hpp"
+      },
+      {
+        "id": "mesh_workload.hpp",
+        "name": "mesh_workload.hpp",
+        "path": "mesh_workload.hpp"
+      },
+      {
+        "id": "metal_soc_descriptor.h",
+        "name": "metal_soc_descriptor.h",
+        "path": "metal_soc_descriptor.h"
+      },
+      {
+        "id": "multi_producer_single_consumer_queue.hpp",
+        "name": "multi_producer_single_consumer_queue.hpp",
+        "path": "multi_producer_single_consumer_queue.hpp"
+      },
+      {
+        "id": "persistent_kernel_cache.hpp",
+        "name": "persistent_kernel_cache.hpp",
+        "path": "persistent_kernel_cache.hpp"
+      },
+      {
+        "id": "profiler_optional_metadata.hpp",
+        "name": "profiler_optional_metadata.hpp",
+        "path": "profiler_optional_metadata.hpp"
+      },
+      {
+        "id": "profiler_types.hpp",
+        "name": "profiler_types.hpp",
+        "path": "profiler_types.hpp"
+      },
+      {
+        "id": "program_cache.hpp",
+        "name": "program_cache.hpp",
+        "path": "program_cache.hpp"
+      },
+      {
+        "id": "program_device_map.hpp",
+        "name": "program_device_map.hpp",
+        "path": "program_device_map.hpp"
+      },
+      {
+        "id": "program_impl.hpp",
+        "name": "program_impl.hpp",
+        "path": "program_impl.hpp"
+      },
+      {
+        "id": "routing_table_generator.hpp",
+        "name": "routing_table_generator.hpp",
+        "path": "routing_table_generator.hpp"
+      },
+      {
+        "id": "runtime_args_data.hpp",
+        "name": "runtime_args_data.hpp",
+        "path": "runtime_args_data.hpp"
+      },
+      {
+        "id": "semaphore.hpp",
+        "name": "semaphore.hpp",
+        "path": "semaphore.hpp"
+      },
+      {
+        "id": "shape.hpp",
+        "name": "shape.hpp",
+        "path": "shape.hpp"
+      },
+      {
+        "id": "shape2d.hpp",
+        "name": "shape2d.hpp",
+        "path": "shape2d.hpp"
+      },
+      {
+        "id": "shape_base.hpp",
+        "name": "shape_base.hpp",
+        "path": "shape_base.hpp"
+      },
+      {
+        "id": "small_vector.hpp",
+        "name": "small_vector.hpp",
+        "path": "small_vector.hpp"
+      },
+      {
+        "id": "sub_device.hpp",
+        "name": "sub_device.hpp",
+        "path": "sub_device.hpp"
+      },
+      {
+        "id": "sub_device_manager_tracker.hpp",
+        "name": "sub_device_manager_tracker.hpp",
+        "path": "sub_device_manager_tracker.hpp"
+      },
+      {
+        "id": "sub_device_types.hpp",
+        "name": "sub_device_types.hpp",
+        "path": "sub_device_types.hpp"
+      },
+      {
+        "id": "system_memory_cq_interface.hpp",
+        "name": "system_memory_cq_interface.hpp",
+        "path": "system_memory_cq_interface.hpp"
+      },
+      {
+        "id": "system_memory_manager.hpp",
+        "name": "system_memory_manager.hpp",
+        "path": "system_memory_manager.hpp"
+      },
+      {
+        "id": "system_mesh.hpp",
+        "name": "system_mesh.hpp",
+        "path": "system_mesh.hpp"
+      },
+      {
+        "id": "tile.hpp",
+        "name": "tile.hpp",
+        "path": "tile.hpp"
+      },
+      {
+        "id": "tilize_utils.hpp",
+        "name": "tilize_utils.hpp",
+        "path": "tilize_utils.hpp"
+      },
+      {
+        "id": "trace.hpp",
+        "name": "trace.hpp",
+        "path": "trace.hpp"
+      },
+      {
+        "id": "trace_buffer.hpp",
+        "name": "trace_buffer.hpp",
+        "path": "trace_buffer.hpp"
+      },
+      {
+        "id": "tt_align.hpp",
+        "name": "tt_align.hpp",
+        "path": "tt_align.hpp"
+      },
+      {
+        "id": "tt_backend_api_types.hpp",
+        "name": "tt_backend_api_types.hpp",
+        "path": "tt_backend_api_types.hpp"
+      },
+      {
+        "id": "tt_log.h",
+        "name": "tt_log.h",
+        "path": "tt_log.h"
+      },
+      {
+        "id": "tt_memory.h",
+        "name": "tt_memory.h",
+        "path": "tt_memory.h"
+      },
+      {
+        "id": "tt_metal.hpp",
+        "name": "tt_metal.hpp",
+        "path": "tt_metal.hpp"
+      },
+      {
+        "id": "util.hpp",
+        "name": "util.hpp",
+        "path": "util.hpp"
+      },
+      {
+        "id": "utils.hpp",
+        "name": "utils.hpp",
+        "path": "utils.hpp"
+      },
+      {
+        "id": "work_executor_types.hpp",
+        "name": "work_executor_types.hpp",
+        "path": "work_executor_types.hpp"
+      },
+      {
+        "id": "work_split.hpp",
+        "name": "work_split.hpp",
+        "path": "work_split.hpp"
+      },
+      {
+        "id": "worker_config_buffer.hpp",
+        "name": "worker_config_buffer.hpp",
+        "path": "worker_config_buffer.hpp"
+      }
+    ],
+    "edges": []
+  },
+  "type_declarations": [
+    {
+      "path": "circular_buffer.hpp",
+      "types": [],
+      "error": "Impossible pattern at row 7, column 6"
+    },
+    {
+      "path": "hlk_desc.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tile.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "event.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_event.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "logger.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "work_split.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "worker_config_buffer.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "core_coord.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "semaphore.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_command_queue.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_settings.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "work_executor_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_core_common.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device_pool.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "profiler_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "control_plane.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "blockfloat_common.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tilize_utils.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "launch_message_ring_buffer_state.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "trace_buffer.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "data_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_memory_manager.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "buffer_constants.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "graph_tracking.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "metal_soc_descriptor.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_device_view.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dev_msgs.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_trace_id.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "jit_build_settings.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat16.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_edm_packet_header.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "routing_table_generator.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "allocator.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_binary.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "circular_buffer_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue_interface.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "allocator_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "jit_build_options.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_semaphore.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_buffer.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape2d.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_device.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "small_vector.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "persistent_kernel_cache.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat8.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "profiler_optional_metadata.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_coord.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape_base.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue_common.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_memory.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat4.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "math.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "memory_reporter.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "erisc_datamover_builder.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "circular_buffer_constants.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_graph.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "hal_exp.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_circular_buffer_impl.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_edm_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "trace.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_trace.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_metal.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "constants.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "assert.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_memory_cq_interface.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_mem_map.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_circular_buffer.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "edm_fabric_counters.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_config.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_capture_utils.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "buffer.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_host_interface.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_impl.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_device_map.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_mesh.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "data_format.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device_manager_tracker.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_backend_api_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "runtime_args_data.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "core_descriptor.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "base_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "util.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_cache.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "distributed.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "utils.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_workload.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "host_api.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "kernel_types.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "hal.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device_impl.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_align.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "distribution_spec.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "kernel.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_replay.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "memcpy.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "multi_producer_single_consumer_queue.hpp",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_log.h",
+      "types": [],
+      "error": "Invalid syntax at row 1, column 0"
+    }
+  ],
+  "function_declarations": [
+    {
+      "path": "circular_buffer.hpp",
+      "functions": [],
+      "error": "Impossible pattern at row 1, column 15"
+    },
+    {
+      "path": "hlk_desc.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tile.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "event.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_event.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "logger.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "work_split.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "worker_config_buffer.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "core_coord.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "semaphore.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_command_queue.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_settings.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "work_executor_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_core_common.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device_pool.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "profiler_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "control_plane.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "blockfloat_common.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tilize_utils.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "launch_message_ring_buffer_state.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "trace_buffer.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "data_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_memory_manager.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "buffer_constants.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "graph_tracking.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "metal_soc_descriptor.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_device_view.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dev_msgs.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_trace_id.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "jit_build_settings.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat16.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_edm_packet_header.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "routing_table_generator.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "allocator.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_binary.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "circular_buffer_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue_interface.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "allocator_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "jit_build_options.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_semaphore.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_buffer.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape2d.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_device.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "small_vector.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "persistent_kernel_cache.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat8.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "profiler_optional_metadata.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_coord.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "shape_base.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "command_queue_common.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_memory.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "bfloat4.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "math.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "memory_reporter.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "erisc_datamover_builder.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "circular_buffer_constants.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_graph.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "hal_exp.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_circular_buffer_impl.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_edm_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "trace.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_trace.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_metal.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "constants.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "assert.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_memory_cq_interface.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "dispatch_mem_map.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "global_circular_buffer.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "edm_fabric_counters.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_config.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_capture_utils.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "buffer.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "fabric_host_interface.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_impl.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_device_map.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "system_mesh.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "data_format.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "sub_device_manager_tracker.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_backend_api_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "runtime_args_data.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "core_descriptor.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "base_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "util.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "program_cache.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "distributed.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "utils.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "mesh_workload.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "host_api.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "kernel_types.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "hal.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "device_impl.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_align.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "distribution_spec.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "kernel.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "lightmetal_replay.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "memcpy.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "multi_producer_single_consumer_queue.hpp",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    },
+    {
+      "path": "tt_log.h",
+      "functions": [],
+      "error": "Invalid syntax at row 1, column 0"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2025-03-18 21:51:19",
+    "total_files_analyzed": 103,
+    "total_nodes": 103,
+    "total_edges": 0,
+    "total_types": 0,
+    "total_functions": 0
+  }
+}
