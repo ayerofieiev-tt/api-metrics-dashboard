@@ -357,8 +357,8 @@ const APIMetricsDashboard = () => {
               />
               <YAxis 
                 domain={[
-                  dataMin => Math.floor(dataMin * 0.98), 
-                  dataMax => Math.ceil(dataMax * 1.02)
+                  0,  // Start from 0
+                  dataMax => Math.ceil(dataMax * 1.02)  // Add 2% padding at the top
                 ]}
               />
               <Tooltip 
@@ -416,8 +416,8 @@ const APIMetricsDashboard = () => {
               />
               <YAxis 
                 domain={[
-                  dataMin => Math.floor(dataMin * 0.98), 
-                  dataMax => Math.ceil(dataMax * 1.02)
+                  0,  // Start from 0
+                  dataMax => Math.ceil(dataMax * 1.02)  // Add 2% padding at the top
                 ]}
               />
               <Tooltip 
