@@ -11,16 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout dashboard repository
+      - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          path: dashboard
-      
-      - name: Checkout tt-metal repository
-        uses: actions/checkout@v3
-        with:
-          repository: tenstorrent/tt-metal
-          path: tt-metal
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,23 +25,12 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install tree-sitter tree-sitter-cpp
       
-      - name: Run metric collection scripts
+      - name: Run analysis and commit changes
         run: |
-          cd tt-metal
-          cp ../dashboard/scripts/setup-and-run-analysis.sh .
-          cp ../dashboard/scripts/build-api-metrics-timeseries.sh .
-          cp ../dashboard/scripts/analyze_cpp_api.py .
-          chmod +x setup-and-run-analysis.sh
-          chmod +x build-api-metrics-timeseries.sh
-          chmod +x analyze_cpp_api.py
-          ./setup-and-run-analysis.sh
-          cp timeseries.csv ../dashboard/public/data/
-      
-      - name: Commit and push changes
-        run: |
-          cd dashboard
+          chmod +x scripts/setup-and-run-analysis.sh
+          ./scripts/setup-and-run-analysis.sh
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
-          git add public/data/timeseries.csv
-          git commit -m "Update API metrics data" || echo "No changes to commit"
-          git push 
+          git add public/
+          git commit -m "Update timeseries data" || echo "No changes to commit"
+          git push
